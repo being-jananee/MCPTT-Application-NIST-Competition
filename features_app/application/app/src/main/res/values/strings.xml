@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">application</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="create_an_action_item">Create an Action Item</string>
+</resources>
