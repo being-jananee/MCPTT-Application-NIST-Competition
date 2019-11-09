@@ -21,7 +21,7 @@
 
 package org.doubango.ngn.services.impl.ms;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import org.doubango.ngn.BuildConfig;

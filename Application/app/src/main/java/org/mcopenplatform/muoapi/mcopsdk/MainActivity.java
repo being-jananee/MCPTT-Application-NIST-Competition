@@ -35,25 +35,28 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.mcopenplatform.muoapi.BuildConfig;
 import org.mcopenplatform.muoapi.ConstantsMCOP;
 import org.mcopenplatform.muoapi.IMCOPCallback;
 import org.mcopenplatform.muoapi.IMCOPsdk;
 import org.mcopenplatform.muoapi.R;
-import org.mcopenplatform.muoapi.mcopsdk.datatype.Session;
 import org.mcopenplatform.muoapi.mcopsdk.datatype.UserData;
 import org.mcopenplatform.muoapi.mcopsdk.preference.PreferencesManager;
 import org.mcopenplatform.muoapi.mcopsdk.preference.PreferencesManagerDefault;
-import org.mcopenplatform.muoapi.utils.Utils;
 
 import java.net.InterfaceAddress;
 import java.net.URI;
@@ -83,14 +86,13 @@ public class MainActivity extends AppCompatActivity {
     private String[] currentProfile;
     private PreferencesManager preferencesManager;
 
-    private Button mainActivity_Button_Register;
-    private Button mainActivity_Button_deRegister;
-    private TextView mainActivity_TextView_info;
+    //private Button mainActivity_Button_Register;
+    //private Button mainActivity_Button_deRegister;
     private TextView mainActivity_TextView_error;
-    private TextView mainActivity_TextView_affiliation;
-    private Button mainActivity_Button_affiliation;
-    private Button mainActivity_Button_unaffiliation;
-    private EditText mainActivity_EditText_affiliation;
+    private TextView mainActivity_simpleTextView;
+    // private Button mainActivity_Button_affiliation;
+    // private Button mainActivity_Button_unaffiliation;
+    //private EditText mainActivity_EditText_affiliation;
     private Button mainActivity_Button_make_call;
     private Button mainActivity_Button_Hang_up_call;
     private DialogMenu mDialogIds;
@@ -104,9 +106,49 @@ public class MainActivity extends AppCompatActivity {
     private Intent serviceIntent;
     private List<InterfaceAddress> interfaceAddresses;
     private DialogMenu mDialogMenuIPs;
-    private Button mainActivity_Button_Advanced_Functions;
+    // private Button mainActivity_Button_Advanced_Functions;
     private DialogMenu mDialogShowAdvanceFunction;
+    private Spinner dropdown;
+    private View view;
+    private Toast toast;
+    private String message;
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getTitle().toString()){
+            case "Register":
+                showTypeRegister(getApplicationContext());
+                item.setTitle("Unregister");
+                return true;
+            case "Unregister":
+                try {
+                    if(mService!=null)
+                        mService.unLoginMCOP();
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+                item.setTitle("Register");
+                return true;
+            case "Location":
+                Intent i = new Intent(MainActivity.this, MapsActivity.class);
+                i.putExtra("user", dropdown.getSelectedItem().toString().trim());
+                startActivity(i);
+                return true;
+            case "Logging":
+                Intent j = new Intent(MainActivity.this,Main2Activity.class);
+                j.putExtra("user", dropdown.getSelectedItem().toString().trim());
+                startActivity(j);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     private Map<String,String[]> getProfilesParameters(List<String> parameters){
         Map<String,String[]> parametersMap=new HashMap<>();
@@ -180,22 +222,34 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        mainActivity_Button_Register=(Button)findViewById(R.id.mainActivity_Button_Register);
+        //mainActivity_Button_Register=(Button)findViewById(R.id.mainActivity_Button_Register);
 
-        mainActivity_Button_deRegister=(Button)findViewById(R.id.mainActivity_Button_deRegister);
-        mainActivity_TextView_info=(TextView)findViewById(R.id.mainActivity_TextView_info);
+        //mainActivity_Button_deRegister=(Button)findViewById(R.id.mainActivity_Button_deRegister);
         mainActivity_TextView_error=(TextView)findViewById(R.id.mainActivity_TextView_error);
-        mainActivity_TextView_affiliation=(TextView)findViewById(R.id.mainActivity_TextView_affiliation);
-        mainActivity_Button_affiliation=(Button)findViewById(R.id.mainActivity_Button_affiliation);
-        mainActivity_Button_unaffiliation=(Button)findViewById(R.id.mainActivity_Button_unaffiliation);
-        mainActivity_EditText_affiliation=(EditText)findViewById(R.id.mainActivity_EditText_affiliation);
+        //mainActivity_Button_affiliation=(Button)findViewById(R.id.mainActivity_Button_affiliation);
+        //mainActivity_Button_unaffiliation=(Button)findViewById(R.id.mainActivity_Button_unaffiliation);
+        //mainActivity_EditText_affiliation=(EditText)findViewById(R.id.mainActivity_EditText_affiliation);
         mainActivity_Button_make_call=(Button)findViewById(R.id.mainActivity_Button_make_call);
         mainActivity_Button_Hang_up_call=(Button)findViewById(R.id.mainActivity_Button_Hang_up_call);
         mainActivity_Button_accept_call=(Button)findViewById(R.id.mainActivity_Button_accept_call);
         mainActivity_Button_Release_token=(Button)findViewById(R.id.mainActivity_Button_Release_token);
         mainActivity_Button_Request_token=(Button)findViewById(R.id.mainActivity_Button_Request_token);
         mainActivity_Button_Speaker=(Button)findViewById(R.id.mainActivity_Button_Speaker);
-        mainActivity_Button_Advanced_Functions=(Button)findViewById(R.id.mainActivity_Button_Advanced_Functions);
+        //mainActivity_Button_Advanced_Functions=(Button)findViewById(R.id.mainActivity_Button_Advanced_Functions);
+        mainActivity_simpleTextView = (TextView)findViewById(R.id.simpleTextView);
+        view = this.getWindow().getDecorView();
+
+        //get the spinner from the xml.
+        dropdown = findViewById(R.id.spinner1);
+//create a list of items for the spinner.
+        String[] items = new String[]{"sip:mcptt-iit3-A@organization.org", "sip:mcptt-iit3-B@organization.org", "sip:mcptt-iit3-C@organization.org", "sip:mcptt-iit3-D@organization.org", "sip:mcptt-iit3-E@organization.org", "sip:iit3_group@organization.org"};
+//create an adapter to describe how the items are displayed, adapters are used in several places in android.
+//There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+//set the spinners adapter to the previously created one.
+        dropdown.setAdapter(adapter);
+        //dropdown.
+
         if(userData==null);
         userData=new UserData();
 
@@ -536,27 +590,51 @@ public class MainActivity extends AppCompatActivity {
                                                         break;
                                                     case eMBMSAvailable:
                                                         if(BuildConfig.DEBUG)Log.d(TAG,"eMBMSNotificationEvent eMBMSAvailable");
-                                                        mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSAvailable");
+                                                        //mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSAvailable");
+                                                        message = "eMBMSNotificationEvent eMBMSAvailable";
+                                                        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                                                        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+                                                        toast.show();
                                                         break;
                                                     case UndereMBMSCoverage:
                                                         if(BuildConfig.DEBUG)Log.d(TAG,"eMBMSNotificationEvent UndereMBMSCoverage");
-                                                        mainActivity_TextView_error.setText("eMBMSNotificationEvent UndereMBMSCoverage");
+                                                        //mainActivity_TextView_error.setText("eMBMSNotificationEvent UndereMBMSCoverage");
+                                                        message = "eMBMSNotificationEvent UndereMBMSCoverage";
+                                                        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                                                        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+                                                        toast.show();
                                                         break;
                                                     case eMBMSBearerInUse:
                                                         if(BuildConfig.DEBUG)Log.d(TAG,"eMBMSNotificationEvent eMBMSBearerInUse");
-                                                        mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSBearerInUse");
+                                                        //mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSBearerInUse");
+                                                        message = "eMBMSNotificationEvent eMBMSBearerInUse";
+                                                        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                                                        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+                                                        toast.show();
                                                         break;
                                                     case eMBMSBearerNotInUse:
                                                         if(BuildConfig.DEBUG)Log.d(TAG,"eMBMSNotificationEvent eMBMSBearerNotInUse");
-                                                        mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSBearerNotInUse");
+                                                        //mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSBearerNotInUse");
+                                                        message = "eMBMSNotificationEvent eMBMSBearerNotInUse";
+                                                        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                                                        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+                                                        toast.show();
                                                         break;
                                                     case NoeMBMSCoverage:
                                                         if(BuildConfig.DEBUG)Log.d(TAG,"eMBMSNotificationEvent NoeMBMSCoverage");
-                                                        mainActivity_TextView_error.setText("eMBMSNotificationEvent NoeMBMSCoverage");
+                                                        //mainActivity_TextView_error.setText("eMBMSNotificationEvent NoeMBMSCoverage");
+                                                        message = "eMBMSNotificationEvent NoeMBMSCoverage";
+                                                        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                                                        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+                                                        toast.show();
                                                         break;
                                                     case eMBMSNotAvailable:
                                                         if(BuildConfig.DEBUG)Log.d(TAG,"eMBMSNotificationEvent eMBMSNotAvailable");
-                                                        mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSNotAvailable");
+                                                        //mainActivity_TextView_error.setText("eMBMSNotificationEvent eMBMSNotAvailable");
+                                                        message = "eMBMSNotificationEvent eMBMSNotAvailable";
+                                                        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                                                        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+                                                        toast.show();
                                                         break;
                                                 }
                                             }else{
@@ -578,7 +656,7 @@ public class MainActivity extends AppCompatActivity {
 
         };
 
-        mainActivity_Button_Register.setOnClickListener(new View.OnClickListener() {
+        /*mainActivity_Button_Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showTypeRegister(getApplicationContext());
@@ -602,7 +680,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     if(mService!=null)
                         mService.groupAffiliationOperation(
-                                mainActivity_EditText_affiliation.getText().toString().trim(),
+                                dropdown.getSelectedItem().toString().trim(),
                                 ConstantsMCOP.GroupAffiliationEventExtras.AffiliationOperationTypeEnum.Affiliate.getValue());
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -616,13 +694,13 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     if(mService!=null)
                         mService.groupAffiliationOperation(
-                                mainActivity_EditText_affiliation.getText().toString().trim(),
+                                dropdown.getSelectedItem().toString().trim(),
                                 ConstantsMCOP.GroupAffiliationEventExtras.AffiliationOperationTypeEnum.Deaffiliate.getValue());
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
             }
-        });
+        });*/
 
         mainActivity_Button_make_call.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -642,6 +720,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 showIdsAcceptCall(getApplicationContext());
+
             }
         });
 
@@ -667,24 +746,24 @@ public class MainActivity extends AppCompatActivity {
                 if(isSpeakerphoneOn){
                     isSpeakerphoneOn=false;
                     Log.d(TAG, "Speaker false");
-                    mainActivity_Button_Speaker.setText("Speaker false");
+                    mainActivity_Button_Speaker.setBackground(getResources().getDrawable(R.drawable.speaker_o));
                 }else{
                     isSpeakerphoneOn=true;
                     Log.d(TAG, "Speaker true");
-                    mainActivity_Button_Speaker.setText("Speaker true");
+                    mainActivity_Button_Speaker.setBackground(getResources().getDrawable(R.drawable.speaker));
                 }
                 mAudioManager.setSpeakerphoneOn(isSpeakerphoneOn);
 
             }
         });
-
+/*
         mainActivity_Button_Advanced_Functions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showAdvanceFeatures();
         }
         });
-
+*/
         if(mConnection==null)
         mConnection = new ServiceConnection() {
             @Override
@@ -819,6 +898,7 @@ public class MainActivity extends AppCompatActivity {
     }
 */
     private void showTypeRegister(final Context context){
+        //Log.d(TAG,"###################################" + dropdown.getSelectedItem().toString());
         final String[] strings={"With External authentication","No authentication"};
         if(strings==null || strings.length==0)return;
         mDialogMenu=null;
@@ -920,11 +1000,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                        if(typeCalls>0 && mService!=null)
+                        if(typeCalls>0 && mService!=null) {
                             mService.makeCall(
-                                    mainActivity_EditText_affiliation.getText().toString().trim(),
+                                    dropdown.getSelectedItem().toString().trim(),
                                     typeCalls
                             );
+                            mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make));
+                        }
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
@@ -943,6 +1025,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 if(mService!=null)
                 mService.hangUpCall(strings[0]);
+                mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make));
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
@@ -955,6 +1038,7 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             if(mService!=null)
                                 mService.hangUpCall(strings[item]);
+                            mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make));
                         } catch (RemoteException e) {
                             e.printStackTrace();
                         }
@@ -1108,7 +1192,10 @@ public class MainActivity extends AppCompatActivity {
         userData.setRegisted(false);
         userData.setDisplayName(null);
         userData.setMcpttID(null);
-        mainActivity_TextView_info.setText("UNREGISTERED");
+        //mainActivity_TextView_info.setText("UNREGISTERED");
+        mainActivity_simpleTextView.setText("NONE");
+        view.setBackgroundColor(getResources().getColor(R.color.INCORRECT));
+
     }
 
     private void isRegisted( boolean success, String  mcpttID, String displayName){
@@ -1119,17 +1206,29 @@ public class MainActivity extends AppCompatActivity {
             userData.setDisplayName(displayName);
         }
         Log.d(TAG,"REGISTERED. MCPTT ID: "+mcpttID+" DISPLAY NAME: "+displayName);
-        mainActivity_TextView_info.setText("REGISTERED. MCPTT ID: "+mcpttID+" DISPLAY NAME: "+displayName);
+        mainActivity_simpleTextView.setText(dropdown.getSelectedItem().toString());
+        //mainActivity_TextView_info.setText("REGISTERED. MCPTT ID: "+mcpttID+" DISPLAY NAME: "+displayName);
+        view.setBackgroundColor(getResources().getColor(R.color.CORRECT));
     }
 
     private void showData(String eventType,String data){
         Log.d(TAG,eventType+": "+data);
-        mainActivity_TextView_info.setText(eventType+": "+data);
+        //mainActivity_TextView_error.setText(eventType+": "+data);
+        message = eventType+": "+data;
+        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+        toast.show();
     }
 
     private void showLastError(String from,int code,String errorString){
         Log.e(TAG,"ERROR "+from+": "+code+" "+errorString);
-        mainActivity_TextView_error.setText("ERROR "+from+": "+code+" "+errorString);
+        mainActivity_simpleTextView.setText("NONE");
+        view.setBackgroundColor(getResources().getColor(R.color.INCORRECT));
+        //mainActivity_TextView_error.setText("ERROR "+from+": "+code+" "+errorString);
+        message = "ERROR "+from+": "+code+" "+errorString;
+        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+        toast.getView().setBackgroundColor(getResources().getColor(R.color.RED));
+        toast.show();
     }
 
     private void showGroups(Map<String, Integer> groups){
@@ -1156,7 +1255,7 @@ public class MainActivity extends AppCompatActivity {
             }
         Calendar calendar = Calendar.getInstance();
 
-        mainActivity_TextView_affiliation.setText("Lists Group Affiliations:(Time:"+String.format("%1$tA %1$tb %1$td %1$tY at %1$tI:%1$tM %1$Tp", calendar)+")\n"+result);
+        //mainActivity_TextView_affiliation.setText("Lists Group Affiliations:(Time:"+String.format("%1$tA %1$tb %1$td %1$tY at %1$tI:%1$tM %1$Tp", calendar)+")\n"+result);
     }
 
 

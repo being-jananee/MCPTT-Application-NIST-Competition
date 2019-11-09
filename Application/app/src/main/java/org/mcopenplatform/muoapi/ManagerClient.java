@@ -32,8 +32,8 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.RemoteException;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
 import org.doubango.ngn.BuildConfig;
@@ -66,14 +66,12 @@ import org.mcopenplatform.muoapi.session.ManagerSessions;
 import org.mcopenplatform.muoapi.utils.Utils;
 
 import java.io.Serializable;
-import java.net.InterfaceAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
 
 import static org.mcopenplatform.muoapi.ManagerClientUtils.TypeParticipant.DISPLAY_NAME;
 import static org.mcopenplatform.muoapi.ManagerClientUtils.TypeParticipant.TYPE;

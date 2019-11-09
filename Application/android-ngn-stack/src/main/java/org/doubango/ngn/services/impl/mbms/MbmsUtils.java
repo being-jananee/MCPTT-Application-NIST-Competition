@@ -22,7 +22,7 @@
 package org.doubango.ngn.services.impl.mbms;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import org.doubango.ngn.datatype.mbms.McpttMbmsUsageInfoType;

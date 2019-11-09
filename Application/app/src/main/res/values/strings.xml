@@ -31,8 +31,10 @@
 
     <string name="Cancel">Cancel</string>
     <string name="Ok">Ok</string>
-
-
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="create_an_action_item">Create an Action Item</string>
+    <string name="title_activity_maps_acitivity">MapsAcitivity</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDW4FqYuXDt3eIs_NdtNg4_ZO1u3tmeedg</string>
 
 </resources>
 

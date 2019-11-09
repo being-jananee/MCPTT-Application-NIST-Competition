@@ -27,7 +27,7 @@ package org.doubango.ngn.services.cms;
 
 import android.content.Context;
 import android.net.Uri;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.doubango.ngn.datatype.ms.cms.mcpttServiceConfig.ServiceConfigurationInfoType;
 import org.doubango.ngn.datatype.ms.cms.mcpttUEConfig.McpttUEConfiguration;
