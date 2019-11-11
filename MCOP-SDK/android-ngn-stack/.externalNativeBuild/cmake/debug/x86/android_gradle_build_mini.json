@@ -1,0 +1,176 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Jithin\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\.externalNativeBuild\\cmake\\debug\\x86 --target clean"
+  ],
+  "libraries": {
+    "libavdevice-Debug-x86": {
+      "artifactName": "libavdevice",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libavdevice.a"
+    },
+    "libopencore-amrwb-Debug-x86": {
+      "artifactName": "libopencore-amrwb",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libopencore-amrwb.a"
+    },
+    "libspeexdsp-Debug-x86": {
+      "artifactName": "libspeexdsp",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libspeexdsp.a"
+    },
+    "libencoder-Debug-x86": {
+      "artifactName": "libencoder",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libencoder.a"
+    },
+    "libopus-Debug-x86": {
+      "artifactName": "libopus",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libopus.a"
+    },
+    "libvpx-Debug-x86": {
+      "artifactName": "libvpx",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libvpx.a"
+    },
+    "libvo-amrwbenc-Debug-x86": {
+      "artifactName": "libvo-amrwbenc",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libvo-amrwbenc.a"
+    },
+    "tinyWRAP-Debug-x86": {
+      "artifactName": "tinyWRAP",
+      "buildCommand": "C:\\Users\\Jithin\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\.externalNativeBuild\\cmake\\debug\\x86 --target tinyWRAP",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\build\\intermediates\\cmake\\debug\\obj\\x86\\libtinyWRAP.so"
+    },
+    "libg729b-Debug-x86": {
+      "artifactName": "libg729b",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libg729b.a"
+    },
+    "libsrtp-Debug-x86": {
+      "artifactName": "libsrtp",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libsrtp.a"
+    },
+    "libswresample-Debug-x86": {
+      "artifactName": "libswresample",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libswresample.a"
+    },
+    "libsystem_wrappers-Debug-x86": {
+      "artifactName": "libsystem_wrappers",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libsystem_wrappers.a"
+    },
+    "libcommon_audio-Debug-x86": {
+      "artifactName": "libcommon_audio",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libcommon_audio.a"
+    },
+    "libspeex-Debug-x86": {
+      "artifactName": "libspeex",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libspeex.a"
+    },
+    "libxml2-Debug-x86": {
+      "artifactName": "libxml2",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libxml2.a"
+    },
+    "libopencore-amrnb-Debug-x86": {
+      "artifactName": "libopencore-amrnb",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libopencore-amrnb.a"
+    },
+    "libiLBC-Debug-x86": {
+      "artifactName": "libiLBC",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libiLBC.a"
+    },
+    "libx264-Debug-x86": {
+      "artifactName": "libx264",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libx264.a"
+    },
+    "libavcodec-Debug-x86": {
+      "artifactName": "libavcodec",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libavcodec.a"
+    },
+    "libprocessing-Debug-x86": {
+      "artifactName": "libprocessing",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libprocessing.a"
+    },
+    "libgsm-Debug-x86": {
+      "artifactName": "libgsm",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libgsm.a"
+    },
+    "libavfilter-Debug-x86": {
+      "artifactName": "libavfilter",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libavfilter.a"
+    },
+    "libpostproc-Debug-x86": {
+      "artifactName": "libpostproc",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libpostproc.a"
+    },
+    "libavformat-Debug-x86": {
+      "artifactName": "libavformat",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libavformat.a"
+    },
+    "libswscale-Debug-x86": {
+      "artifactName": "libswscale",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libswscale.a"
+    },
+    "libdecoder-Debug-x86": {
+      "artifactName": "libdecoder",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libdecoder.a"
+    },
+    "libcrypto-Debug-x86": {
+      "artifactName": "libcrypto",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libcrypto.a"
+    },
+    "libaudio_processing-Debug-x86": {
+      "artifactName": "libaudio_processing",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libaudio_processing.a"
+    },
+    "libyuv-Debug-x86": {
+      "artifactName": "libyuv",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libyuv.a"
+    },
+    "libavutil-Debug-x86": {
+      "artifactName": "libavutil",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\gpl\\libavutil.a"
+    },
+    "libcommon-Debug-x86": {
+      "artifactName": "libcommon",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libcommon.a"
+    },
+    "libopenh264-Debug-x86": {
+      "artifactName": "libopenh264",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libopenh264.a"
+    },
+    "libssl-Debug-x86": {
+      "artifactName": "libssl",
+      "abi": "x86",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\x86\\lib\\dist\\libssl.a"
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Jithin\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "libcrypto-Release-armeabi-v7a": {
+      "artifactName": "libcrypto",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libcrypto.a"
+    },
+    "libcommon_audio-Release-armeabi-v7a": {
+      "artifactName": "libcommon_audio",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libcommon_audio.a"
+    },
+    "libopencore-amrnb-Release-armeabi-v7a": {
+      "artifactName": "libopencore-amrnb",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libopencore-amrnb.a"
+    },
+    "libencoder-Release-armeabi-v7a": {
+      "artifactName": "libencoder",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libencoder.a"
+    },
+    "libavfilter-Release-armeabi-v7a": {
+      "artifactName": "libavfilter",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libavfilter.a"
+    },
+    "libspeexdsp-Release-armeabi-v7a": {
+      "artifactName": "libspeexdsp",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libspeexdsp.a"
+    },
+    "libiLBC-Release-armeabi-v7a": {
+      "artifactName": "libiLBC",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libiLBC.a"
+    },
+    "libswscale-Release-armeabi-v7a": {
+      "artifactName": "libswscale",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libswscale.a"
+    },
+    "libavcodec-Release-armeabi-v7a": {
+      "artifactName": "libavcodec",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libavcodec.a"
+    },
+    "libdecoder-Release-armeabi-v7a": {
+      "artifactName": "libdecoder",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libdecoder.a"
+    },
+    "libvpx-Release-armeabi-v7a": {
+      "artifactName": "libvpx",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libvpx.a"
+    },
+    "libavformat-Release-armeabi-v7a": {
+      "artifactName": "libavformat",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libavformat.a"
+    },
+    "libx264-Release-armeabi-v7a": {
+      "artifactName": "libx264",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libx264.a"
+    },
+    "libsrtp-Release-armeabi-v7a": {
+      "artifactName": "libsrtp",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libsrtp.a"
+    },
+    "libspeex-Release-armeabi-v7a": {
+      "artifactName": "libspeex",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libspeex.a"
+    },
+    "libaudio_processing-Release-armeabi-v7a": {
+      "artifactName": "libaudio_processing",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libaudio_processing.a"
+    },
+    "libsystem_wrappers-Release-armeabi-v7a": {
+      "artifactName": "libsystem_wrappers",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libsystem_wrappers.a"
+    },
+    "libopenh264-Release-armeabi-v7a": {
+      "artifactName": "libopenh264",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libopenh264.a"
+    },
+    "libxml2-Release-armeabi-v7a": {
+      "artifactName": "libxml2",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libxml2.a"
+    },
+    "libswresample-Release-armeabi-v7a": {
+      "artifactName": "libswresample",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libswresample.a"
+    },
+    "libvo-amrwbenc-Release-armeabi-v7a": {
+      "artifactName": "libvo-amrwbenc",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libvo-amrwbenc.a"
+    },
+    "libavdevice-Release-armeabi-v7a": {
+      "artifactName": "libavdevice",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libavdevice.a"
+    },
+    "libopus-Release-armeabi-v7a": {
+      "artifactName": "libopus",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libopus.a"
+    },
+    "libavutil-Release-armeabi-v7a": {
+      "artifactName": "libavutil",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libavutil.a"
+    },
+    "libprocessing-Release-armeabi-v7a": {
+      "artifactName": "libprocessing",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libprocessing.a"
+    },
+    "libg729b-Release-armeabi-v7a": {
+      "artifactName": "libg729b",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libg729b.a"
+    },
+    "libcommon-Release-armeabi-v7a": {
+      "artifactName": "libcommon",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libcommon.a"
+    },
+    "tinyWRAP-Release-armeabi-v7a": {
+      "artifactName": "tinyWRAP",
+      "buildCommand": "C:\\Users\\Jithin\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target tinyWRAP",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libtinyWRAP.so"
+    },
+    "libopencore-amrwb-Release-armeabi-v7a": {
+      "artifactName": "libopencore-amrwb",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libopencore-amrwb.a"
+    },
+    "libssl-Release-armeabi-v7a": {
+      "artifactName": "libssl",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libssl.a"
+    },
+    "libyuv-Release-armeabi-v7a": {
+      "artifactName": "libyuv",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libyuv.a"
+    },
+    "libpostproc-Release-armeabi-v7a": {
+      "artifactName": "libpostproc",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\gpl\\libpostproc.a"
+    },
+    "libgsm-Release-armeabi-v7a": {
+      "artifactName": "libgsm",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Jithin\\Desktop\\MCOP-SDK\\android-ngn-stack\\..\\doubango\\thirdparties\\android\\armeabi-v7a\\lib\\dist\\libgsm.a"
+    }
+  }
+}

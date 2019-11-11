@@ -25,7 +25,7 @@ public class ActionItem {
         this.tag = null;
         this.latitude = null;
         this.longitude = null;
-        this.completed = null;
+        this.completed = false;
     }
 
     public Boolean getCompleted() {
@@ -73,8 +73,8 @@ public class ActionItem {
         this.content = content;
         this.timestamp = timestamp;
         this.tag = tag;
-        this.latitude = null;
-        this.longitude = null;
+        this.latitude = 0.0;
+        this.longitude = 0.0;
         this.completed = false;
     }
 
