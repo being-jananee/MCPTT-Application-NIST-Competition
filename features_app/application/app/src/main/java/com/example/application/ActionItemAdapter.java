@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,6 +37,7 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         holder.name.setText(item.getUser());
         holder.timestamp.setText(item.getTimestamp());
         holder.tag.setText(item.getTag().toString());
+        holder.s.setChecked(item.getCompleted());
     }
 
     @Override
@@ -47,6 +50,7 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         private TextView content;
         private TextView timestamp;
         private TextView tag;
+        private Switch s;
 
         public ActionItemViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -54,10 +58,20 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
             tag = itemView.findViewById(R.id.tag);
             content = itemView.findViewById(R.id.content);
             timestamp = itemView.findViewById(R.id.timestamp);
-
+            s = itemView.findViewById(R.id.switch2);
             itemView.setOnClickListener(mainActivity);
             itemView.setOnLongClickListener(mainActivity);
+            s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    ActionItem item = allItems.get(getAdapterPosition());
+                    item.setCompleted(isChecked);
+                    mainActivity.updateEvent(item);
+                }
+            });
 
         }
+
+
     }
 }

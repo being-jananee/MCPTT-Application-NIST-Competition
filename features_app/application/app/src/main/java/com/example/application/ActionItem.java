@@ -1,7 +1,6 @@
 package com.example.application;
 
 
-import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.database.DataSnapshot;
 
 import java.io.Serializable;
@@ -15,20 +14,49 @@ public class ActionItem {
     private String content;
     private String timestamp;
     private ActionTag tag;
-    private LatLng location;
+    private Double latitude;
+    private Double longitude;
+    private Boolean completed;
 
     public ActionItem() {
         this.user = null;
         this.content = null;
         this.timestamp = null;
         this.tag = null;
-        this.location = null;
+        this.latitude = null;
+        this.longitude = null;
+        this.completed = null;
+    }
+
+    public Boolean getCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(Boolean completed) {
+        this.completed = completed;
     }
 
     public static ActionItem newActionItem() {
         ActionItem item = new ActionItem();
         item.setId(UUID.randomUUID());
+        item.setCompleted(false);
         return item;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
     public UUID getId() {
@@ -45,7 +73,9 @@ public class ActionItem {
         this.content = content;
         this.timestamp = timestamp;
         this.tag = tag;
-        this.location = null;
+        this.latitude = null;
+        this.longitude = null;
+        this.completed = false;
     }
 
 
@@ -60,15 +90,6 @@ public class ActionItem {
 
     public ActionItem setTag(ActionTag tag) {
         this.tag = tag;
-        return this;
-    }
-
-    public LatLng getLocation() {
-        return location;
-    }
-
-    public ActionItem setLocation(LatLng location) {
-        this.location = location;
         return this;
     }
 
@@ -112,11 +133,14 @@ public class ActionItem {
                 case "timestamp":
                     item.setTimestamp(data.getValue() != null ? data.getValue().toString() : null);
                     break;
-                case "location":
-                    String loc = data.getValue() != null ? data.getValue().toString() : null;
-                    if (loc != null) {
-                        item.setLocation(new LatLng(Double.parseDouble(loc.split(",")[0]), Double.parseDouble(loc.split(",")[1])));
-                    }
+                case "latitude":
+                    item.setLatitude(data.getValue() != null ? data.getValue(Double.class) : null);
+                    break;
+                case "longitude":
+                    item.setLongitude(data.getValue() != null ? data.getValue(Double.class) : null);
+                    break;
+                case "completed":
+                    item.setCompleted(data.getValue() != null ? data.getValue(Boolean.class) : null);
                     break;
             }
         }
@@ -129,17 +153,21 @@ public class ActionItem {
         public String content;
         public String timestamp;
         public ActionTag tag;
-        public String location;
+        public Double latitude;
+        public Double longitude;
+        public Boolean completed;
 
         public static ActionItemDTO fromItem(ActionItem item) {
             ActionItemDTO newDTO = new ActionItemDTO();
             newDTO.content = item.content;
-            if(item.location != null) {
-                newDTO.location = item.location.latitude + "," + item.location.longitude;
+            if(item.getLatitude() != null) {
+                newDTO.latitude = item.latitude;
+                newDTO.longitude = item.longitude;
             }
             newDTO.tag = item.tag;
             newDTO.timestamp = item.timestamp;
             newDTO.user = item.user;
+            newDTO.completed = item.completed;
             return newDTO;
         }
 

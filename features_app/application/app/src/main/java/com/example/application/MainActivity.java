@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Switch;
 
@@ -30,17 +32,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -51,7 +51,6 @@ import java.util.Random;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
-    Random rand = new Random(0);
     ArrayList<ActionItem> allItems = new ArrayList<>();
     private RecyclerView recyclerView;
     private ActionItemAdapter actionItemAdapter;
@@ -59,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference().child("events");
     private ChildEventListener listener = getChildListener();
     private FusedLocationProviderClient fusedClient;
+    private String username = "user_"+Build.MODEL.replace(" ", "_");
+    private LinearLayoutManager manager;
+    private ActionItem selectedItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +76,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView = findViewById(R.id.recycle);
         actionItemAdapter = new ActionItemAdapter(this, allItems);
         recyclerView.setAdapter(actionItemAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        manager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(manager);
         floatingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,12 +102,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        newItem.setUser("User 2").setContent(et.getText().toString()).setTimestamp(getTimestamp())
+                        newItem.setUser(username).setContent(et.getText().toString()).setTimestamp(getTimestamp())
                                 .setTag(ActionTag.get((sp.getSelectedItem().toString())));
                         if(s.isChecked() && hasPermission()) {
-                            addLocationToActionItem(newItem);
+                            addLocationToActionItemAndSend(newItem);
                         } else {
-                            eventsRef.child(newItem.getId().toString()).setValue(ActionItem.ActionItemDTO.fromItem(newItem));
+                            updateEvent(newItem);
                         }
                         ad.dismiss();
                     }
@@ -146,7 +149,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.maps:
-               startActivity(new Intent(MainActivity.this, MapsActivity.class));
+                Intent i = new Intent(MainActivity.this, MapsActivity.class);
+                i.putExtra("username", username);
+               startActivity(i);
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -157,34 +162,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onChildAdded(@NonNull DataSnapshot addedEvent, @Nullable String s) {
                 Log.d("MainActivity", "onChildAdded: ");
-                ActionItem item = new ActionItem();
-                item.setId(UUID.fromString(addedEvent.getKey()));
-                for(DataSnapshot eventDescription: addedEvent.getChildren()) {
-                    switch(eventDescription.getKey()) {
-                        case "content":
-                            item.setContent(eventDescription.getValue() != null ? eventDescription.getValue().toString() : null);
-                            break;
-                        case "tag":
-                            item.setTag(eventDescription.getValue() != null ? ActionTag.valueOf(eventDescription.getValue().toString()) : null);
-                            break;
-                        case "user":
-                            item.setUser(eventDescription.getValue() != null ? eventDescription.getValue().toString() : null);
-                            break;
-                        case "timestamp":
-                            item.setTimestamp(eventDescription.getValue() != null ? eventDescription.getValue().toString() : null);
-                            break;
-                        case "location":
-                            String loc = eventDescription.getValue() != null ? eventDescription.getValue().toString() : null;
-                            if(loc != null) {
-                                item.setLocation(new LatLng(Double.parseDouble(loc.split(",")[0]), Double.parseDouble(loc.split(",")[1])));
-                            }
-                            break;
-                    }
-                }
+                ActionItem item = ActionItem.fromSnapshot(addedEvent);
                 allItems.add(item);
                 Collections.sort(allItems, ActionItem.Comparators.TIME);
                 actionItemAdapter.notifyDataSetChanged();
-
             }
 
             @Override
@@ -223,6 +204,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return timestamp;
     }
 
+    public void updateEvent(ActionItem item) {
+        eventsRef.child(item.getId().toString()).setValue(ActionItem.ActionItemDTO.fromItem(item));
+    }
+
     @Override
     protected void onDestroy()
     {
@@ -237,13 +222,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onLongClick(View v) {
         final int position = recyclerView.getChildAdapterPosition(v);
+        Log.d("TAG", "onLongClick: "+position);
         final AlertDialog.Builder ad = new AlertDialog.Builder(MainActivity.this);
         ad.setTitle("Confirm");
         ad.setMessage("Are you sure you would like to delete this item?");
-        ad.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        ad.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                allItems.remove(position);
+                ActionItem item = allItems.get(position);
+                if(item.getUser().equals(username)) {
+                    eventsRef.child(item.getId().toString()).removeValue();
+                } else {
+                    //handle error on deleting someone else's items.
+                }
+            }
+        });
+        ad.setNegativeButton("Completed", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                ActionItem item = allItems.get(position);
+                item.setCompleted(true);
+                dialog.dismiss();
+                actionItemAdapter.notifyItemChanged(position);
             }
         });
         ad.create().show();
@@ -254,16 +254,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED);
     }
 
-    public void addLocationToActionItem(final ActionItem newItem) throws SecurityException {
+    public void addLocationToActionItemAndSend(final ActionItem newItem) throws SecurityException {
         fusedClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(Location location) {
-                if(location != null) {
-                    newItem.setLocation(new LatLng(location.getLatitude(), location.getLongitude()));
-                } else {
-                    newItem.setLocation(new LatLng(41.8781, 87.6298));
-                }
-                eventsRef.child(newItem.getId().toString()).setValue(ActionItem.ActionItemDTO.fromItem(newItem));
+            if(location != null) {
+                newItem.setLatitude(location.getLatitude());
+                newItem.setLongitude(location.getLongitude());
+                updateEvent(newItem);
+            } else {
+                //make dialog to show error;
+            }
             }
         });
     }
@@ -271,11 +272,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         int position = recyclerView.getChildAdapterPosition(v);
-        if(allItems.get(position).getLocation() != null) {
-            Intent i = new Intent(MainActivity.this, MapsActivity.class);
-            i.putExtra("item_lat", allItems.get(position).getLocation().latitude);
-            i.putExtra("item_long", allItems.get(position).getLocation().longitude);
-            startActivity(i);
+        if((selectedItem = allItems.get(position)) != null) {
+            //View mView = manager.findViewByPosition(position);
+            //MapView mapView = mView.findViewById(R.id.mapView);
+            //mapView.getMapAsync(this);
+            if(selectedItem.getLatitude() != null) {
+                Intent i = new Intent(MainActivity.this, MapsActivity.class);
+                i.putExtra("item", ActionItem.ActionItemDTO.fromItem(selectedItem));
+                i.putExtra("username", username);
+                startActivity(i);
+            }
         }
     }
+
+//    @Override
+//    public void onMapReady(GoogleMap googleMap) {
+//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            ActivityCompat.requestPermissions(this,
+//                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 10);
+//        } else {
+//            LatLng currLoc = new LatLng(selectedItem.getLatitude(), selectedItem.getLongitude());
+//            googleMap.addMarker(new MarkerOptions().position(currLoc));
+//            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currLoc, 15));
+//        }
+//    }
 }
