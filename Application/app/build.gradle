@@ -6,29 +6,29 @@ android {
 
     defaultConfig {
         applicationId "org.mcopenplatform.muoapi"
-        minSdkVersion 17
+        minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
         versionName "0.1"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
-			buildConfigField "boolean", "LOG_SHOW", "false"
+            buildConfigField "boolean", "LOG_SHOW", "false"
             minifyEnabled false
-			minifyEnabled true
+            minifyEnabled true
             shrinkResources true
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             flavorDimensions "default"
         }
         debug {
-			buildConfigField "boolean", "LOG_SHOW", "true"
+            buildConfigField "boolean", "LOG_SHOW", "true"
             minifyEnabled false
-			minifyEnabled false
+            minifyEnabled false
             shrinkResources false
             zipAlignEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -70,11 +70,10 @@ android {
 }
 
 
-
 dependencies {
     implementation project(':android-ngn-stack')
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
     api 'com.android.support:support-annotations:' + rootProject.supportLibVersion
     api 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion
     api 'com.android.support:design:' + rootProject.supportLibVersion
@@ -82,10 +81,20 @@ dependencies {
     api 'com.android.support:support-v4:' + rootProject.supportLibVersion
     api 'com.android.support:recyclerview-v7:' + rootProject.supportLibVersion
     // Required -- JUnit 4 framework
+    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
     testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
     // Optional -- Mockito framework
     testImplementation 'org.mockito:mockito-core:2.7.22'
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.3.0-alpha02', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    implementation 'com.google.firebase:firebase-database:19.2.0'
 }
+apply plugin: 'com.google.gms.google-services'

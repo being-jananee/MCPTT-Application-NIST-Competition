@@ -33,9 +33,9 @@ import android.content.pm.Signature;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NotificationCompat;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
 import org.mcopenplatform.muoapi.utils.PermissionRequestUtils;
@@ -43,7 +43,7 @@ import org.mcopenplatform.muoapi.utils.Utils;
 
 import java.util.ArrayList;
 
-import static android.support.v4.app.NotificationCompat.PRIORITY_MIN;
+import static androidx.core.app.NotificationCompat.PRIORITY_MIN;
 
 
 /**

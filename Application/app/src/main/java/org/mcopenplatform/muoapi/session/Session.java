@@ -23,13 +23,8 @@ package org.mcopenplatform.muoapi.session;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
-import android.view.SurfaceView;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
-import android.widget.FrameLayout;
 
 import org.doubango.ngn.BuildConfig;
 import org.doubango.ngn.events.NgnInviteEventArgs;
@@ -50,8 +45,6 @@ import static org.mcopenplatform.muoapi.datatype.error.Constants.CallEvent.CallT
 import static org.mcopenplatform.muoapi.datatype.error.Constants.CallEvent.CallTypeValidEnum.AudioWithFloorCtrlPrivateEmergency;
 import static org.mcopenplatform.muoapi.datatype.error.Constants.CallEvent.CallTypeValidEnum.AudioWithoutFloorCtrlPrivate;
 import static org.mcopenplatform.muoapi.datatype.error.Constants.CallEvent.CallTypeValidEnum.NONE;
-import static org.mcopenplatform.muoapi.datatype.error.Constants.CallEvent.CallTypeValidEnum.VideoAudioWithFloorCtrlPrearrangedGroup;
-import static org.mcopenplatform.muoapi.datatype.error.Constants.CallEvent.CallTypeValidEnum.VideoAudioWithFloorCtrlPrivate;
 
 public class Session implements NgnAVSession.OnEventMCPTTListener {
     private final static String TAG = Utils.getTAG(Session.class.getCanonicalName());

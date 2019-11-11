@@ -20,7 +20,7 @@
 */
 package org.doubango.ngn.datatype.openId;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.doubango.utils.Utils;
 import org.json.JSONException;

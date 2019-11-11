@@ -25,7 +25,7 @@ package org.doubango.ngn.services.impl.ms;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import net.openid.appauth.AppAuthConfiguration;
