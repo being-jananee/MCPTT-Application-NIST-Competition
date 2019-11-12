@@ -65,6 +65,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onStart() {
         lReceiver = new LocationReceiver();
         IntentFilter filter = new IntentFilter("locations");
+        filter.addAction("fromNotif");
         registerReceiver(lReceiver, filter);
         super.onStart();
     }
@@ -120,9 +121,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals("locations")) {
+            if (("locations").equals(intent.getAction())) {
                 HashMap<String, LocationItem> userLocations = (HashMap) intent.getSerializableExtra("items");
                 updateLocations(userLocations);
+            } else if (("fromNotif").equals(intent.getAction())) {
+                locationSwitch.setChecked(false);
             }
         }
     }

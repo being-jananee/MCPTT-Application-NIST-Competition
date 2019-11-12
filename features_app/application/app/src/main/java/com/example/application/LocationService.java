@@ -45,6 +45,7 @@ public class LocationService extends Service {
     private HashMap<String, LocationItem> allItems = new HashMap<>();
     private LocationServiceReceiver lServiceReciever = new LocationServiceReceiver();
     private int permission;
+    private NotificationManager notificationManager;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -53,6 +54,7 @@ public class LocationService extends Service {
 
     @Override
     public int onStartCommand (Intent intent, int flags, int startId) {
+        notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         username = intent.getStringExtra("username");
         running = intent.getBooleanExtra("checked", false);
         permission = ContextCompat.checkSelfPermission(LocationService.this,
@@ -87,15 +89,14 @@ public class LocationService extends Service {
                     createNotificationChannel("my_service", "My Background Service") : "";
             NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channelId)
                     .setContentTitle(getString(R.string.app_name))
-                    .setContentText("Currently Tracking Location")
-                    .setSubText("Tap here to turn off Location Tracking")
+                    .setSubText("Currently Tracking Location")
+                    .setContentText("Tap here to turn off Location Tracking")
 
 //Make this notification ongoing so it can’t be dismissed by the user//
 
-                    .setOngoing(true)
                     .setContentIntent(broadcastIntent)
                     .setSmallIcon(R.drawable.ic_location_searching_black_24dp);
-            startForeground(1, builder.build());
+            notificationManager.notify(1, builder.build());
         }
     }
 
@@ -109,7 +110,8 @@ public class LocationService extends Service {
 
 //Stop the Service//
             running = false;
-            stopSelf();
+            sendBroadcast(new Intent("fromNotif"));
+            notificationManager.cancel(1);
         }
     };
 
