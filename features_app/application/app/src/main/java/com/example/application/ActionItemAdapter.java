@@ -37,7 +37,11 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         holder.name.setText(item.getUser());
         holder.timestamp.setText(item.getTimestamp());
         holder.tag.setText(item.getTag().toString());
-        holder.s.setChecked(item.getCompleted());
+        if(item.getCompleted() != null) {
+            holder.s.setChecked(item.getCompleted());
+        } else {
+            holder.s.setChecked(false);
+        }
     }
 
     @Override

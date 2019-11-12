@@ -41,11 +41,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Random;
 import java.util.UUID;
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String username = "user_"+Build.MODEL.replace(" ", "_");
     private LinearLayoutManager manager;
     private ActionItem selectedItem;
+    private DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss.sss", Locale.US);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        newItem.setUser(username).setContent(et.getText().toString()).setTimestamp(getTimestamp())
+                        newItem.setUser(username).setContent(et.getText().toString()).setTimestamp(formatter.format(new Date()))
                                 .setTag(ActionTag.get((sp.getSelectedItem().toString())));
                         if(s.isChecked() && hasPermission()) {
                             addLocationToActionItemAndSend(newItem);
@@ -195,13 +200,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //Figure out what to do in error?
             }
         };
-    }
-
-    public String getTimestamp() {
-        Calendar c = Calendar.getInstance();
-        c.setTime(new Date());
-        String timestamp = (c.get(Calendar.MONTH) + 1) + "-" + c.get(Calendar.DAY_OF_MONTH) +"-"+c.get(Calendar.YEAR) + " " + c.get(Calendar.HOUR_OF_DAY) + ":" + c.get(Calendar.MINUTE) + ":" + c.get(Calendar.SECOND) + "." + c.get(Calendar.MILLISECOND);
-        return timestamp;
     }
 
     public void updateEvent(ActionItem item) {

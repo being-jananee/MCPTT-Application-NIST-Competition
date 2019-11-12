@@ -1,14 +1,20 @@
 package com.example.application;
 
 
+import android.util.Log;
+
 import com.google.firebase.database.DataSnapshot;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Comparator;
+import java.util.Locale;
 import java.util.UUID;
 
 public class ActionItem {
-
+    private static final String TAG = "ActionItem";
+    private static DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss.sss", Locale.US);
     private UUID id;
     private String user;
     private String content;
@@ -177,8 +183,21 @@ public class ActionItem {
         public static Comparator<ActionItem> TIME = new Comparator<ActionItem>() {
             @Override
             public int compare(ActionItem item1, ActionItem item2) {
-                return -1 * item1.timestamp.compareTo(item2.timestamp);
+                try {
+                    if(formatter.parse(item1.getTimestamp()).before(formatter.parse(item2.getTimestamp()))) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
+                } catch(Exception e) {
+                    return 1;
+                }
             }
         };
     }
+//timestamp
+//    public int getDate() {
+//
+//    }
+
 }
