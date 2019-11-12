@@ -234,15 +234,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-        ad.setNegativeButton("Completed", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                ActionItem item = allItems.get(position);
-                item.setCompleted(true);
-                dialog.dismiss();
-                actionItemAdapter.notifyItemChanged(position);
-            }
-        });
+        
         ad.create().show();
         return true;
     }
