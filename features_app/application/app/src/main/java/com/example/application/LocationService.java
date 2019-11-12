@@ -46,6 +46,7 @@ public class LocationService extends Service {
     private LocationServiceReceiver lServiceReciever = new LocationServiceReceiver();
     private int permission;
     private NotificationManager notificationManager;
+    private ChildEventListener listener;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -70,7 +71,8 @@ public class LocationService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        getOtherUserLocations();
+        listener = getOtherUserLocations();
+        ref.addChildEventListener(listener);
         requestLocationUpdates(permission);
     }
 
@@ -159,8 +161,8 @@ public class LocationService extends Service {
         return !(Math.abs(loc1.latitude - loc2.latitude) < 0.00001) && !(Math.abs(loc1.latitude - loc2.latitude) < 0.00001);
     }
 
-    private void getOtherUserLocations() {
-        ref.addChildEventListener(new ChildEventListener() {
+    private ChildEventListener getOtherUserLocations() {
+        return new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot userLocation, @Nullable String s) {
                 Log.d("TAG", "onChildChanged: CHILD HAS BEEN ADDED");
@@ -197,7 +199,7 @@ public class LocationService extends Service {
                 //handle errors;
                 return;
             }
-        });
+        };
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -216,6 +218,7 @@ public class LocationService extends Service {
         public void onReceive(Context context, Intent intent) {
             if ("STOP".equals(intent.getAction())) {
                 running = false;
+                sendBroadcast(new Intent("stop"));
                 Log.d("HUBBA", "onReceive: STOP");
             } else if ("START".equals(intent.getAction())) {
                 running = true;
@@ -235,6 +238,7 @@ public class LocationService extends Service {
     public void onDestroy() {
         sendBroadcast(new Intent("stop"));
         unregisterReceiver(lServiceReciever);
+        ref.removeEventListener(listener);
         super.onDestroy();
 
 
