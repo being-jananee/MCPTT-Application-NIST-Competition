@@ -1,0 +1,79 @@
+-- Check for working C compiler: C:/Users/Jithin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+-- Check for working C compiler: C:/Users/Jithin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/Users/Jithin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe
+-- Check for working CXX compiler: C:/Users/Jithin/AppData/Local/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CMAKE_BUILD_TYPE DEBUG
+-- libc++
+-- add library: libaudio_processing
+-- add library: libcommon
+-- add library: libcommon_audio
+-- add library: libcrypto
+-- add library: libdecoder
+-- add library: libencoder
+-- add library: libg729b
+-- add library: libgsm
+-- add library: libiLBC
+-- add library: libopencore-amrnb
+-- add library: libopencore-amrwb
+-- add library: libvo-amrwbenc
+-- add library: libopenh264
+-- add library: libopus
+-- add library: libprocessing
+-- add library: libspeex
+-- add library: libspeexdsp
+-- add library: libsrtp
+-- add library: libssl
+-- add library: libsystem_wrappers
+-- add library: libvpx
+-- add library: libx264
+-- add library: libxml2
+-- add library: libyuv
+-- add library: libavcodec
+-- add library: libavdevice
+-- add library: libavfilter
+-- add library: libavformat
+-- add library: libavutil
+-- add library: libpostproc
+-- add library: libswresample
+-- add library: libswscale
+-- have tiny: WRAP
+-- have tiny: BFCP
+-- have tiny: DAV
+-- have tiny: HTTP
+-- have tiny: IPSEC
+-- have tiny: MEDIA
+-- have tiny: MSRP
+-- have tiny: NET
+-- have tiny: RTP
+-- have tiny: SAK
+-- have tiny: SDP
+-- have tiny: SIGCOMP
+-- have tiny: SIP
+-- have tiny: SMS
+-- have tiny: XCAP
+-- have tiny: MCPTT
+-- have librery: DEBUG_LEVEL=DEBUG_LEVEL_INFO
+-- have librery: _DEBUG
+-- have librery: HAVE_OPENH264
+-- have librery: HAVE_H264
+-- have librery: HAVE_OPENCORE_AMR
+-- have librery: HAVE_SPEEX_DENOISE
+-- have librery: HAVE_SPEEX_DSP
+-- have librery: HAVE_SPEEX_JB
+-- have librery: HAVE_LIBGSM
+-- have librery: HAVE_LIBYUV
+-- have librery: HAVE_LIBXML2
+-- have librery: HAVE_SRTP_SRTP_H
+-- have librery: HAVE_SRTP
+-- Add library plugin OpenSL ES
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Jithin/Desktop/MCOP-SDK/android-ngn-stack/.externalNativeBuild/cmake/debug/x86

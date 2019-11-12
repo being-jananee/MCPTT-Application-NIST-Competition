@@ -1,0 +1,8 @@
+Executable : C:\Users\Jithin\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+--build
+C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\.externalNativeBuild\cmake\release\x86
+--target
+tinyWRAP
+jvmArgs : 
+

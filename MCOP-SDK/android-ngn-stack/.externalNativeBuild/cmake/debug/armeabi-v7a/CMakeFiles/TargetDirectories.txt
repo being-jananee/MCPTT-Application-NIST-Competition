@@ -1,0 +1,3 @@
+C:/Users/Jithin/Desktop/MCOP-SDK/android-ngn-stack/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/tinyWRAP.dir
+C:/Users/Jithin/Desktop/MCOP-SDK/android-ngn-stack/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Jithin/Desktop/MCOP-SDK/android-ngn-stack/.externalNativeBuild/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
