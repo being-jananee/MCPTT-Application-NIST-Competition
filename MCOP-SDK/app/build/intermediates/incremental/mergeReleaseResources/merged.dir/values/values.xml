@@ -358,6 +358,7 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="google_enabled">false</bool>
     <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <color name="BLACK">#000000</color>
     <color name="CORRECT">#00FF7F</color>
     <color name="GREEN">#00FF00</color>
     <color name="INCORRECT">#FA8072</color>
@@ -1062,7 +1063,7 @@
     <string name="google_scope_string" translatable="false">openid profile email</string>
     <string name="google_storage_bucket" translatable="false">maps-api-547.appspot.com</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
-    <string name="logged_in_as">LOGGED IN AS:</string>
+    <string name="logged_in_as">USER</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="none">NONE</string>
     <string name="password_toggle_content_description">Show password</string>
@@ -1079,7 +1080,7 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_maps2">Map</string>
     <string name="title_activity_maps_acitivity">MapsAcitivity</string>
-    <string name="users">USERS:</string>
+    <string name="users">CONTACTS</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

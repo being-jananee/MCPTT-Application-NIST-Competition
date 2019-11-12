@@ -6670,7 +6670,6 @@ androidx.core.app.NotificationCompat$Builder -> androidx.core.app.l$c:
     androidx.core.app.NotificationCompat$Builder setLocalOnly(boolean) -> b
     androidx.core.app.NotificationCompat$Builder setSmallIcon(int) -> b
     androidx.core.app.NotificationCompat$Builder setContentTitle(java.lang.CharSequence) -> c
-    androidx.core.app.NotificationCompat$Builder setOngoing(boolean) -> c
     androidx.core.app.NotificationCompat$Builder setSubText(java.lang.CharSequence) -> d
     androidx.core.app.NotificationCompat$Builder setTicker(java.lang.CharSequence) -> e
 androidx.core.app.NotificationCompat$Style -> androidx.core.app.l$d:
@@ -27278,13 +27277,15 @@ org.mcopenplatform.muoapi.Maps2Activity -> org.mcopenplatform.muoapi.Maps2Activi
     android.widget.Switch locationSwitch -> v
     org.mcopenplatform.muoapi.Maps2Activity$LocationReceiver lReceiver -> u
     com.google.android.gms.location.FusedLocationProviderClient fusedClient -> s
+    boolean running -> x
     com.google.android.gms.maps.GoogleMap mMap -> r
     org.mcopenplatform.muoapi.mcopsdk.ActionItem$ActionItemDTO itemToDisplay -> w
     java.lang.String username -> t
-    com.google.android.gms.maps.GoogleMap access$000(org.mcopenplatform.muoapi.Maps2Activity) -> a
+    android.widget.Switch access$000(org.mcopenplatform.muoapi.Maps2Activity) -> a
     com.google.android.gms.maps.model.BitmapDescriptor bitmapDescriptorFromVector(android.content.Context,int) -> a
     void onMapReady(com.google.android.gms.maps.GoogleMap) -> a
     void updateLocations(java.util.HashMap) -> a
+    com.google.android.gms.maps.GoogleMap access$100(org.mcopenplatform.muoapi.Maps2Activity) -> b
 org.mcopenplatform.muoapi.Maps2Activity$1 -> org.mcopenplatform.muoapi.z:
     org.mcopenplatform.muoapi.Maps2Activity this$0 -> a
     void onSuccess(android.location.Location) -> a
@@ -27647,38 +27648,40 @@ org.mcopenplatform.muoapi.managerIapi.ManagerSimService -> org.mcopenplatform.mu
 org.mcopenplatform.muoapi.managerIapi.ManagerSimService$OnSimServiceListener -> org.mcopenplatform.muoapi.b.j$a:
     void onConfiguration(java.lang.String[],java.lang.String,java.lang.String,java.lang.String[],int[],java.lang.String,java.lang.String) -> a
 org.mcopenplatform.muoapi.mcopsdk.ActionItem -> org.mcopenplatform.muoapi.mcopsdk.a:
-    java.lang.Boolean completed -> h
-    org.mcopenplatform.muoapi.mcopsdk.ActionTag tag -> e
-    java.util.UUID id -> a
-    java.lang.String content -> c
-    java.lang.String user -> b
-    java.lang.Double longitude -> g
-    java.lang.String timestamp -> d
-    java.lang.Double latitude -> f
+    org.mcopenplatform.muoapi.mcopsdk.ActionTag tag -> f
+    java.lang.Boolean completed -> i
+    java.util.UUID id -> b
+    java.lang.String user -> c
+    java.text.DateFormat formatter -> a
+    java.lang.Double longitude -> h
+    java.lang.String timestamp -> e
+    java.lang.Double latitude -> g
+    java.lang.String content -> d
     java.lang.String access$000(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> a
+    java.text.DateFormat access$700() -> a
     org.mcopenplatform.muoapi.mcopsdk.ActionItem fromSnapshot(com.google.firebase.database.DataSnapshot) -> a
-    java.lang.Boolean getCompleted() -> a
     void setCompleted(java.lang.Boolean) -> a
     org.mcopenplatform.muoapi.mcopsdk.ActionItem setContent(java.lang.String) -> a
     void setId(java.util.UUID) -> a
     void setLatitude(java.lang.Double) -> a
     org.mcopenplatform.muoapi.mcopsdk.ActionItem setTag(org.mcopenplatform.muoapi.mcopsdk.ActionTag) -> a
     java.lang.Double access$100(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> b
-    java.lang.String getContent() -> b
+    java.lang.Boolean getCompleted() -> b
     void setLongitude(java.lang.Double) -> b
     org.mcopenplatform.muoapi.mcopsdk.ActionItem setTimestamp(java.lang.String) -> b
     java.lang.Double access$200(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> c
-    java.util.UUID getId() -> c
+    java.lang.String getContent() -> c
     org.mcopenplatform.muoapi.mcopsdk.ActionItem setUser(java.lang.String) -> c
     org.mcopenplatform.muoapi.mcopsdk.ActionTag access$300(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> d
-    java.lang.Double getLatitude() -> d
+    java.util.UUID getId() -> d
     java.lang.String access$400(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> e
-    org.mcopenplatform.muoapi.mcopsdk.ActionTag getTag() -> e
+    java.lang.Double getLatitude() -> e
     java.lang.String access$500(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> f
-    java.lang.String getTimestamp() -> f
+    org.mcopenplatform.muoapi.mcopsdk.ActionTag getTag() -> f
     java.lang.Boolean access$600(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> g
-    java.lang.String getUser() -> g
-    org.mcopenplatform.muoapi.mcopsdk.ActionItem newActionItem() -> h
+    java.lang.String getTimestamp() -> g
+    java.lang.String getUser() -> h
+    org.mcopenplatform.muoapi.mcopsdk.ActionItem newActionItem() -> i
 org.mcopenplatform.muoapi.mcopsdk.ActionItem$ActionItemDTO -> org.mcopenplatform.muoapi.mcopsdk.a$a:
     java.lang.Double latitude -> e
     java.lang.Boolean completed -> g
@@ -27752,27 +27755,30 @@ org.mcopenplatform.muoapi.mcopsdk.LocationItem -> org.mcopenplatform.muoapi.mcop
     java.lang.String getUser() -> a
 org.mcopenplatform.muoapi.mcopsdk.LocationService -> org.mcopenplatform.muoapi.mcopsdk.LocationService:
     org.mcopenplatform.muoapi.mcopsdk.LocationService$LocationServiceReceiver lServiceReciever -> f
-    android.content.BroadcastReceiver stopReceiver -> h
+    android.content.BroadcastReceiver stopReceiver -> j
+    com.google.firebase.database.ChildEventListener listener -> i
     int permission -> g
     java.lang.String TAG -> a
     java.lang.String username -> c
+    android.app.NotificationManager notificationManager -> h
     boolean running -> b
     com.google.firebase.database.DatabaseReference ref -> d
     java.util.HashMap allItems -> e
     boolean access$000() -> a
     boolean access$002(boolean) -> a
-    java.lang.String access$100(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> a
-    void access$600(org.mcopenplatform.muoapi.mcopsdk.LocationService,int) -> a
+    android.app.NotificationManager access$100(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> a
+    void access$700(org.mcopenplatform.muoapi.mcopsdk.LocationService,int) -> a
     void buildNotification(int) -> a
     java.lang.String createNotificationChannel(java.lang.String,java.lang.String) -> a
     boolean distanceChangedEnough(org.mcopenplatform.muoapi.mcopsdk.LocationItem,org.mcopenplatform.muoapi.mcopsdk.LocationItem) -> a
-    com.google.firebase.database.DatabaseReference access$200(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> b
-    java.lang.String access$400() -> b
-    void access$700(org.mcopenplatform.muoapi.mcopsdk.LocationService,int) -> b
+    java.lang.String access$200(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> b
+    java.lang.String access$500() -> b
+    void access$800(org.mcopenplatform.muoapi.mcopsdk.LocationService,int) -> b
     void requestLocationUpdates(int) -> b
-    java.util.HashMap access$300(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> c
-    void getOtherUserLocations() -> c
-    int access$500(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> d
+    com.google.firebase.database.DatabaseReference access$300(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> c
+    com.google.firebase.database.ChildEventListener getOtherUserLocations() -> c
+    java.util.HashMap access$400(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> d
+    int access$600(org.mcopenplatform.muoapi.mcopsdk.LocationService) -> e
 org.mcopenplatform.muoapi.mcopsdk.LocationService$1 -> org.mcopenplatform.muoapi.mcopsdk.i:
     org.mcopenplatform.muoapi.mcopsdk.LocationService this$0 -> a
 org.mcopenplatform.muoapi.mcopsdk.LocationService$2 -> org.mcopenplatform.muoapi.mcopsdk.j:
@@ -27792,6 +27798,7 @@ org.mcopenplatform.muoapi.mcopsdk.LocationService$LocationServiceReceiver -> org
 org.mcopenplatform.muoapi.mcopsdk.Main2Activity -> org.mcopenplatform.muoapi.mcopsdk.Main2Activity:
     com.google.firebase.database.DatabaseReference eventsRef -> x
     org.mcopenplatform.muoapi.mcopsdk.ActionItem selectedItem -> C
+    java.text.DateFormat formatter -> D
     com.google.firebase.database.ChildEventListener listener -> y
     androidx.recyclerview.widget.LinearLayoutManager manager -> B
     androidx.recyclerview.widget.RecyclerView recyclerView -> u
@@ -27800,14 +27807,14 @@ org.mcopenplatform.muoapi.mcopsdk.Main2Activity -> org.mcopenplatform.muoapi.mco
     java.util.ArrayList allItems -> t
     com.google.android.material.floatingactionbutton.FloatingActionButton floatingButton -> w
     com.google.android.gms.location.FusedLocationProviderClient fusedClient -> z
-    java.lang.String access$000(org.mcopenplatform.muoapi.mcopsdk.Main2Activity) -> a
+    java.text.DateFormat access$000(org.mcopenplatform.muoapi.mcopsdk.Main2Activity) -> a
     void addLocationToActionItemAndSend(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> a
-    org.mcopenplatform.muoapi.mcopsdk.ActionItemAdapter access$100(org.mcopenplatform.muoapi.mcopsdk.Main2Activity) -> b
+    java.lang.String access$100(org.mcopenplatform.muoapi.mcopsdk.Main2Activity) -> b
     void updateEvent(org.mcopenplatform.muoapi.mcopsdk.ActionItem) -> b
-    com.google.firebase.database.DatabaseReference access$200(org.mcopenplatform.muoapi.mcopsdk.Main2Activity) -> c
+    org.mcopenplatform.muoapi.mcopsdk.ActionItemAdapter access$200(org.mcopenplatform.muoapi.mcopsdk.Main2Activity) -> c
+    com.google.firebase.database.DatabaseReference access$300(org.mcopenplatform.muoapi.mcopsdk.Main2Activity) -> d
     com.google.firebase.database.ChildEventListener getChildListener() -> n
-    java.lang.String getTimestamp() -> o
-    boolean hasPermission() -> p
+    boolean hasPermission() -> o
 org.mcopenplatform.muoapi.mcopsdk.Main2Activity$1 -> org.mcopenplatform.muoapi.mcopsdk.m:
     org.mcopenplatform.muoapi.mcopsdk.Main2Activity this$0 -> a
 org.mcopenplatform.muoapi.mcopsdk.Main2Activity$1$1 -> org.mcopenplatform.muoapi.mcopsdk.l:
@@ -27833,34 +27840,40 @@ org.mcopenplatform.muoapi.mcopsdk.Main2Activity$4 -> org.mcopenplatform.muoapi.m
     void onSuccess(android.location.Location) -> a
     void onSuccess(java.lang.Object) -> a
 org.mcopenplatform.muoapi.mcopsdk.MainActivity -> org.mcopenplatform.muoapi.mcopsdk.MainActivity:
+    android.widget.Toast toast -> T
+    java.util.ArrayList items -> Y
     boolean isSpeakerphoneOn -> L
-    java.lang.String message -> S
+    android.view.View view -> S
     android.content.ServiceConnection mConnection -> w
     java.lang.String TAG -> t
     org.mcopenplatform.muoapi.mcopsdk.preference.PreferencesManager preferencesManager -> B
     java.lang.String PARAMETER_SAVE_PROFILE -> v
     android.widget.Button mainActivity_Button_Release_token -> H
     android.widget.TextView mainActivity_simpleTextView -> C
+    android.view.MenuItem location -> V
+    android.widget.ArrayAdapter adapter -> Z
     android.content.Intent serviceIntent -> N
-    android.view.MenuItem item -> R
-    java.util.ArrayList items -> T
     android.widget.Button mainActivity_Button_make_call -> D
-    android.widget.Toast toast -> Q
+    android.widget.Spinner dropdown2 -> P
+    android.widget.ArrayAdapter adapter2 -> R
     org.mcopenplatform.muoapi.mcopsdk.datatype.UserData userData -> u
-    android.view.View view -> P
     java.lang.String[] currentProfile -> A
     android.widget.Button mainActivity_Button_Request_token -> I
     org.mcopenplatform.muoapi.IMCOPCallback mMCOPCallback -> y
     android.widget.Button mainActivity_Button_accept_call -> G
+    java.lang.String message -> X
     android.widget.Button mainActivity_Button_Speaker -> M
+    android.view.MenuItem item -> U
     boolean isConnect -> z
+    android.view.MenuItem log -> W
     org.mcopenplatform.muoapi.IMCOPsdk mService -> x
     org.mcopenplatform.muoapi.mcopsdk.DialogMenu mDialogIds -> F
     java.util.Map clients -> K
+    java.lang.String endString -> aa
     android.widget.Button mainActivity_Button_Hang_up_call -> E
-    android.widget.ArrayAdapter adapter -> U
     org.mcopenplatform.muoapi.mcopsdk.DialogMenu mDialogMenu -> J
     android.widget.Spinner dropdown -> O
+    java.util.ArrayList items2 -> Q
     void access$000(org.mcopenplatform.muoapi.mcopsdk.MainActivity,java.lang.String,int,java.lang.String) -> a
     java.lang.String[] access$100(org.mcopenplatform.muoapi.mcopsdk.MainActivity) -> a
     android.widget.Toast access$1002(org.mcopenplatform.muoapi.mcopsdk.MainActivity,android.widget.Toast) -> a

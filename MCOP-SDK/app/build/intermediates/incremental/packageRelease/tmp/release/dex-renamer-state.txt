@@ -1,4 +1,4 @@
-#Mon Nov 11 17:16:36 CST 2019
-base.0=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\transforms\\r8\\release\\0
+#Tue Nov 12 11:26:52 CST 2019
+base.0=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
 path.0=classes.dex
 renamed.0=classes.dex

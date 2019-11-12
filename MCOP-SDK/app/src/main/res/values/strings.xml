@@ -36,9 +36,9 @@
     <string name="title_activity_maps_acitivity">MapsAcitivity</string>
 
     <string name="release_token">RELEASE TOKEN</string>
-    <string name="logged_in_as">LOGGED IN AS:</string>
+    <string name="logged_in_as">USER</string>
     <string name="none">NONE</string>
-    <string name="users">USERS:</string>
+    <string name="users">CONTACTS</string>
     <string name="request_token">REQUEST TOKEN</string>
     <string name="title_activity_maps2">Map</string>
 

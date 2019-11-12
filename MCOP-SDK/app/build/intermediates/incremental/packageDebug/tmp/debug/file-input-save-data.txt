@@ -1,0 +1,23 @@
+#Internal package file, do not edit.
+#Tue Nov 12 11:30:08 CST 2019
+2.base=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+0.path=classes_0.dex
+2.baseType=DIRECTORY
+3.base=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+2.set=NATIVE_RESOURCE
+1.path=lib/armeabi-v7a/libtinyWRAP.so
+4.base=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+count=5
+2.path=lib/x86/libtinyWRAP.so
+4.set=DEX
+3.path=classes.dex
+3.baseType=DIRECTORY
+1.set=NATIVE_RESOURCE
+4.path=classes.dex
+1.baseType=DIRECTORY
+0.base=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out
+0.baseType=DIRECTORY
+3.set=DEX
+1.base=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\transforms\\stripDebugSymbol\\debug\\0
+4.baseType=DIRECTORY
+0.set=DEX

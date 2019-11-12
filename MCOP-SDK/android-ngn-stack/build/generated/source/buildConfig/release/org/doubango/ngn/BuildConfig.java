@@ -15,5 +15,5 @@ public final class BuildConfig {
   public static final boolean AUTHENTICATION_SIM = true;
   public static final boolean LOG_SHOW = false;
   // Fields from default config.
-  public static final long TIMESTAMP = 1573513934908L;
+  public static final long TIMESTAMP = 1573579531172L;
 }

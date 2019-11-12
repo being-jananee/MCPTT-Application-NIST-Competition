@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     //private Button mainActivity_Button_deRegister;
     private TextView mainActivity_TextView_error;
     private TextView mainActivity_simpleTextView;
+    private TextView mainActivity_simpleTextView2;
     // private Button mainActivity_Button_affiliation;
     // private Button mainActivity_Button_unaffiliation;
     //private EditText mainActivity_EditText_affiliation;
@@ -110,17 +111,30 @@ public class MainActivity extends AppCompatActivity {
     // private Button mainActivity_Button_Advanced_Functions;
     private DialogMenu mDialogShowAdvanceFunction;
     private Spinner dropdown;
+    private Spinner dropdown2;
+    private ArrayList <String> items2 = new ArrayList<String>();
+    private ArrayAdapter<String> adapter2;
+
     private View view;
     private Toast toast;
     private MenuItem item;
+    private MenuItem location;
+    private MenuItem log;
     private String message;
     private ArrayList <String> items = new ArrayList<String>();
-    ArrayAdapter<String> adapter;
+    private ArrayAdapter<String> adapter;
+
+    private String endString;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.action_menu,menu);
+        log = menu.getItem(1);
+        location = menu.getItem(2);
+        item = menu.getItem(0);
+        location.setEnabled(false);
+        log.setEnabled(false);
         return true;
     }
 
@@ -129,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getTitle().toString()){
             case "Register":
                 showTypeRegister(getApplicationContext());
-                this.item = item;
+                //this.item = item;
                 return true;
             case "Unregister":
                 try {
@@ -142,13 +156,13 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case "Location":
                 Intent i = new Intent(MainActivity.this, Maps2Activity.class);
-                i.putExtra("username", dropdown.getSelectedItem().toString().trim().substring(0,dropdown.getSelectedItem().toString().trim().indexOf('@')));
+                i.putExtra("username", mainActivity_simpleTextView.getText().toString());
 
                 startActivity(i);
                 return true;
             case "Logging":
                 Intent j = new Intent(MainActivity.this,Main2Activity.class);
-                j.putExtra("username", dropdown.getSelectedItem().toString().trim().substring(0,dropdown.getSelectedItem().toString().trim().indexOf('@')));
+                j.putExtra("username", mainActivity_simpleTextView.getText().toString());
                 startActivity(j);
                 return true;
         }
@@ -246,19 +260,22 @@ public class MainActivity extends AppCompatActivity {
 
         //get the spinner from the xml.
         dropdown = findViewById(R.id.spinner1);
+        dropdown2 = findViewById(R.id.spinner2);
 //create a list of items for the spinner.
         items.add("sip:mcptt_id_iit3_A@organization.org");
         items.add("sip:mcptt_id_iit3_B@organization.org");
         items.add("sip:mcptt_id_iit3_C@organization.org");
         items.add("sip:mcptt_id_iit3_D@organization.org");
         items.add("sip:mcptt_id_iit3_E@organization.org");
-        items.add("sip:iit3_group@organization.org");
 
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+
+        adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items2);
 //set the spinners adapter to the previously created one.
         dropdown.setAdapter(adapter);
+        dropdown2.setAdapter(adapter2);
         //dropdown.
 
         if(userData==null);
@@ -960,11 +977,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void showMakeCallTypes(final Context context){
         final String[] strings={"Private call"
-                ,"Private call(whitout floor control)"
+                //,"Private call(whitout floor control)"
                 ,"Group call"
-                ,"Emergency Group call"
+                /*,"Emergency Group call"
                 ,"Emergency Private call"
-                ,"Chat Group call"
+                ,"Chat Group call"*/
 
         };
         if(strings==null || strings.length==0)return;
@@ -982,17 +999,17 @@ public class MainActivity extends AppCompatActivity {
                                     typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue()|
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
-                                }
+                                }/*
                                 else if(typeCall.compareTo("Private call(whitout floor control)")==0){
                                     typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithoutFloorCtrl.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
-                                }
+                                }*/
                                 else if(typeCall.compareTo("Group call")==0) {
                                     typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.PrearrangedGroup.getValue();
-                                }
+                                }/*
                                 else if(typeCall.compareTo("Emergency Group call")==0) {
                                     typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
@@ -1009,7 +1026,7 @@ public class MainActivity extends AppCompatActivity {
                                     typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.ChatGroup.getValue();
-                                }
+                                }*/
 
                             }
 
@@ -1205,14 +1222,23 @@ public class MainActivity extends AppCompatActivity {
         userData.setDisplayName(null);
         userData.setMcpttID(null);
         //mainActivity_TextView_info.setText("UNREGISTERED");
-        items.add(mainActivity_simpleTextView.getText().toString());
+        for(int i = 0; i < items2.size(); i++){
+            if(items.contains(items2.get(i))){
+                items.remove(items2.get(i));
+            }
+        }
+        items.add(mainActivity_simpleTextView.getText().toString()+endString);
+        items2.clear();
         adapter.notifyDataSetChanged();
+        adapter2.notifyDataSetChanged();
         mainActivity_simpleTextView.setText("NONE");
         message = "UNREGISTERED";
         toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
         toast.getView().setBackgroundColor(getResources().getColor(R.color.GREEN));
         toast.show();
         view.setBackgroundColor(getResources().getColor(R.color.WHITE));
+        location.setEnabled(false);
+        log.setEnabled(false);
 
     }
 
@@ -1224,7 +1250,8 @@ public class MainActivity extends AppCompatActivity {
             userData.setDisplayName(displayName);
         }
         Log.d(TAG,"REGISTERED. MCPTT ID: "+mcpttID+" DISPLAY NAME: "+displayName);
-        mainActivity_simpleTextView.setText(mcpttID);
+        mainActivity_simpleTextView.setText(mcpttID.substring(0,mcpttID.indexOf('@')));
+        endString = mcpttID.substring(mcpttID.indexOf('@'));
         items.remove(mcpttID);
         adapter.notifyDataSetChanged();
         item.setTitle("Unregister");
@@ -1235,6 +1262,8 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
         //mainActivity_TextView_info.setText("REGISTERED. MCPTT ID: "+mcpttID+" DISPLAY NAME: "+displayName);
         view.setBackgroundColor(getResources().getColor(R.color.CORRECT));
+        location.setEnabled(true);
+        log.setEnabled(true);
     }
 
     private void showData(String eventType,String data){
@@ -1282,6 +1311,22 @@ public class MainActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
 
         //mainActivity_TextView_affiliation.setText("Lists Group Affiliations:(Time:"+String.format("%1$tA %1$tb %1$td %1$tY at %1$tI:%1$tM %1$Tp", calendar)+")\n"+result);
+        Log.d(TAG,result);
+        items2.clear();
+        String [] strs = result.trim().split(":");
+        for(int i = 0; i < strs.length; i++){
+            Log.d(TAG,"OBJECTS: " +strs[i]);
+            if(strs[i].equals("groupID")){
+                if(strs[i+3].equals("affiliated")) {
+                    Log.d(TAG,"INSIDE " +strs[i+2]);
+                    items2.add(strs[i + 1]+':'+strs[i + 2]);
+                    if(!items.contains(strs[i + 1]+':'+strs[i + 2]))
+                        items.add(strs[i + 1]+':'+strs[i + 2]);
+                }
+            }
+        }
+        adapter.notifyDataSetChanged();
+        adapter2.notifyDataSetChanged();
     }
 
 
