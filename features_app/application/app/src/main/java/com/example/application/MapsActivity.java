@@ -44,6 +44,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private LocationReceiver lReceiver;
     private Switch locationSwitch;
     private ActionItem.ActionItemDTO itemToDisplay;
+    private boolean running = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -166,6 +167,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             i.putExtra("username", username);
             i.putExtra("checked", locationSwitch.isChecked());
             startService(i);
+            running = true;
         }
     }
 
@@ -178,5 +180,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Canvas canvas = new Canvas(bitmap);
         vectorDrawable.draw(canvas);
         return BitmapDescriptorFactory.fromBitmap(bitmap);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(running) {
+            stopService(new Intent(MapsActivity.this, LocationService.class));
+        }
     }
 }

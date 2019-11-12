@@ -42,7 +42,7 @@ public class LocationService extends Service {
     private String username = "";
     private static boolean running;
     private DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("locations");
-    private HashMap<String, LocationItem> allItems;
+    private HashMap<String, LocationItem> allItems = new HashMap<>();
     private LocationServiceReceiver lServiceReciever = new LocationServiceReceiver();
     private int permission;
 
@@ -57,7 +57,6 @@ public class LocationService extends Service {
         running = intent.getBooleanExtra("checked", false);
         permission = ContextCompat.checkSelfPermission(LocationService.this,
                 Manifest.permission.ACCESS_FINE_LOCATION);
-        allItems = new HashMap<>();
         IntentFilter filter = new IntentFilter("STOP");
         filter.addAction("START");
         filter.addAction("displayItem");
@@ -232,8 +231,11 @@ public class LocationService extends Service {
 
     @Override
     public void onDestroy() {
+        sendBroadcast(new Intent("stop"));
         unregisterReceiver(lServiceReciever);
         super.onDestroy();
+
+
     }
 }
 
