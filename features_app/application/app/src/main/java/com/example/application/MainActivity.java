@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -230,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(item.getUser().equals(username)) {
                     eventsRef.child(item.getId().toString()).removeValue();
                 } else {
-                    //handle error on deleting someone else's items.
+                    Toast.makeText(MainActivity.this, "Can't delete an event for a user that is not yourself.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
