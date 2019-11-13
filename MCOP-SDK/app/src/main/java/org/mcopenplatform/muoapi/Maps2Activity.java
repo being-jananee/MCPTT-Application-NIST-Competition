@@ -103,7 +103,7 @@ public class Maps2Activity extends FragmentActivity implements OnMapReadyCallbac
             if(username.equals(s)) {
                 mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(Maps2Activity.this, R.drawable.ic_person_pin_circle_black_24dp)).title("You"));
             } else {
-                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(Maps2Activity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(username));
+                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(Maps2Activity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(s));
             }
         }
         if(itemToDisplay != null) {

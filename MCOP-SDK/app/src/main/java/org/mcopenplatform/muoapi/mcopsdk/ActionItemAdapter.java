@@ -26,7 +26,6 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         this.mainActivity = ma;
     }
 
-
     @Override
     public ActionItemAdapter.ActionItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item_view, parent, false);
@@ -58,6 +57,14 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         private TextView timestamp;
         private TextView tag;
         private Switch s;
+
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            ActionItem item = allItems.get(getAdapterPosition());
+            if(item.getCompleted() != isChecked) {
+                item.setCompleted(isChecked);
+                mainActivity.updateEvent(item);
+            }
+        }
 
         public ActionItemViewHolder(@NonNull View itemView) {
             super(itemView);

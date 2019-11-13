@@ -51,7 +51,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
@@ -59,7 +58,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/aidl" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
@@ -67,7 +65,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
@@ -82,7 +79,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
@@ -90,10 +86,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/.externalNativeBuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/generated/not_namespaced_r_class_sources" />
       <excludeFolder url="file://$MODULE_DIR$/build/generated/source/r" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/aapt_friendly_merged_manifests" />
@@ -127,258 +121,6 @@
     </content>
     <content url="file://$MODULE_DIR$/../doubango">
       <sourceFolder url="file://$MODULE_DIR$/../doubango" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/bindings/_common">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/bindings/_common" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/plugins/audio_opensles">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/plugins/audio_opensles" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyBFCP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyBFCP/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/alsa">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/alsa" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/coreaudio">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/coreaudio" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/directsound">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/directsound" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/oss">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/oss" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/wasapi">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/wasapi" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/waveapi">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/audio/waveapi" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/bfcp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/bfcp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/amr">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/amr" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/bfcp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/bfcp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/bv">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/bv" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/dtmf">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/dtmf" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/fec">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/fec" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/g711">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/g711" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/g722">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/g722" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/g729">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/g729" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/gsm">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/gsm" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/h261">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/h261" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/h263">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/h263" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/h264">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/h264" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/ilbc">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/ilbc" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/mp4ves">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/mp4ves" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/msrp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/msrp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/opus">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/opus" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/speex">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/speex" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/t140">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/t140" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/theora">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/theora" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/vpx">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/codecs/vpx" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/mcptt">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/mcptt" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/msrp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/msrp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/t140">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/t140" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/gdi">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/gdi" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/jb">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/jb" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/mf">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/mf" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/v4linux">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/v4linux" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/winm">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyDAV/src/video/winm" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyHTTP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyHTTP/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyHTTP/src/auth">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyHTTP/src/auth" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyHTTP/src/headers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyHTTP/src/headers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyHTTP/src/parsers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyHTTP/src/parsers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyIPSec/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyIPSec/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMCPTT/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMCPTT/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMCPTT/src/packet">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMCPTT/src/packet" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMEDIA/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMEDIA/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMEDIA/src/content">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMEDIA/src/content" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMSRP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMSRP/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMSRP/src/headers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMSRP/src/headers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMSRP/src/parsers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMSRP/src/parsers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyMSRP/src/session">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyMSRP/src/session" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/dhcp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/dhcp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/dhcp6">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/dhcp6" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/dns">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/dns" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/ice">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/ice" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/mbms">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/mbms" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/stun">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/stun" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/tls">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/tls" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyNET/src/turn">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyNET/src/turn" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyRTP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyRTP/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyRTP/src/rtcp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyRTP/src/rtcp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyRTP/src/rtp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyRTP/src/rtp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySAK/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySAK/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySDP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySDP/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySDP/src/headers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySDP/src/headers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySDP/src/parsers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySDP/src/parsers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIGCOMP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIGCOMP/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/api">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/api" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/authentication">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/authentication" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/dialogs">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/dialogs" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/headers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/headers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/parsers">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/parsers" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/sigcomp">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/sigcomp" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/transactions">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/transactions" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySIP/src/transports">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySIP/src/transports" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySMS/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySMS/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySMS/src/rpdu">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySMS/src/rpdu" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinySMS/src/tpdu">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinySMS/src/tpdu" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../doubango/tinyXCAP/src">
-      <sourceFolder url="file://$MODULE_DIR$/../doubango/tinyXCAP/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -207,5 +207,8 @@
     <orderEntry type="library" name="Gradle: net.openid:appauth:0.4.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21@jar" level="project" />
     <orderEntry type="module" module-name="android-ngn-stack" />
+    <orderEntry type="module" module-name="android-ngn-stack" />
+    <orderEntry type="module" module-name="android-ngn-stack" />
+    <orderEntry type="module" module-name="android-ngn-stack" />
   </component>
 </module>

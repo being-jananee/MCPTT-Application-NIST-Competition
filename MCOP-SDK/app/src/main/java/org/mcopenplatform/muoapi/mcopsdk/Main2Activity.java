@@ -159,7 +159,14 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                //No Editing Of Events
+                Log.d("MainActivity", "onChildChanged: ");
+                for(ActionItem item1 : allItems) {
+                    if(item1.getId().toString().equals(dataSnapshot.getKey())) {
+                        item1.setCompleted(dataSnapshot.child("completed").getValue(Boolean.class));
+                        actionItemAdapter.notifyDataSetChanged();
+                        break;
+                    }
+                }
             }
 
             @Override

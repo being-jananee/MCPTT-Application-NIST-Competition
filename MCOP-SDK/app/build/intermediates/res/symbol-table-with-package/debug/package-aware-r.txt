@@ -1315,12 +1315,14 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_my_location_black_24dp
 drawable ic_person_pin_circle_black_24dp
+drawable ic_phone_black_24dp
 drawable ic_switch_camera_black_48dp
 drawable ic_volume_up_black_24dp
 drawable ic_volume_up_black_48dp
 drawable icon
 drawable make
 drawable make_1
+drawable make_2
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1523,11 +1525,9 @@ id listMode
 id list_item
 id locationSwitch
 id mainActivity_Button_Hang_up_call
-id mainActivity_Button_Release_token
-id mainActivity_Button_Request_token
 id mainActivity_Button_Speaker
-id mainActivity_Button_accept_call
 id mainActivity_Button_make_call
+id mainActivity_Button_token
 id map
 id masked
 id media_actions
@@ -1605,7 +1605,6 @@ id showTitle
 id simpleTextView
 id simplexTextView2
 id simpleyTextView
-id simpleyTextView2
 id sin
 id smallLabel
 id snackbar_action
@@ -1615,7 +1614,6 @@ id snapMargins
 id spacer
 id spinner
 id spinner1
-id spinner2
 id spline
 id split_action_bar
 id spread

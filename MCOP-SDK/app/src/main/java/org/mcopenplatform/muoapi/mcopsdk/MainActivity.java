@@ -99,8 +99,9 @@ public class MainActivity extends AppCompatActivity {
     private Button mainActivity_Button_Hang_up_call;
     private DialogMenu mDialogIds;
     private Button mainActivity_Button_accept_call;
-    private Button mainActivity_Button_Release_token;
-    private Button mainActivity_Button_Request_token;
+    //private Button mainActivity_Button_Release_token;
+    //private Button mainActivity_Button_Request_token;
+    private Button mainActivity_Button_token;
     private DialogMenu mDialogMenu;
     private Map<String, String[]> clients;
     private boolean isSpeakerphoneOn;
@@ -111,9 +112,7 @@ public class MainActivity extends AppCompatActivity {
     // private Button mainActivity_Button_Advanced_Functions;
     private DialogMenu mDialogShowAdvanceFunction;
     private Spinner dropdown;
-    private Spinner dropdown2;
     private ArrayList <String> items2 = new ArrayList<String>();
-    private ArrayAdapter<String> adapter2;
 
     private View view;
     private Toast toast;
@@ -250,9 +249,10 @@ public class MainActivity extends AppCompatActivity {
         //mainActivity_EditText_affiliation=(EditText)findViewById(R.id.mainActivity_EditText_affiliation);
         mainActivity_Button_make_call=(Button)findViewById(R.id.mainActivity_Button_make_call);
         mainActivity_Button_Hang_up_call=(Button)findViewById(R.id.mainActivity_Button_Hang_up_call);
-        mainActivity_Button_accept_call=(Button)findViewById(R.id.mainActivity_Button_accept_call);
-        mainActivity_Button_Release_token=(Button)findViewById(R.id.mainActivity_Button_Release_token);
-        mainActivity_Button_Request_token=(Button)findViewById(R.id.mainActivity_Button_Request_token);
+        //mainActivity_Button_accept_call=(Button)findViewById(R.id.mainActivity_Button_accept_call);
+        //mainActivity_Button_Release_token=(Button)findViewById(R.id.mainActivity_Button_Release_token);
+        //mainActivity_Button_Request_token=(Button)findViewById(R.id.mainActivity_Button_Request_token);
+        mainActivity_Button_token=(Button)findViewById(R.id.mainActivity_Button_token);
         mainActivity_Button_Speaker=(Button)findViewById(R.id.mainActivity_Button_Speaker);
         //mainActivity_Button_Advanced_Functions=(Button)findViewById(R.id.mainActivity_Button_Advanced_Functions);
         mainActivity_simpleTextView = (TextView)findViewById(R.id.simpleTextView);
@@ -260,7 +260,6 @@ public class MainActivity extends AppCompatActivity {
 
         //get the spinner from the xml.
         dropdown = findViewById(R.id.spinner1);
-        dropdown2 = findViewById(R.id.spinner2);
 //create a list of items for the spinner.
         items.add("sip:mcptt_id_iit3_A@organization.org");
         items.add("sip:mcptt_id_iit3_B@organization.org");
@@ -271,11 +270,8 @@ public class MainActivity extends AppCompatActivity {
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-
-        adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items2);
 //set the spinners adapter to the previously created one.
         dropdown.setAdapter(adapter);
-        dropdown2.setAdapter(adapter2);
         //dropdown.
 
         if(userData==null);
@@ -411,11 +407,12 @@ public class MainActivity extends AppCompatActivity {
                                                         callType=action.getIntExtra(ConstantsMCOP.CallEventExtras.CALL_TYPE,ERROR_CODE_DEFAULT);
                                                         if(sessionID!=null)userData.addSessionID(sessionID);
                                                         showData("callEvent ("+sessionID+")","CONNECTED"+" -> "+callerID+" "+(groupCallerID!=null?groupCallerID:null)+" callType:"+callType);
-                                                        mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make));
+                                                        mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_2));
                                                         break;
                                                     case TERMINATED:
                                                         sessionID=action.getStringExtra(ConstantsMCOP.CallEventExtras.SESSION_ID);
                                                         showData("callEvent ("+sessionID+")","TERMINATED");
+                                                        mainActivity_Button_token.setText("TOKEN");
                                                         mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_1));
 
                                                         if(sessionID!=null)userData.removeSessionID(sessionID);
@@ -427,6 +424,7 @@ public class MainActivity extends AppCompatActivity {
                                                             stringError=action.getStringExtra(ConstantsMCOP.CallEventExtras.ERROR_STRING);
                                                             sessionID=action.getStringExtra(ConstantsMCOP.CallEventExtras.SESSION_ID);
                                                             showLastError("callEvent ("+sessionID+")",codeError,stringError);
+                                                            mainActivity_Button_token.setText("TOKEN");
                                                             mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_1));
                                                         }
                                                         if(sessionID!=null)userData.addSessionID(sessionID);
@@ -465,15 +463,21 @@ public class MainActivity extends AppCompatActivity {
                                                         case none:
                                                             break;
                                                         case granted:
+                                                            mainActivity_Button_token.setText("RELEASE");
+                                                            mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_2));
                                                             int durationGranted=action.getIntExtra(ConstantsMCOP.FloorControlEventExtras.DURATION_TOKEN,ERROR_CODE_DEFAULT);
                                                             Log.d(TAG,"floorControl ("+sessionID+") granted");
                                                             showData("floorControl ("+sessionID+")","granted -> Duration: "+durationGranted);
                                                             break;
                                                         case idle:
+                                                            mainActivity_Button_token.setText("REQUEST");
+                                                            mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_1));
                                                             Log.d(TAG,"floorControl ("+sessionID+") idle");
                                                             showData("floorControl ("+sessionID+")","idle");
                                                             break;
                                                         case taken:
+                                                            mainActivity_Button_token.setText("REQUEST");
+                                                            mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make));
                                                             String userIDTaken=action.getStringExtra(ConstantsMCOP.FloorControlEventExtras.USER_ID);
                                                             String displayNameTaken=action.getStringExtra(ConstantsMCOP.FloorControlEventExtras.DISPLAY_NAME);
                                                             boolean allow_request=action.getBooleanExtra(ConstantsMCOP.FloorControlEventExtras.ALLOW_REQUEST,VALUE_BOOLEAN_DEFAULT);
@@ -748,6 +752,8 @@ public class MainActivity extends AppCompatActivity {
                 showIds(getApplicationContext());
             }
         });
+
+        /*
         mainActivity_Button_accept_call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -755,18 +761,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        mainActivity_Button_Release_token.setOnClickListener(new View.OnClickListener() {
+        */
+        mainActivity_Button_token.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showIdsOperationFloorControl(getApplicationContext(),false);
-            }
-        });
-
-        mainActivity_Button_Request_token.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showIdsOperationFloorControl(getApplicationContext(),true);
+                if(mainActivity_Button_token.getText().toString().equals("RELEASE"))
+                    showIdsOperationFloorControl(getApplicationContext(),false);
+                if(mainActivity_Button_token.getText().toString().equals("REQUEST"))
+                    showIdsOperationFloorControl(getApplicationContext(),true);
             }
         });
 
@@ -977,7 +979,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showMakeCallTypes(final Context context){
         final String[] strings={"Private call"
-                //,"Private call(whitout floor control)"
+                ,"Private call (WITHOUT FLOOR CONTROL)"
                 ,"Group call"
                 /*,"Emergency Group call"
                 ,"Emergency Private call"
@@ -999,12 +1001,12 @@ public class MainActivity extends AppCompatActivity {
                                     typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue()|
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
-                                }/*
-                                else if(typeCall.compareTo("Private call(whitout floor control)")==0){
+                                }
+                                else if(typeCall.compareTo("Private call (WITHOUT FLOOR CONTROL)")==0){
                                     typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithoutFloorCtrl.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
-                                }*/
+                                }
                                 else if(typeCall.compareTo("Group call")==0) {
                                     typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
@@ -1230,7 +1232,6 @@ public class MainActivity extends AppCompatActivity {
         items.add(mainActivity_simpleTextView.getText().toString()+endString);
         items2.clear();
         adapter.notifyDataSetChanged();
-        adapter2.notifyDataSetChanged();
         mainActivity_simpleTextView.setText("NONE");
         message = "UNREGISTERED";
         toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
@@ -1269,6 +1270,7 @@ public class MainActivity extends AppCompatActivity {
     private void showData(String eventType,String data){
         Log.d(TAG,eventType+": "+data);
         //mainActivity_TextView_error.setText(eventType+": "+data);
+        view.setBackgroundColor(getResources().getColor(R.color.GREEN));
         message = eventType+": "+data;
         toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
         toast.getView().setBackgroundColor(getResources().getColor(R.color.GREEN));
@@ -1326,7 +1328,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         adapter.notifyDataSetChanged();
-        adapter2.notifyDataSetChanged();
     }
 
 

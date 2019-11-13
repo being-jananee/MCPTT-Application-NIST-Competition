@@ -44,11 +44,9 @@
 
     <Button
         android:id="@+id/mainActivity_Button_make_call"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/make_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,55 +65,28 @@
         app:layout_constraintTop_toTopOf="@+id/mainActivity_Button_Speaker" />
 
     <Button
-        android:id="@+id/mainActivity_Button_accept_call"
+        android:id="@+id/mainActivity_Button_token"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginStart="24dp"
         android:background="@drawable/accept"
+        android:text="TOKEN"
         app:layout_constraintBottom_toBottomOf="@+id/mainActivity_Button_Hang_up_call"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/mainActivity_Button_Hang_up_call" />
-
-    <Button
-        android:id="@+id/mainActivity_Button_Release_token"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/release_token"
-        android:textSize="6sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mainActivity_Button_Request_token"
-        app:layout_constraintEnd_toStartOf="@+id/mainActivity_Button_make_call"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mainActivity_Button_Request_token" />
-
-    <Button
-        android:id="@+id/mainActivity_Button_Request_token"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/request_token"
-        android:textSize="6sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mainActivity_Button_make_call"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mainActivity_Button_make_call"
-        app:layout_constraintTop_toTopOf="@+id/mainActivity_Button_make_call" />
 
     <Button
         android:id="@+id/mainActivity_Button_Speaker"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/speaker_o"
         app:layout_constraintBottom_toTopOf="@+id/mainActivity_Button_make_call"
         app:layout_constraintEnd_toStartOf="@+id/mainActivity_Button_Hang_up_call"
-        app:layout_constraintStart_toEndOf="@+id/mainActivity_Button_accept_call"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintStart_toEndOf="@+id/mainActivity_Button_token"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
 
 
     <TextView
@@ -128,29 +99,12 @@
         android:layout_marginTop="8dp"
         android:text="@string/users"
         android:clickable="true"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/spinner1"
         app:layout_constraintEnd_toStartOf="@+id/spinner1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spinner1" />
-
-    <TextView
-        android:id="@+id/simpleyTextView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="GROUPS"
-        android:clickable="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner2"
-        app:layout_constraintEnd_toStartOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinner2" />
 
     <TextView
         android:id="@+id/simpleTextView"
@@ -176,16 +130,5 @@
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simpleTextView" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="260dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="@+id/spinner1"
-        app:layout_constraintStart_toStartOf="@+id/spinner1"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
