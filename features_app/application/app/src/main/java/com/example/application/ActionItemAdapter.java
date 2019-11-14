@@ -1,26 +1,38 @@
 package com.example.application;
 
-import android.app.AlertDialog;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.ActionItemViewHolder> {
 
     private ArrayList<ActionItem> allItems;
     private MainActivity mainActivity;
+    TextToSpeech t1;
 
     public ActionItemAdapter(MainActivity ma, ArrayList<ActionItem> allItems) {
         this.allItems = allItems;
         this.mainActivity = ma;
+        this.t1 = new TextToSpeech(mainActivity, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.US);
+                }
+            }
+        });
     }
 
 
@@ -37,6 +49,7 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         holder.name.setText(item.getUser());
         holder.timestamp.setText(item.getTimestamp());
         holder.tag.setText(item.getTag().getName());
+        holder.mapButton.setVisibility(item.getLatitude() != null ? View.VISIBLE : View.GONE);
         if(item.getCompleted() != null) {
             holder.s.setChecked(item.getCompleted());
         } else {
@@ -55,6 +68,8 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         private TextView timestamp;
         private TextView tag;
         private Switch s;
+        private Button ttsButton;
+        private Button mapButton;
 
         public ActionItemViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,7 +78,9 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
             content = itemView.findViewById(R.id.content);
             timestamp = itemView.findViewById(R.id.timestamp);
             s = itemView.findViewById(R.id.switch2);
-            itemView.setOnClickListener(mainActivity);
+            ttsButton = itemView.findViewById(R.id.button1);
+            mapButton = itemView.findViewById(R.id.button2);
+            mapButton.setOnClickListener(mainActivity);
             itemView.setOnLongClickListener(mainActivity);
             s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -73,9 +90,15 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
                     mainActivity.updateEvent(item);
                 }
             });
-
+            ttsButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String toSpeak = content.getText().toString();
+                    Toast.makeText(mainActivity, toSpeak,Toast.LENGTH_SHORT).show();
+                    String utteranceId = this.hashCode()+"";
+                    t1.speak(toSpeak, 0, null, utteranceId);
+                }
+            });
         }
-
-
     }
 }

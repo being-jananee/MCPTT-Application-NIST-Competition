@@ -8,12 +8,15 @@
 
     <TextView
         android:id="@+id/user"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
+        android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -22,48 +25,102 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/timestamp"
-        app:layout_constraintEnd_toStartOf="@+id/tag"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tag"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/content" />
 
     <TextView
         android:id="@+id/timestamp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
+        android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/user" />
-    <LinearLayout android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content">
+
         <Switch
             android:id="@+id/switch2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Completed" />
-    </LinearLayout>
+            android:text="Completed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/ic_volume_up_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_map_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button1"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.63" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
