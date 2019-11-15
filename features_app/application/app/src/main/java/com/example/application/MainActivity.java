@@ -8,7 +8,10 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.method.KeyListener;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -261,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        int position = recyclerView.getChildAdapterPosition(v);
+        int position = (Integer) v.getTag();
         if((selectedItem = allItems.get(position)) != null) {
             //View mView = manager.findViewByPosition(position);
             //MapView mapView = mView.findViewById(R.id.mapView);

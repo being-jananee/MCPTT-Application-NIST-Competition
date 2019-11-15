@@ -17,6 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:maxLines="1"
+        android:maxLength="50"
         android:hint="What happened?"
         android:inputType="textPersonName" />
 
