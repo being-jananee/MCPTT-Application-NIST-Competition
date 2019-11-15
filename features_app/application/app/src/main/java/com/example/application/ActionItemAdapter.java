@@ -50,6 +50,7 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
         holder.timestamp.setText(item.getTimestamp());
         holder.tag.setText(item.getTag().getName());
         holder.mapButton.setVisibility(item.getLatitude() != null ? View.VISIBLE : View.GONE);
+        holder.mapButton.setTag(position);
         if(item.getCompleted() != null) {
             holder.s.setChecked(item.getCompleted());
         } else {
