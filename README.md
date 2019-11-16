@@ -24,9 +24,17 @@ GROUP 3: iit3
 Prearranged Group: sip:iit3_group@organization.org
 
 Users A to E:
-A) Private Identity (IMPI): mcptt-iit3-A@organization.org | Password: 361aa900ec | Public Identity (IMPU): sip:mcptt-iit3-A@organization.org | MCPTT ID: sip:mcptt_id_iit3_A@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_A@organization.org | IdMS user: iit3A | IdMS password: iit3A
-B) Private Identity (IMPI): mcptt-iit3-B@organization.org | Password: f74a98252e | Public Identity (IMPU): sip:mcptt-iit3-B@organization.org | MCPTT ID: sip:mcptt_id_iit3_B@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_B@organization.org | IdMS user: iit3B | IdMS password: iit3B
-C) Private Identity (IMPI): mcptt-iit3-C@organization.org | Password: f7eee3a467 | Public Identity (IMPU): sip:mcptt-iit3-C@organization.org | MCPTT ID: sip:mcptt_id_iit3_C@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_C@organization.org | IdMS user: iit3C | IdMS password: iit3C
-D) Private Identity (IMPI): mcptt-iit3-D@organization.org | Password: 846c0538a9 | Public Identity (IMPU): sip:mcptt-iit3-D@organization.org | MCPTT ID: sip:mcptt_id_iit3_D@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_D@organization.org | IdMS user: iit3D | IdMS password: iit3D
-E) Private Identity (IMPI): mcptt-iit3-E@organization.org | Password: 4cf653df06 | Public Identity (IMPU): sip:mcptt-iit3-E@organization.org | MCPTT ID: sip:mcptt_id_iit3_E@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_E@organization.org | IdMS user: iit3E | IdMS password: iit3E
+A. Private Identity (IMPI): mcptt-iit3-A@organization.org | Password: 361aa900ec | Public Identity (IMPU): sip:mcptt-iit3-A@organization.org | MCPTT ID: sip:mcptt_id_iit3_A@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_A@organization.org | IdMS user: iit3A | IdMS password: iit3A
+
+
+B. Private Identity (IMPI): mcptt-iit3-B@organization.org | Password: f74a98252e | Public Identity (IMPU): sip:mcptt-iit3-B@organization.org | MCPTT ID: sip:mcptt_id_iit3_B@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_B@organization.org | IdMS user: iit3B | IdMS password: iit3B
+
+
+C. Private Identity (IMPI): mcptt-iit3-C@organization.org | Password: f7eee3a467 | Public Identity (IMPU): sip:mcptt-iit3-C@organization.org | MCPTT ID: sip:mcptt_id_iit3_C@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_C@organization.org | IdMS user: iit3C | IdMS password: iit3C
+
+
+D. Private Identity (IMPI): mcptt-iit3-D@organization.org | Password: 846c0538a9 | Public Identity (IMPU): sip:mcptt-iit3-D@organization.org | MCPTT ID: sip:mcptt_id_iit3_D@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_D@organization.org | IdMS user: iit3D | IdMS password: iit3D
+
+
+E. Private Identity (IMPI): mcptt-iit3-E@organization.org | Password: 4cf653df06 | Public Identity (IMPU): sip:mcptt-iit3-E@organization.org | MCPTT ID: sip:mcptt_id_iit3_E@organization.org | MCPTT Client ID: sip:mcptt_id_iit3_E@organization.org | IdMS user: iit3E | IdMS password: iit3E
 
