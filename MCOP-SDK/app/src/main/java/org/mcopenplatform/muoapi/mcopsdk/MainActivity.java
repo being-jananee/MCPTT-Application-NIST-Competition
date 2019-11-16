@@ -413,7 +413,8 @@ public class MainActivity extends AppCompatActivity {
                                                         sessionID=action.getStringExtra(ConstantsMCOP.CallEventExtras.SESSION_ID);
                                                         showData("callEvent ("+sessionID+")","TERMINATED");
                                                         mainActivity_Button_token.setText("TOKEN");
-                                                        mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_1));
+                                                        mainActivity_Button_token.setBackground(getResources().getDrawable(R.drawable.token_b));
+                                                        mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_call_press));
 
                                                         if(sessionID!=null)userData.removeSessionID(sessionID);
 
@@ -425,7 +426,8 @@ public class MainActivity extends AppCompatActivity {
                                                             sessionID=action.getStringExtra(ConstantsMCOP.CallEventExtras.SESSION_ID);
                                                             showLastError("callEvent ("+sessionID+")",codeError,stringError);
                                                             mainActivity_Button_token.setText("TOKEN");
-                                                            mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_1));
+                                                            mainActivity_Button_token.setBackground(getResources().getDrawable(R.drawable.token_b));
+                                                            mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_call_press));
                                                         }
                                                         if(sessionID!=null)userData.addSessionID(sessionID);
                                                         break;
@@ -464,6 +466,7 @@ public class MainActivity extends AppCompatActivity {
                                                             break;
                                                         case granted:
                                                             mainActivity_Button_token.setText("RELEASE");
+                                                            mainActivity_Button_token.setBackground(getResources().getDrawable(R.drawable.token_rel));
                                                             mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_2));
                                                             int durationGranted=action.getIntExtra(ConstantsMCOP.FloorControlEventExtras.DURATION_TOKEN,ERROR_CODE_DEFAULT);
                                                             Log.d(TAG,"floorControl ("+sessionID+") granted");
@@ -471,12 +474,14 @@ public class MainActivity extends AppCompatActivity {
                                                             break;
                                                         case idle:
                                                             mainActivity_Button_token.setText("REQUEST");
+                                                            mainActivity_Button_token.setBackground(getResources().getDrawable(R.drawable.token_req));
                                                             mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make_1));
                                                             Log.d(TAG,"floorControl ("+sessionID+") idle");
                                                             showData("floorControl ("+sessionID+")","idle");
                                                             break;
                                                         case taken:
                                                             mainActivity_Button_token.setText("REQUEST");
+                                                            mainActivity_Button_token.setBackground(getResources().getDrawable(R.drawable.token_req));
                                                             mainActivity_Button_make_call.setBackground(getResources().getDrawable(R.drawable.make));
                                                             String userIDTaken=action.getStringExtra(ConstantsMCOP.FloorControlEventExtras.USER_ID);
                                                             String displayNameTaken=action.getStringExtra(ConstantsMCOP.FloorControlEventExtras.DISPLAY_NAME);
@@ -765,10 +770,13 @@ public class MainActivity extends AppCompatActivity {
         mainActivity_Button_token.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mainActivity_Button_token.getText().toString().equals("RELEASE"))
+
+                if(mainActivity_Button_token.getText().toString().equals("RELEASE")){
                     showIdsOperationFloorControl(getApplicationContext(),false);
-                if(mainActivity_Button_token.getText().toString().equals("REQUEST"))
+                }
+                if(mainActivity_Button_token.getText().toString().equals("REQUEST")){
                     showIdsOperationFloorControl(getApplicationContext(),true);
+                }
             }
         });
 
@@ -981,9 +989,9 @@ public class MainActivity extends AppCompatActivity {
         final String[] strings={"Private call"
                 ,"Private call (WITHOUT FLOOR CONTROL)"
                 ,"Group call"
-                /*,"Emergency Group call"
+                ,"Emergency Group call"
                 ,"Emergency Private call"
-                ,"Chat Group call"*/
+                ,"Chat Group call"
 
         };
         if(strings==null || strings.length==0)return;
@@ -1011,7 +1019,7 @@ public class MainActivity extends AppCompatActivity {
                                     typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.PrearrangedGroup.getValue();
-                                }/*
+                                }
                                 else if(typeCall.compareTo("Emergency Group call")==0) {
                                     typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
@@ -1028,7 +1036,7 @@ public class MainActivity extends AppCompatActivity {
                                     typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
                                             ConstantsMCOP.CallEventExtras.CallTypeEnum.ChatGroup.getValue();
-                                }*/
+                                }
 
                             }
 

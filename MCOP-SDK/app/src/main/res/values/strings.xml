@@ -21,7 +21,7 @@
 
 <resources>
     <string name="app_name">MCOPSDK</string>
-    <string name="title_activity_main">MCOP SDK</string>
+    <string name="title_activity_main">MCPTT APP</string>
     <string name="Error_in_authetication">Authetication error</string>
 
     <!--INIT-->

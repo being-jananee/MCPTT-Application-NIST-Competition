@@ -1,4 +1,4 @@
-#Tue Nov 12 17:39:35 CST 2019
+#Fri Nov 15 04:17:07 CST 2019
 base.0=C\:\\Users\\Jithin\\Desktop\\MCOP-SDK\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
 path.0=classes.dex
 renamed.0=classes.dex

@@ -252,7 +252,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        int position = recyclerView.getChildAdapterPosition(v);
+        int position = (Integer) v.getTag();
         if((selectedItem = allItems.get(position)) != null) {
             //View mView = manager.findViewByPosition(position);
             //MapView mapView = mView.findViewById(R.id.mapView);
