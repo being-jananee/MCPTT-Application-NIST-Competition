@@ -325,7 +325,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
 
-            Intent i = new Intent(MapsActivity.this, LocationService.class);
+            Intent i = new Intent(MapsActivity.this, Locati   onService.class);
 
             i.putExtra("username", username);
 

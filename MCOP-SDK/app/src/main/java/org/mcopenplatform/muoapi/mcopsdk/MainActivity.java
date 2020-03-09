@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case "Location":
                 Intent i = new Intent(MainActivity.this, Maps2Activity.class);
-                i.putExtra("username", mainActivity_simpleTextView.getText().toString());
+                i.putExtra("username", userData);
 
                 startActivity(i);
                 return true;
