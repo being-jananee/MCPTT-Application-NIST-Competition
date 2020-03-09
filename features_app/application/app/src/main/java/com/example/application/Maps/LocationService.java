@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.application.Maps;
 
 import android.Manifest;
 import android.app.NotificationChannel;
@@ -22,6 +22,8 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
+import com.example.application.Domain.ActionItem;
+import com.example.application.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -144,6 +146,8 @@ public class LocationService extends Service {
 //Save the location data to the database//
                         LocationItem currentLocation = new LocationItem(username, location.getLatitude(), location.getLongitude());
                         if(lastSentLoc.latitude == null || distanceChangedEnough(lastSentLoc, currentLocation)) {
+                            Log.d(TAG, "onLocationResult: "+ref.child(username).toString());
+                            Log.d(TAG, "onLocationResult: "+currentLocation.toString());
                             ref.child(username).setValue(new LatLng(currentLocation.latitude, currentLocation.longitude));
                             lastSentLoc.latitude = currentLocation.latitude;
                             lastSentLoc.longitude = currentLocation.longitude;

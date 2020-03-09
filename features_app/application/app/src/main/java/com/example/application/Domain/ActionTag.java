@@ -1,9 +1,9 @@
-package com.example.application;
+package com.example.application.Domain;
 
 import java.util.HashMap;
 import java.util.Map;
 
-enum ActionTag {
+public enum ActionTag {
     TAG_SOS("SOS"), TAG_INCIDENT("Incident"), TAG_INTEREST_LOCATION("Location of Interest"), TAG_THREAT("Threat Found"), TAG_COMPLETE("Completed");
 
     private String tagName;
@@ -13,7 +13,7 @@ enum ActionTag {
     }
 
     public String getName() {
-        return tagName;
+        return this.tagName;
     }
 
     private static final Map<String, ActionTag> lookup = new HashMap<>();

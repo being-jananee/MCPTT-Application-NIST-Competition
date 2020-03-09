@@ -1,7 +1,5 @@
-package com.example.application;
+package com.example.application.Domain;
 
-
-import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
 
@@ -16,7 +14,7 @@ public class ActionItem {
     private static final String TAG = "ActionItem";
     private static DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss.sss", Locale.US);
     private UUID id;
-    private String user;
+    private String userId;
     private String content;
     private String timestamp;
     private ActionTag tag;
@@ -25,7 +23,7 @@ public class ActionItem {
     private Boolean completed;
 
     public ActionItem() {
-        this.user = null;
+        this.userId = null;
         this.content = null;
         this.timestamp = null;
         this.tag = null;
@@ -73,9 +71,9 @@ public class ActionItem {
         this.id = id;
     }
 
-    public ActionItem(String user, String content, String timestamp, ActionTag tag) {
+    public ActionItem(String userId, String content, String timestamp, ActionTag tag) {
         this.id = UUID.randomUUID();
-        this.user = user;
+        this.userId = userId;
         this.content = content;
         this.timestamp = timestamp;
         this.tag = tag;
@@ -86,8 +84,8 @@ public class ActionItem {
 
 
 
-    public String getUser() {
-        return user;
+    public String getUserId() {
+        return userId;
     }
 
     public ActionTag getTag() {
@@ -99,8 +97,8 @@ public class ActionItem {
         return this;
     }
 
-    public ActionItem setUser(String user) {
-        this.user = user;
+    public ActionItem setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
 
@@ -133,8 +131,8 @@ public class ActionItem {
                 case "tag":
                     item.setTag(data.getValue() != null ? ActionTag.valueOf(data.getValue().toString()) : null);
                     break;
-                case "user":
-                    item.setUser(data.getValue() != null ? data.getValue().toString() : null);
+                case "userId":
+                    item.setUserId(data.getValue() != null ? data.getValue().toString() : null);
                     break;
                 case "timestamp":
                     item.setTimestamp(data.getValue() != null ? data.getValue().toString() : null);
@@ -172,7 +170,7 @@ public class ActionItem {
             }
             newDTO.tag = item.tag;
             newDTO.timestamp = item.timestamp;
-            newDTO.user = item.user;
+            newDTO.user = item.userId;
             newDTO.completed = item.completed;
             return newDTO;
         }

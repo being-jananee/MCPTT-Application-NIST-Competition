@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.application.Maps;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
@@ -11,49 +11,64 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.CompoundButton;
-import android.widget.RadioGroup;
-import android.widget.Switch;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.application.Domain.ActionItem.ActionItemDTO;
+import com.example.application.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.LocationSource;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.HashMap;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, Switch.OnCheckedChangeListener {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private FloatingActionButton fab;
     private FusedLocationProviderClient fusedClient;
     private String username;
     private LocationReceiver lReceiver;
-    private Switch locationSwitch;
-    private ActionItem.ActionItemDTO itemToDisplay;
+    private ActionItemDTO itemToDisplay;
     private boolean running = false;
+    private boolean realtimeActive = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        locationSwitch = findViewById(R.id.locationSwitch);
-        locationSwitch.setOnCheckedChangeListener(this);
+        fab = findViewById(R.id.floatingActionButton2);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!realtimeActive) {
+                    Toast.makeText(MapsActivity.this, "Real-time location services turned on", Toast.LENGTH_SHORT).show();
+                    fab.setImageResource(R.drawable.real_time_on);
+                    sendBroadcast(new Intent("START"));
+                    realtimeActive = true;
+                } else {
+                    Toast.makeText(MapsActivity.this, "Real-time location services turned off", Toast.LENGTH_SHORT).show();
+                    fab.setImageResource(R.drawable.real_time_off);
+                    sendBroadcast(new Intent("STOP"));
+                    realtimeActive = false;
+                }
+            }
+        });
         username = getIntent().getStringExtra("username");
-        itemToDisplay = (ActionItem.ActionItemDTO) getIntent().getSerializableExtra("item");
+        itemToDisplay = (ActionItemDTO) getIntent().getSerializableExtra("item");
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -108,15 +123,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if(isChecked) {
-            sendBroadcast(new Intent("START"));
-        } else {
-            sendBroadcast(new Intent("STOP"));
-        }
-    }
-
     public class LocationReceiver extends BroadcastReceiver {
 
         @Override
@@ -125,7 +131,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 HashMap<String, LocationItem> userLocations = (HashMap) intent.getSerializableExtra("items");
                 updateLocations(userLocations);
             } else if (("fromNotif").equals(intent.getAction())) {
-                locationSwitch.setChecked(false);
+                if(realtimeActive) {
+                    fab.performClick();
+                }
             }
         }
     }
@@ -168,7 +176,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
             Intent i = new Intent(MapsActivity.this, LocationService.class);
             i.putExtra("username", username);
-            i.putExtra("checked", locationSwitch.isChecked());
+            i.putExtra("checked", realtimeActive);
             startService(i);
             running = true;
         }

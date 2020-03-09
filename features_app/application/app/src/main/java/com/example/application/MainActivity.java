@@ -8,20 +8,14 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.method.KeyListener;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -35,6 +29,11 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.application.Domain.ActionItem;
+import com.example.application.Domain.ActionTag;
+import com.example.application.Domain.UserData;
+import com.example.application.Maps.MapsActivity;
+import com.example.application.Messaging.MessageSelect;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -44,31 +43,27 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Objects;
-import java.util.Random;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
     ArrayList<ActionItem> allItems = new ArrayList<>();
     private RecyclerView recyclerView;
     private ActionItemAdapter actionItemAdapter;
-    private FloatingActionButton floatingButton;
+    FloatingActionButton floatingButton;
     private DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference().child("events");
     private ChildEventListener listener = getChildListener();
     private FusedLocationProviderClient fusedClient;
-    private String username = "user_"+Build.MODEL.replace(" ", "_");
-    private LinearLayoutManager manager;
-    private ActionItem selectedItem;
+    private UserData currentUser;
+    LinearLayoutManager manager;
+    ActionItem selectedItem;
     private DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss.sss", Locale.US);
+    public final String TAG = MainActivity.class.getCanonicalName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 10);
         }
+        currentUser = getIntent().hasExtra("currentUser")
+                ? (UserData) getIntent().getParcelableExtra("currentUser")
+                : getCurrentUser();
+        Log.d(TAG, "onCreate: "+currentUser.toString());
         eventsRef.addChildEventListener(listener);
         floatingButton = findViewById(R.id.floatingActionButton);
         recyclerView = findViewById(R.id.recycle);
@@ -98,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for(ActionTag i : ActionTag.values()) {
                     tags.add(i.getName());
                 }
-                String[] a = tags.toArray(new String[tags.size()]);
+                String[] a = tags.toArray(new String[0]);
                 ArrayAdapter spinnerArrayAdapter = new ArrayAdapter
                         (MainActivity.this, android.R.layout.simple_spinner_item,
                                 a); //selected item will look like a spinner set from XML
@@ -110,7 +109,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        newItem.setUser(username).setContent(et.getText().toString()).setTimestamp(formatter.format(new Date()))
+                        newItem.setUserId(currentUser.getMcpttID())
+                                .setContent(et.getText().toString()).setTimestamp(formatter.format(new Date()))
                                 .setTag(ActionTag.get((sp.getSelectedItem().toString())));
                         if(s.isChecked() && hasPermission()) {
                             addLocationToActionItemAndSend(newItem);
@@ -158,8 +158,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (item.getItemId()) {
             case R.id.maps:
                 Intent i = new Intent(MainActivity.this, MapsActivity.class);
-                i.putExtra("username", username);
+                i.putExtra("currentUser", currentUser);
                startActivity(i);
+               return true;
+            case R.id.chat:
+                Intent j = new Intent(MainActivity.this, MessageSelect.class);
+                j.putExtra("currentUser", currentUser);
+                startActivity(j);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -231,10 +237,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ActionItem item = allItems.get(position);
-                if(item.getUser().equals(username)) {
+                if(item.getUserId().equals(currentUser.getMcpttID())) {
                     eventsRef.child(item.getId().toString()).removeValue();
                 } else {
-                    Toast.makeText(MainActivity.this, "Can't delete an event for a user that is not yourself.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,
+                            "Can't delete an event for a user that is not yourself.", Toast.LENGTH_SHORT)
+                            .show();
                 }
             }
         });
@@ -244,7 +252,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public boolean hasPermission() {
-        return (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED);
+        return (ContextCompat
+                .checkSelfPermission(this,
+                        Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+        );
     }
 
     public void addLocationToActionItemAndSend(final ActionItem newItem) throws SecurityException {
@@ -256,7 +267,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 newItem.setLongitude(location.getLongitude());
                 updateEvent(newItem);
             } else {
-                //make dialog to show error;
+                Toast.makeText(MainActivity.this,
+                        "Unable to add location to Action Item", Toast.LENGTH_SHORT)
+                        .show();
             }
             }
         });
@@ -272,10 +285,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(selectedItem.getLatitude() != null) {
                 Intent i = new Intent(MainActivity.this, MapsActivity.class);
                 i.putExtra("item", ActionItem.ActionItemDTO.fromItem(selectedItem));
-                i.putExtra("username", username);
+                i.putExtra("currentUser", currentUser);
                 startActivity(i);
             }
         }
+    }
+
+    public UserData getCurrentUser() {
+        return new UserData("mcpttID1TestUser", "user_"+ Build.MODEL.replace(" ", "_"));
     }
 
 //    @Override

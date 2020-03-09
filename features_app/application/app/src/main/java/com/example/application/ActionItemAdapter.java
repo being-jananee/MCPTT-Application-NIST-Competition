@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.application.Domain.ActionItem;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -46,7 +48,7 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
     public void onBindViewHolder(@NonNull ActionItemAdapter.ActionItemViewHolder holder, int position) {
         ActionItem item = allItems.get(position);
         holder.content.setText(item.getContent());
-        holder.name.setText(item.getUser());
+        holder.name.setText(item.getUserId());
         holder.timestamp.setText(item.getTimestamp());
         holder.tag.setText(item.getTag().getName());
         holder.mapButton.setVisibility(item.getLatitude() != null ? View.VISIBLE : View.GONE);
@@ -74,7 +76,7 @@ public class ActionItemAdapter extends RecyclerView.Adapter<ActionItemAdapter.Ac
 
         public ActionItemViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.user);
+            name = itemView.findViewById(R.id.userId);
             tag = itemView.findViewById(R.id.tag);
             content = itemView.findViewById(R.id.content);
             timestamp = itemView.findViewById(R.id.timestamp);

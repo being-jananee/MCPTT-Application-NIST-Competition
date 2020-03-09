@@ -2,4 +2,8 @@
     <string name="app_name">application</string>
     <string name="title_activity_maps">Map</string>
     <string name="create_an_action_item">Create an Action Item</string>
+    <string name="person_image">personImage</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

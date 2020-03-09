@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.application.Maps;
 
 
 import java.io.Serializable;
