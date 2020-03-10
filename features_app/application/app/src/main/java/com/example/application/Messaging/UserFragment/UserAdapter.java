@@ -63,8 +63,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(ms, MessageActivity.class);
-                    i.putExtra("currentUser", currentUser);
-                    ArrayList<String> otherUserIds = new ArrayList<>(Arrays.asList(userNames.get(getAdapterPosition()).getMcpttID().split(", ")));
+                    i.putExtra("currentUser", currentUser);;
+                    ArrayList<String> otherUserIds = new ArrayList<>(Arrays.asList(userNames.get(getAdapterPosition()).getMcpttID().split(":")));
                     Log.d(TAG, "onClick: "+otherUserIds.size() + otherUserIds.get(0));
                     i.putParcelableArrayListExtra("otherUsers", new ArrayList<>(db.getUserListById(otherUserIds)));
                     ms.startActivity(i);
