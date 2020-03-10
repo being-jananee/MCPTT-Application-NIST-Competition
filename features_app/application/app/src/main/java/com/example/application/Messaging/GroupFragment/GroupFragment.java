@@ -23,6 +23,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static android.content.ContentValues.TAG;
+
 public class GroupFragment extends Fragment {
 
     public DatabaseUtils db = new DatabaseUtils();
@@ -40,21 +42,22 @@ public class GroupFragment extends Fragment {
         RecyclerView rv = view.findViewById(R.id.group_recycle);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
-        GroupAdapter ua = new GroupAdapter(getContext(), users);
+        final GroupAdapter ua = new GroupAdapter(getContext(), users);
         Log.d("TAG", "onCreateView: "+ua.users.size());
         rv.setAdapter(ua);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ArrayList<UserData> toSend = new ArrayList<>();
-                for(UserData user : users) {
+                for(UserData user : ua.users) {
+                    Log.d(TAG, "onClick: "+user.isChecked()+" "+user.getDisplayName());
                     if(user.isChecked()) {
                         toSend.add(user);
                     }
                 }
                 Intent i = new Intent(getContext(), MessageActivity.class);
                 i.putExtra("currentUser", currentUser);
-                i.putExtra("otherUsers", toSend);
+                i.putParcelableArrayListExtra("otherUsers", toSend);
                 startActivity(i);
             }
         });

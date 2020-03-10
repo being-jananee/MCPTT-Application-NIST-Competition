@@ -1,10 +1,12 @@
 package com.example.application.Messaging.GroupFragment;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -57,7 +59,13 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupViewHol
                 @Override
                 public void onClick(View v) {
                     checkBox.performClick();
-                    users.get(getAdapterPosition()).setChecked(checkBox.isSelected());
+                }
+            });
+            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    Log.d(TAG, "onClick: "+isChecked + " " + users.get(getAdapterPosition()).getDisplayName());
+                    users.get(getAdapterPosition()).setChecked(isChecked);
                 }
             });
             user_name = itemView.findViewById(R.id.user_name);

@@ -1,6 +1,9 @@
 package com.example.application;
 
+import android.util.Log;
+
 import com.example.application.Domain.UserData;
+import com.example.application.Messaging.MessageUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,6 +24,7 @@ public class DatabaseUtils {
     public List<UserData> getUserListById(ArrayList<String> ids) {
         List<UserData> userData = new ArrayList<>();
         for(UserData user : users) {
+            Log.d("TAGAGAG", "getUserListById: "+ user.getMcpttID() + " " + MessageUtils.join(ids, ":"));
             if(ids.contains(user.getMcpttID())) {
                 userData.add(user);
             }

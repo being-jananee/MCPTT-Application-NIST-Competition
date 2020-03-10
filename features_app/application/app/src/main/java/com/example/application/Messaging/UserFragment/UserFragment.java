@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.application.DatabaseUtils;
+import com.example.application.Domain.UserDataLite;
+import com.example.application.Messaging.MessageUtils;
 import com.example.application.R;
 import com.example.application.Domain.UserData;
 
@@ -28,7 +30,8 @@ public class UserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        List<UserData> users = db.getUsers();
+        List<UserDataLite> users = MessageUtils.toLite(new ArrayList<>(db.getUsers()));
+        Log.d("TAGAGA", "onCreateView: "+users.get(0).toString());
         assert getArguments() != null;
         UserData currentUser = getArguments().getParcelable("currentUser");
         View view = inflater.inflate(R.layout.fragment_user, container, false);
@@ -36,7 +39,7 @@ public class UserFragment extends Fragment {
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
         UserAdapter ua = new UserAdapter(getContext(), new ArrayList<>(users), currentUser);
-        Log.d("TAG", "onCreateView: "+ua.users.size());
+        Log.d("TAG", "onCreateView: "+ua.userNames.size());
         rv.setAdapter(ua);
 
         return view;

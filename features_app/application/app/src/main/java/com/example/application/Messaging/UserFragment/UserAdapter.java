@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.application.DatabaseUtils;
+import com.example.application.Domain.UserDataLite;
 import com.example.application.Messaging.MessageActivity;
 import com.example.application.R;
 import com.example.application.Domain.UserData;
@@ -24,13 +25,13 @@ import java.util.List;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
 
     public Context ms;
-    public List<UserData> users;
+    public List<UserDataLite> userNames;
     public UserData currentUser;
     public DatabaseUtils db = new DatabaseUtils();
 
-    public UserAdapter(Context ms, ArrayList<UserData> users, UserData currentUser) {
+    public UserAdapter(Context ms, ArrayList<UserDataLite> users, UserData currentUser) {
         this.ms = ms;
-        this.users = users;
+        this.userNames = users;
         this.currentUser = currentUser;
     }
 
@@ -42,13 +43,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        String user_name = users.get(position).getDisplayName();
+        String user_name = userNames.get(position).getDisplayName();
         holder.user_name.setText(user_name);
     }
     //TODO: Fix UserAdapter
     @Override
     public int getItemCount() {
-        return users.size();
+        return userNames.size();
     }
 
     public class UserViewHolder extends RecyclerView.ViewHolder {
@@ -63,7 +64,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                 public void onClick(View v) {
                     Intent i = new Intent(ms, MessageActivity.class);
                     i.putExtra("currentUser", currentUser);
-                    ArrayList<String> otherUserIds = new ArrayList<>(Arrays.asList(user_name.getText().toString().split(", ")));
+                    ArrayList<String> otherUserIds = new ArrayList<>(Arrays.asList(userNames.get(getAdapterPosition()).getMcpttID().split(", ")));
                     Log.d(TAG, "onClick: "+otherUserIds.size() + otherUserIds.get(0));
                     i.putParcelableArrayListExtra("otherUsers", new ArrayList<>(db.getUserListById(otherUserIds)));
                     ms.startActivity(i);

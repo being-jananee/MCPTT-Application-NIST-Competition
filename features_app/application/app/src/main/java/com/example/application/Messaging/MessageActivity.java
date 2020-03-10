@@ -68,8 +68,8 @@ public class MessageActivity extends AppCompatActivity {
                 messageList.clear();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     boolean isYourChat = MessageUtils.checkIfThisChatIsTheChatYouSelected(currentUser, otherUsers, snapshot);
+                    Log.d("is your chat", "onDataChange: "+snapshot.getKey());
                     if(isYourChat) {
-                        Log.d("is your chat", "onDataChange: "+snapshot.getKey());
                         for (DataSnapshot messageSnapshot : snapshot.child("messages").getChildren()) {
                             InstantMessage message = messageSnapshot.getValue(InstantMessage.class);
                             if(message != null) {
