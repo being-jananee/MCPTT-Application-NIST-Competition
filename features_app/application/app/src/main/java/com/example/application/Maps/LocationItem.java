@@ -8,7 +8,7 @@ public class LocationItem implements Serializable {
     public Double latitude;
     public Double longitude;
 
-    public LocationItem(String user) {
+    public LocationItem() {
         this.latitude = null;
         this.longitude = null;
     }

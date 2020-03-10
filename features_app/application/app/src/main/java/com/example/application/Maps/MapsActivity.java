@@ -11,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -19,7 +20,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.application.DatabaseUtils;
 import com.example.application.Domain.ActionItem.ActionItemDTO;
+import com.example.application.Domain.UserData;
 import com.example.application.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -40,11 +43,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private FloatingActionButton fab;
     private FusedLocationProviderClient fusedClient;
-    private String username;
+    private UserData user;
     private LocationReceiver lReceiver;
     private ActionItemDTO itemToDisplay;
     private boolean running = false;
     private boolean realtimeActive = false;
+    private DatabaseUtils db = new DatabaseUtils();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +71,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         });
-        username = getIntent().getStringExtra("username");
+        user = getIntent().getParcelableExtra("currentUser");
         itemToDisplay = (ActionItemDTO) getIntent().getSerializableExtra("item");
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -111,10 +115,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.clear();
         for(String s : userLocations.keySet()) {
             LatLng currLoc = new LatLng(userLocations.get(s).latitude, userLocations.get(s).longitude);
-            if(username.equals(s)) {
+            UserData user = db.getUserById(s);
+            Log.d("HOBBY", "updateLocations: "+user.toString());
+            if(this.user.getMcpttID().equals(user.getMcpttID())) {
                 mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title("You"));
             } else {
-                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(username));
+                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(this.user.getDisplayName()));
             }
         }
         if(itemToDisplay != null) {
@@ -175,7 +181,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
             }
             Intent i = new Intent(MapsActivity.this, LocationService.class);
-            i.putExtra("username", username);
+            i.putExtra("username", user);
             i.putExtra("checked", realtimeActive);
             startService(i);
             running = true;

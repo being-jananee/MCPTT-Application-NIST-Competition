@@ -32,11 +32,11 @@ public class MessageItemAdapter extends RecyclerView.Adapter<MessageItemAdapter.
     @Override
     public MessageItemAdapter.MessageItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if(viewType == RECIEVED_VIEW_TYPE) {
-            return new MessageItemAdapter.MessageItemViewHolder(
+            return new MessageItemViewHolder(
                     LayoutInflater.from(parent.getContext())
                             .inflate(R.layout.receive_instant_message_item, parent, false));
         } else {
-            return new MessageItemAdapter.MessageItemViewHolder(
+            return new MessageItemViewHolder(
                     LayoutInflater.from(parent.getContext())
                             .inflate(R.layout.send_instant_message_item, parent, false));
         }
@@ -51,7 +51,7 @@ public class MessageItemAdapter extends RecyclerView.Adapter<MessageItemAdapter.
     public void onBindViewHolder(@NonNull MessageItemAdapter.MessageItemViewHolder holder, int position) {
         InstantMessage message = messages.get(position);
         holder.content.setText(message.content);
-        holder.timestamp.setText(message.timeStamp);
+        holder.timestamp.setText(message.clientTimeStamp);
         if(!message.sender.equals(currentUser.getMcpttID())) {
             holder.username.setText(message.sender);
         }
@@ -62,7 +62,7 @@ public class MessageItemAdapter extends RecyclerView.Adapter<MessageItemAdapter.
         return messages.size();
     }
 
-    public class MessageItemViewHolder extends RecyclerView.ViewHolder {
+    public static class MessageItemViewHolder extends RecyclerView.ViewHolder {
 
         public TextView timestamp;
         public TextView content;
@@ -73,6 +73,12 @@ public class MessageItemAdapter extends RecyclerView.Adapter<MessageItemAdapter.
             timestamp = itemView.findViewById(R.id.text_message_time);
             content = itemView.findViewById(R.id.text_message_body);
             username = itemView.findViewById(R.id.text_message_name);
+            content.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    timestamp.setVisibility(timestamp.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
+                }
+            });
         }
     }
 }

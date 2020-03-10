@@ -292,7 +292,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public UserData getCurrentUser() {
-        return new UserData(Build.MODEL.replace(" ", "_"), "User_"+Build.BRAND);
+        return new UserData("TANWIR", "BIG SUCKY BOI");
     }
 
 //    @Override

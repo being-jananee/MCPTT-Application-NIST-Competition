@@ -34,9 +34,10 @@ public class GroupFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final List<UserData> users = db.getUsers();
-        assert getArguments() != null;
         final UserData currentUser = getArguments().getParcelable("currentUser");
+
+        final List<UserData> users = db.getUsers(currentUser);
+        assert getArguments() != null;
         View view = inflater.inflate(R.layout.fragment_group, container, false);
         b = view.findViewById(R.id.group_button);
         RecyclerView rv = view.findViewById(R.id.group_recycle);

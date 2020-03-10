@@ -30,10 +30,10 @@ public class UserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        List<UserDataLite> users = MessageUtils.toLite(new ArrayList<>(db.getUsers()));
+        UserData currentUser = getArguments().getParcelable("currentUser");
+        List<UserDataLite> users = MessageUtils.toLite(new ArrayList<>(db.getUsers(currentUser)));
         Log.d("TAGAGA", "onCreateView: "+users.get(0).toString());
         assert getArguments() != null;
-        UserData currentUser = getArguments().getParcelable("currentUser");
         View view = inflater.inflate(R.layout.fragment_user, container, false);
         RecyclerView rv = view.findViewById(R.id.user_recycle);
         rv.setHasFixedSize(true);
