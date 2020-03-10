@@ -57,7 +57,6 @@ public class ChatFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 chatView.clear();
-                ua.notifyDataSetChanged();
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     if(MessageUtils.checkIfChatIncludesYou(currentUser, snapshot)) {
                         ArrayList<String> chatUsers = MessageUtils.getOtherChatUsers(currentUser, snapshot);
@@ -67,7 +66,7 @@ public class ChatFragment extends Fragment {
                         } else if(chatUsers.size() == 1) {
                             user = UserDataLite.fromUser(db.getUserById(chatUsers.get(0)));
                         }
-                        messageRef.child(snapshot.getKey()).child("messages").addChildEventListener(listenForUnreadMessages(currentUser, user.getMcpttID()));
+                        ///messageRef.child(snapshot.getKey()).child("messages").addChildEventListener(listenForUnreadMessages(currentUser, user.getMcpttID()));
                         ChatViewItem item = new ChatViewItem();
                         item.setUserOrGroup(user);
                         InstantMessage im = null;
@@ -85,9 +84,9 @@ public class ChatFragment extends Fragment {
                             chatView.add(item);
                         }
                     }
+                    ua = new ChatAdapter(getContext(), chatView, currentUser);
                 }
                 Log.d(TAG, "onDataChange: "+chatView.size() + " ChatView");
-                ua.notifyDataSetChanged();
                 rv.setAdapter(ua);
             }
 
@@ -108,22 +107,22 @@ public class ChatFragment extends Fragment {
         ua.notifyDataSetChanged();
     }
 
-    private ChildEventListener listenForUnreadMessages(final UserData currentUser, final String idList) {
-        return new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                if(!dataSnapshot.child("sender").getValue(String.class).equalsIgnoreCase(currentUser.getMcpttID())) {
-                    setItemUnread(idList);
-                }
-            }
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) { }
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) { }
-        };
-    }
+//    private ChildEventListener listenForUnreadMessages(final UserData currentUser, final String idList) {
+//        return new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+//                if(!dataSnapshot.child("sender").getValue(String.class).equalsIgnoreCase(currentUser.getMcpttID())) {
+//                    setItemUnread(idList);
+//                }
+//            }
+//            @Override
+//            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
+//            @Override
+//            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) { }
+//            @Override
+//            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) { }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) { }
+//        };
+//    }
 }
