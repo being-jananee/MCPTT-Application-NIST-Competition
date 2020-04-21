@@ -60,8 +60,6 @@ public class LocationService extends Service {
     public int onStartCommand (Intent intent, int flags, int startId) {
         notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
         user = intent.getParcelableExtra("currentUser");
-        Log.d(TAG, "onStartCommand: GET USER ID" + user.getMcpttID());
-
         running = intent.getBooleanExtra("checked", false);
         permission = ContextCompat.checkSelfPermission(LocationService.this,
                 Manifest.permission.ACCESS_FINE_LOCATION);

@@ -21,6 +21,17 @@ public class DatabaseUtils {
         return users;
     }
 
+    public ArrayList<UserData> getUsers(UserData currentUser) {
+        ArrayList<UserData> ret = new ArrayList<>(users);
+        for(UserData user : ret) {
+            if(user.getMcpttID().equals(currentUser.getMcpttID())) {
+                ret.remove(user);
+                break;
+            }
+        }
+        return ret;
+    }
+
     public List<UserData> getUserListById(ArrayList<String> ids) {
         List<UserData> userData = new ArrayList<>();
         for(UserData user : users) {
@@ -38,7 +49,7 @@ public class DatabaseUtils {
                 return user;
             }
         }
-        return null;
+        return new UserData(id, "User_with_id_"+id);
     }
 
     public void addUser(UserData user) {

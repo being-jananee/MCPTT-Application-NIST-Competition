@@ -75,9 +75,9 @@ public class MessageActivity extends AppCompatActivity {
                             if(message != null) {
                                 String oldTimestamp = message.timeStamp;
                                 try {
-                                    message.timeStamp = displayFormat.format(dbFormat.parse(message.timeStamp));
+                                    message.clientTimeStamp = displayFormat.format(dbFormat.parse(message.timeStamp));
                                 } catch (Exception pe) {
-                                    message.timeStamp = oldTimestamp;
+                                    message.clientTimeStamp = oldTimestamp;
                                 }
                                 messageList.add(message);
                             }

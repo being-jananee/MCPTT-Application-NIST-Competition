@@ -11,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.application.DatabaseUtils;
 import com.example.application.Domain.ActionItem.ActionItemDTO;
 import com.example.application.Domain.UserData;
 import com.example.application.R;
@@ -46,6 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ActionItemDTO itemToDisplay;
     private boolean running = false;
     private boolean realtimeActive = false;
+    private DatabaseUtils db = new DatabaseUtils();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,10 +115,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.clear();
         for(String s : userLocations.keySet()) {
             LatLng currLoc = new LatLng(userLocations.get(s).latitude, userLocations.get(s).longitude);
-            if(user.getMcpttID().equals(s)) {
+            UserData user = db.getUserById(s);
+            Log.d("HOBBY", "updateLocations: "+user.toString());
+            if(this.user.getMcpttID().equals(user.getMcpttID())) {
                 mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title("You"));
             } else {
-                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(user.getDisplayName()));
+                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(this.user.getDisplayName()));
             }
         }
         if(itemToDisplay != null) {
