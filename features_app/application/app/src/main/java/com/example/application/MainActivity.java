@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         newItem.setUserId(currentUser.getMcpttID())
                                 .setContent(et.getText().toString()).setTimestamp(formatter.format(new Date()))
                                 .setTag(ActionTag.get((sp.getSelectedItem().toString())));
+                        Log.d(TAG, "onClick: GET USER ID " + currentUser.getMcpttID() + " " + newItem.getUserId());
                         if(s.isChecked() && hasPermission()) {
                             addLocationToActionItemAndSend(newItem);
                         } else {
@@ -237,6 +238,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ActionItem item = allItems.get(position);
+                Log.d(TAG, "onClick: GET USER ID" + currentUser.getMcpttID());
                 if(item.getUserId().equals(currentUser.getMcpttID())) {
                     eventsRef.child(item.getId().toString()).removeValue();
                 } else {

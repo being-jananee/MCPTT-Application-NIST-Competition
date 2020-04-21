@@ -4,17 +4,18 @@ package com.example.application.Maps;
 import java.io.Serializable;
 
 public class LocationItem implements Serializable {
-    private String user;
+    private String userId;
     public Double latitude;
     public Double longitude;
 
-    public LocationItem(String user) {
-        this.latitude = null;
+    public LocationItem(String userId) {
+        this.userId = userId;
         this.longitude = null;
+        this.latitude = null;
     }
 
     public LocationItem(String user, Double latitude, Double longitude) {
-        this.user = user;
+        this.userId = user;
         this.latitude = latitude;
         this.longitude = longitude;
     }
@@ -22,17 +23,17 @@ public class LocationItem implements Serializable {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("User: ").append(user).append("\n");
+        sb.append("User: ").append(userId).append("\n");
         sb.append("Lat/Long: ").append(latitude).append(", ").append(longitude).append("\n");
         return sb.toString();
     }
 
     public String getUser() {
-        return user;
+        return userId;
     }
 
     public void setUser(String user) {
-        this.user = user;
+        this.userId = user;
     }
 
 }

@@ -23,6 +23,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 
 import com.example.application.Domain.ActionItem;
+import com.example.application.Domain.UserData;
 import com.example.application.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -41,7 +42,7 @@ import java.util.HashMap;
 public class LocationService extends Service {
 
     private static final String TAG = LocationService.class.getSimpleName();
-    private String username = "";
+    private UserData user;
     private static boolean running;
     private DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("locations");
     private HashMap<String, LocationItem> allItems = new HashMap<>();
@@ -58,24 +59,25 @@ public class LocationService extends Service {
     @Override
     public int onStartCommand (Intent intent, int flags, int startId) {
         notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
-        username = intent.getStringExtra("username");
+        user = intent.getParcelableExtra("currentUser");
+        Log.d(TAG, "onStartCommand: GET USER ID" + user.getMcpttID());
+
         running = intent.getBooleanExtra("checked", false);
         permission = ContextCompat.checkSelfPermission(LocationService.this,
                 Manifest.permission.ACCESS_FINE_LOCATION);
+        listener = getOtherUserLocations();
+        ref.addChildEventListener(listener);
+        requestLocationUpdates(permission);
         IntentFilter filter = new IntentFilter("STOP");
         filter.addAction("START");
         filter.addAction("displayItem");
         registerReceiver(lServiceReciever, filter);
-        Log.d(TAG, "onStartCommand: " + username);
         return flags;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        listener = getOtherUserLocations();
-        ref.addChildEventListener(listener);
-        requestLocationUpdates(permission);
     }
 
 //Create the persistent notification//
@@ -123,7 +125,7 @@ public class LocationService extends Service {
 
     private void requestLocationUpdates(int permission) throws SecurityException {
         LocationRequest request = new LocationRequest();
-        final LocationItem lastSentLoc = new LocationItem(username);
+        final LocationItem lastSentLoc = new LocationItem(user.getMcpttID());
 //Specify how often your app should request the device’s location//
         request.setInterval(1000);
 //Get the most accurate location data available//
@@ -137,18 +139,17 @@ public class LocationService extends Service {
                 public void onLocationResult(LocationResult locationResult) {
                     if(!running) {
                         client.removeLocationUpdates(this);
-                        ref.child(username).removeValue();
+                        ref.child(user.getMcpttID()).removeValue();
                         return;
                     }
 //Get a reference to the database, so your app can perform read and write operations//
                     Location location = locationResult.getLastLocation();
                     if (location != null) {
 //Save the location data to the database//
-                        LocationItem currentLocation = new LocationItem(username, location.getLatitude(), location.getLongitude());
+                        LocationItem currentLocation = new LocationItem(user.getMcpttID(), location.getLatitude(), location.getLongitude());
                         if(lastSentLoc.latitude == null || distanceChangedEnough(lastSentLoc, currentLocation)) {
-                            Log.d(TAG, "onLocationResult: "+ref.child(username).toString());
                             Log.d(TAG, "onLocationResult: "+currentLocation.toString());
-                            ref.child(username).setValue(new LatLng(currentLocation.latitude, currentLocation.longitude));
+                            ref.child(user.getMcpttID()).setValue(new LatLng(currentLocation.latitude, currentLocation.longitude));
                             lastSentLoc.latitude = currentLocation.latitude;
                             lastSentLoc.longitude = currentLocation.longitude;
                         }
@@ -232,7 +233,7 @@ public class LocationService extends Service {
             } else if("displayItem".equals(intent.getAction())) {
                 running = false;
                 ActionItem.ActionItemDTO dto = (ActionItem.ActionItemDTO) intent.getSerializableExtra("displayItem");
-                LocationItem item = new LocationItem(dto.user, dto.latitude, dto.longitude);
+                LocationItem item = new LocationItem(dto.userId, dto.latitude, dto.longitude);
                 allItems.put("selectedItem", item);
             }
         }

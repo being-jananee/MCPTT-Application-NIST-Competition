@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.application.Domain.ActionItem.ActionItemDTO;
+import com.example.application.Domain.UserData;
 import com.example.application.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -40,7 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private FloatingActionButton fab;
     private FusedLocationProviderClient fusedClient;
-    private String username;
+    private UserData user;
     private LocationReceiver lReceiver;
     private ActionItemDTO itemToDisplay;
     private boolean running = false;
@@ -67,7 +68,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         });
-        username = getIntent().getStringExtra("username");
+        user = getIntent().getParcelableExtra("currentUser");
         itemToDisplay = (ActionItemDTO) getIntent().getSerializableExtra("item");
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -111,10 +112,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.clear();
         for(String s : userLocations.keySet()) {
             LatLng currLoc = new LatLng(userLocations.get(s).latitude, userLocations.get(s).longitude);
-            if(username.equals(s)) {
+            if(user.getMcpttID().equals(s)) {
                 mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title("You"));
             } else {
-                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(username));
+                mMap.addMarker(new MarkerOptions().position(currLoc).icon(bitmapDescriptorFromVector(MapsActivity.this, R.drawable.ic_person_pin_circle_black_24dp)).title(user.getDisplayName()));
             }
         }
         if(itemToDisplay != null) {
@@ -175,7 +176,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
             }
             Intent i = new Intent(MapsActivity.this, LocationService.class);
-            i.putExtra("username", username);
+            i.putExtra("currentUser", user);
             i.putExtra("checked", realtimeActive);
             startService(i);
             running = true;

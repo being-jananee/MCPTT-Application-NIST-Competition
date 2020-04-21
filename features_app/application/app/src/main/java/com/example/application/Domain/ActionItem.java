@@ -153,7 +153,7 @@ public class ActionItem {
 
 
     public static class ActionItemDTO implements Serializable {
-        public String user;
+        public String userId;
         public String content;
         public String timestamp;
         public ActionTag tag;
@@ -170,7 +170,7 @@ public class ActionItem {
             }
             newDTO.tag = item.tag;
             newDTO.timestamp = item.timestamp;
-            newDTO.user = item.userId;
+            newDTO.userId = item.userId;
             newDTO.completed = item.completed;
             return newDTO;
         }
