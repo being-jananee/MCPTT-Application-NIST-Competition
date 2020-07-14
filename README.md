@@ -1,4 +1,4 @@
-# CS547_Project
+# Tech to Protect - Competition # 2
 
 Mission Critical Push to Talk Application:
 
