@@ -37,6 +37,7 @@ import android.os.RemoteException;
 import android.provider.Settings;
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
+import org.mcopenplatform.muoapi.mcopsdk.Domain.UserData;
 import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -53,9 +54,8 @@ import org.mcopenplatform.muoapi.BuildConfig;
 import org.mcopenplatform.muoapi.ConstantsMCOP;
 import org.mcopenplatform.muoapi.IMCOPCallback;
 import org.mcopenplatform.muoapi.IMCOPsdk;
-import org.mcopenplatform.muoapi.Maps2Activity;
 import org.mcopenplatform.muoapi.R;
-import org.mcopenplatform.muoapi.mcopsdk.datatype.UserData;
+import org.mcopenplatform.muoapi.mcopsdk.Messaging.MessageSelect;
 import org.mcopenplatform.muoapi.mcopsdk.preference.PreferencesManager;
 import org.mcopenplatform.muoapi.mcopsdk.preference.PreferencesManagerDefault;
 
@@ -114,11 +114,13 @@ public class MainActivity extends AppCompatActivity {
     private Spinner dropdown;
     private ArrayList <String> items2 = new ArrayList<String>();
 
+    private UserData user;
     private View view;
     private Toast toast;
     private MenuItem item;
     private MenuItem location;
     private MenuItem log;
+    private MenuItem messages;
     private String message;
     private ArrayList <String> items = new ArrayList<String>();
     private ArrayAdapter<String> adapter;
@@ -129,12 +131,24 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.action_menu,menu);
-        log = menu.getItem(1);
-        location = menu.getItem(2);
-        item = menu.getItem(0);
+        log = menu.getItem(2);
+        location = menu.getItem(1);
+        messages = menu.getItem(0);
+        item = menu.getItem(3);
         location.setEnabled(false);
         log.setEnabled(false);
+        messages.setEnabled(false);
         return true;
+    }
+
+    public UserData getCurrentUser() {
+        Log.d(TAG,""+mainActivity_simpleTextView.getText().toString().substring(mainActivity_simpleTextView.getText().length()-8).equals("-OFFLINE"));
+        Log.d(TAG,mainActivity_simpleTextView.getText().toString().substring(mainActivity_simpleTextView.getText().length()-8));
+        Log.d(TAG, mainActivity_simpleTextView.getText().toString().substring(0,mainActivity_simpleTextView.getText().length()-8));
+        if(mainActivity_simpleTextView.getText().toString().substring(mainActivity_simpleTextView.getText().length()-8).equals("-OFFLINE"))
+            return new UserData(mainActivity_simpleTextView.getText().toString().substring(0,mainActivity_simpleTextView.getText().length()-8), mainActivity_simpleTextView.getText().toString().substring(0,mainActivity_simpleTextView.getText().length()-8));
+        else
+            return new UserData(mainActivity_simpleTextView.getText().toString(), mainActivity_simpleTextView.getText().toString());
     }
 
     @Override
@@ -144,9 +158,21 @@ public class MainActivity extends AppCompatActivity {
                 showTypeRegister(getApplicationContext());
                 //this.item = item;
                 return true;
+            case "Exit Offline":
+                message = "Exiting Offline Mode";
+                mainActivity_simpleTextView.setText("NONE");
+                toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                toast.getView().setBackgroundColor(getResources().getColor(R.color.GREEN));
+                toast.show();
+                location.setEnabled(false);
+                log.setEnabled(false);
+                messages.setEnabled(false);
+                view.setBackgroundColor(getResources().getColor(R.color.WHITE));
+                item.setTitle("Register");
+                return true;
             case "Unregister":
                 try {
-                    if(mService!=null)
+                    if (mService != null)
                         mService.unLoginMCOP();
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -154,15 +180,24 @@ public class MainActivity extends AppCompatActivity {
                 item.setTitle("Register");
                 return true;
             case "Location":
-                Intent i = new Intent(MainActivity.this, Maps2Activity.class);
-                i.putExtra("username", userData);
+                user = getCurrentUser();
+                Intent i = new Intent(MainActivity.this, MapsActivity.class);
+                i.putExtra("currentUser", user);
 
                 startActivity(i);
                 return true;
             case "Logging":
+                user = getCurrentUser();
                 Intent j = new Intent(MainActivity.this,Main2Activity.class);
-                j.putExtra("username", mainActivity_simpleTextView.getText().toString());
+                j.putExtra("currentUser", user);
                 startActivity(j);
+                return true;
+            case "Message":
+                Log.d(TAG,"I MADE IS MOM");
+                user = getCurrentUser();
+                Intent k = new Intent(MainActivity.this, MessageSelect.class);
+                k.putExtra("currentUser", user);
+                startActivity(k);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -177,18 +212,18 @@ public class MainActivity extends AppCompatActivity {
             parameters=loadParameters();
         }
         if(parameters!=null && !parameters.isEmpty())
-        for (String parameter:parameters){
-            Log.i(TAG,"Parameter: "+parameter);
-            String[] parametersSplit=parameter.split(":");
-            if(parametersSplit!=null)
-            if(parametersSplit.length==2){
-                parametersMap.put(parametersSplit[0],new String[]{parametersSplit[1]});
-            }else if(parametersSplit.length==4){
-                parametersMap.put(parametersSplit[0],new String[]{parametersSplit[1],parametersSplit[2],parametersSplit[3]});
-            }else{
-                Log.e(TAG,"Error in parse parameter");
+            for (String parameter:parameters){
+                Log.i(TAG,"Parameter: "+parameter);
+                String[] parametersSplit=parameter.split(":");
+                if(parametersSplit!=null)
+                    if(parametersSplit.length==2){
+                        parametersMap.put(parametersSplit[0],new String[]{parametersSplit[1]});
+                    }else if(parametersSplit.length==4){
+                        parametersMap.put(parametersSplit[0],new String[]{parametersSplit[1],parametersSplit[2],parametersSplit[3]});
+                    }else{
+                        Log.e(TAG,"Error in parse parameter");
+                    }
             }
-        }
         if(parametersMap!=null && !parametersMap.isEmpty()){
             saveParameters(parameters);
         }
@@ -261,12 +296,11 @@ public class MainActivity extends AppCompatActivity {
         //get the spinner from the xml.
         dropdown = findViewById(R.id.spinner1);
 //create a list of items for the spinner.
-        items.add("sip:mcptt_id_iit3_A@organization.org");
-        items.add("sip:mcptt_id_iit3_B@organization.org");
-        items.add("sip:mcptt_id_iit3_C@organization.org");
-        items.add("sip:mcptt_id_iit3_D@organization.org");
-        items.add("sip:mcptt_id_iit3_E@organization.org");
-
+        items.add("USER A");
+        items.add("USER B");
+        items.add("USER C");
+        items.add("USER D");
+        items.add("USER E");
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -308,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
                                                 String redirect=null;
                                                 if((requestUri=action.getStringExtra(ConstantsMCOP.AuthorizationRequestExtras.REQUEST_URI))!=null &&
                                                         (redirect=action.getStringExtra(ConstantsMCOP.AuthorizationRequestExtras.REDIRECT_URI))!=null
-                                                        ){
+                                                ){
                                                     if(BuildConfig.DEBUG)Log.d(TAG,"onAuthentication URI: "+requestUri+ " redirectionURI: "+redirect);
                                                     Intent intent2 = new Intent(getApplicationContext(), ScreenAutheticationWebView.class);
                                                     intent2.putExtra(ScreenAutheticationWebView.DATA_URI_INTENT,requestUri.trim());
@@ -570,11 +604,11 @@ public class MainActivity extends AppCompatActivity {
                                             Log.d(TAG,"activeRealTimeVideoMode:"+activeRealTimeVideoMode+"");
                                             Log.d(TAG,"Users:");
                                             if(participantsList.size()==participantsListDisplayName.size() && participantsList.size()==participantsListType.size())
-                                            for(int con=0;con<participantsList.size();con++){
-                                                Log.d(TAG,"Participant: "+participantsList.get(con));
-                                                Log.d(TAG,"DisplayName: "+participantsListDisplayName.get(con));
-                                                Log.d(TAG,"Type: "+participantsListType.get(con));
-                                            }
+                                                for(int con=0;con<participantsList.size();con++){
+                                                    Log.d(TAG,"Participant: "+participantsList.get(con));
+                                                    Log.d(TAG,"DisplayName: "+participantsListDisplayName.get(con));
+                                                    Log.d(TAG,"Type: "+participantsListType.get(con));
+                                                }
 
                                             break;
                                         case groupAffiliationEvent:
@@ -807,28 +841,28 @@ public class MainActivity extends AppCompatActivity {
         });
 */
         if(mConnection==null)
-        mConnection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName className, IBinder service) {
-                Log.e(TAG,"Service Binded!\n");
-                mService = IMCOPsdk.Stub.asInterface(service);
-                try {
-                    mService.registerCallback(mMCOPCallback);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
+            mConnection = new ServiceConnection() {
+                @Override
+                public void onServiceConnected(ComponentName className, IBinder service) {
+                    Log.e(TAG,"Service Binded!\n");
+                    mService = IMCOPsdk.Stub.asInterface(service);
+                    try {
+                        mService.registerCallback(mMCOPCallback);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                    isConnect=true;
                 }
-                isConnect=true;
-            }
 
-            @Override
-            public void onServiceDisconnected(ComponentName className) {
-                mService = null;
-                // This method is only invoked when the service quits from the other end or gets killed
-                // Invoking exit() from the AIDL interface makes the Service kill itself, thus invoking this.
-                Log.e(TAG,"Service Disconnected.\n");
-                isConnect=false;
-            }
-        };
+                @Override
+                public void onServiceDisconnected(ComponentName className) {
+                    mService = null;
+                    // This method is only invoked when the service quits from the other end or gets killed
+                    // Invoking exit() from the AIDL interface makes the Service kill itself, thus invoking this.
+                    Log.e(TAG,"Service Disconnected.\n");
+                    isConnect=false;
+                }
+            };
         /*
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -913,56 +947,66 @@ public class MainActivity extends AppCompatActivity {
             Log.i(TAG,"Bind Service: "+bindService(serviceIntent, mConnection, BIND_AUTO_CREATE));
         }
     }
-/*
-    private void showOptionsProfiles(Map<String,String[]> stringsList,final Context context){
-        if(stringsList==null)return;
-        final ArrayList<String> strings=new ArrayList<>();
-        for(String[] value:stringsList.values()){
-            if(value!=null && value.length>=1 && value[0]!=null){
-                strings.add(value[0]);
-            }else{
-                Log.e(TAG,"Error in process value");
-            }
-        }
-        if(strings==null || strings.isEmpty())return;
-        mDialogMenu = DialogMenu.newInstance( strings.toArray(new String[strings.size()]),null);
-        mDialogMenu.setOnClickItemListener(new DialogMenu.OnClickListener() {
-            @Override
-            public void onClickItem(int item) {
-                if(item>=0 && strings.size()>item){
-                    Log.d(TAG,"Select Profile "+strings.get(item));
-                    //TODO:
-                    connectService(strings.get(item));
+    /*
+        private void showOptionsProfiles(Map<String,String[]> stringsList,final Context context){
+            if(stringsList==null)return;
+            final ArrayList<String> strings=new ArrayList<>();
+            for(String[] value:stringsList.values()){
+                if(value!=null && value.length>=1 && value[0]!=null){
+                    strings.add(value[0]);
+                }else{
+                    Log.e(TAG,"Error in process value");
                 }
             }
-        });
-        mDialogMenu.show(getSupportFragmentManager(), "SimpleDialog");
-    }
-*/
+            if(strings==null || strings.isEmpty())return;
+            mDialogMenu = DialogMenu.newInstance( strings.toArray(new String[strings.size()]),null);
+            mDialogMenu.setOnClickItemListener(new DialogMenu.OnClickListener() {
+                @Override
+                public void onClickItem(int item) {
+                    if(item>=0 && strings.size()>item){
+                        Log.d(TAG,"Select Profile "+strings.get(item));
+                        //TODO:
+                        connectService(strings.get(item));
+                    }
+                }
+            });
+            mDialogMenu.show(getSupportFragmentManager(), "SimpleDialog");
+        }
+    */
     private void showTypeRegister(final Context context){
         //Log.d(TAG,"###################################" + dropdown.getSelectedItem().toString());
-        final String[] strings={"With External authentication","No authentication"};
+        final String[] strings={"With External authentication","No authentication","Offline Mode"};
         if(strings==null || strings.length==0)return;
         mDialogMenu=null;
         mDialogMenu = DialogMenu.newInstance(strings,"Registration types");
         mDialogMenu.setOnClickItemListener(new DialogMenu.OnClickListener() {
             @Override
-            public void onClickItem(int item) {
-                if(item>=0 && strings.length>item){
-                    Log.d(TAG,"Select type call "+strings[item]);
+            public void onClickItem(int ite) {
+                if (ite >= 0 && strings.length > ite) {
+                    Log.d(TAG, "Select type call " + strings[ite]);
                     try {
-                        int typeCalls=-1;
-                        switch (item){
+                        int typeCalls = -1;
+                        switch (ite) {
                             case 0:
-                                    if(mService!=null)
-                                        mService.loginMCOP();
+                                if (mService != null)
+                                    mService.loginMCOP();
                                 break;
                             case 1:
                                 //Test
-                                    if(mService!=null)
-                                        mService.authorizeUser(null);
+                                if (mService != null)
+                                    mService.authorizeUser(null);
                                 break;
-
+                            case 2:
+                                message = "Offline Mode";
+                                view.setBackgroundColor(getResources().getColor(R.color.CORRECT));
+                                item.setTitle("Exit Offline");
+                                mainActivity_simpleTextView.setText(dropdown.getSelectedItem().toString().trim() + "-OFFLINE");
+                                toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+                                toast.getView().setBackgroundColor(getResources().getColor(R.color.GREEN));
+                                toast.show();
+                                location.setEnabled(true);
+                                log.setEnabled(true);
+                                messages.setEnabled(true);
                             default:
                                 break;
                         }
@@ -1003,42 +1047,42 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG,"Select type call "+strings[item]);
                     try {
                         int typeCalls=-1;
-                            String typeCall=null;
-                            if((typeCall=strings[item])!=null){
-                                if(typeCall.compareTo("Private call")==0){
-                                    typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue()|
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
-                                }
-                                else if(typeCall.compareTo("Private call (WITHOUT FLOOR CONTROL)")==0){
-                                    typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.WithoutFloorCtrl.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
-                                }
-                                else if(typeCall.compareTo("Group call")==0) {
-                                    typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.PrearrangedGroup.getValue();
-                                }
-                                else if(typeCall.compareTo("Emergency Group call")==0) {
-                                    typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.PrearrangedGroup.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.Emergency.getValue();
-                                }
-                                else if(typeCall.compareTo("Emergency Private call")==0) {
-                                    typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.Emergency.getValue();
-                                }
-                                else if(typeCall.compareTo("Chat Group call")==0) {
-                                    typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
-                                            ConstantsMCOP.CallEventExtras.CallTypeEnum.ChatGroup.getValue();
-                                }
-
+                        String typeCall=null;
+                        if((typeCall=strings[item])!=null){
+                            if(typeCall.compareTo("Private call")==0){
+                                typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue()|
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
                             }
+                            else if(typeCall.compareTo("Private call (WITHOUT FLOOR CONTROL)")==0){
+                                typeCalls=ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.WithoutFloorCtrl.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue();
+                            }
+                            else if(typeCall.compareTo("Group call")==0) {
+                                typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.PrearrangedGroup.getValue();
+                            }
+                            else if(typeCall.compareTo("Emergency Group call")==0) {
+                                typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.PrearrangedGroup.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.Emergency.getValue();
+                            }
+                            else if(typeCall.compareTo("Emergency Private call")==0) {
+                                typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.Private.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.Emergency.getValue();
+                            }
+                            else if(typeCall.compareTo("Chat Group call")==0) {
+                                typeCalls = ConstantsMCOP.CallEventExtras.CallTypeEnum.Audio.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.WithFloorCtrl.getValue() |
+                                        ConstantsMCOP.CallEventExtras.CallTypeEnum.ChatGroup.getValue();
+                            }
+
+                        }
 
 
 
@@ -1065,7 +1109,7 @@ public class MainActivity extends AppCompatActivity {
         if(strings.length==1) {
             try {
                 if(mService!=null)
-                mService.hangUpCall(strings[0]);
+                    mService.hangUpCall(strings[0]);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
@@ -1210,7 +1254,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.i(TAG, "Uri: " + uri.toString());
                             try {
                                 if(mService!=null)
-                                mService.authorizeUser(dataUri);
+                                    mService.authorizeUser(dataUri);
                             } catch (RemoteException e) {
                                 e.printStackTrace();
                             }
@@ -1232,22 +1276,38 @@ public class MainActivity extends AppCompatActivity {
         userData.setDisplayName(null);
         userData.setMcpttID(null);
         //mainActivity_TextView_info.setText("UNREGISTERED");
-        for(int i = 0; i < items2.size(); i++){
-            if(items.contains(items2.get(i))){
-                items.remove(items2.get(i));
+        if(!mainActivity_simpleTextView.getText().toString().equals("NONE")) {
+            for (int i = 0; i < items2.size(); i++) {
+                if (items.contains(items2.get(i))) {
+                    items.remove(items2.get(i));
+                }
             }
+            items.add(mainActivity_simpleTextView.getText().toString());
+            items2.clear();
+            adapter.notifyDataSetChanged();
+            mainActivity_simpleTextView.setText("NONE");
+            message = "UNREGISTERED";
+            toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+            toast.getView().setBackgroundColor(getResources().getColor(R.color.GREEN));
+            toast.show();
+            item.setTitle("Unregister");
+            view.setBackgroundColor(getResources().getColor(R.color.WHITE));
+            location.setEnabled(false);
+            log.setEnabled(false);
+            messages.setEnabled(false);
         }
-        items.add(mainActivity_simpleTextView.getText().toString()+endString);
-        items2.clear();
-        adapter.notifyDataSetChanged();
-        mainActivity_simpleTextView.setText("NONE");
-        message = "UNREGISTERED";
-        toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
-        toast.getView().setBackgroundColor(getResources().getColor(R.color.GREEN));
-        toast.show();
-        view.setBackgroundColor(getResources().getColor(R.color.WHITE));
-        location.setEnabled(false);
-        log.setEnabled(false);
+        else{
+            message = "Offline Mode";
+            item.setTitle("Exit Offline");
+            view.setBackgroundColor(getResources().getColor(R.color.CORRECT));
+            mainActivity_simpleTextView.setText(dropdown.getSelectedItem().toString().trim() + "-OFFLINE");
+            toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+            toast.getView().setBackgroundColor(getResources().getColor(R.color.GREEN));
+            toast.show();
+            location.setEnabled(true);
+            log.setEnabled(true);
+            messages.setEnabled(true);
+        }
 
     }
 
@@ -1273,6 +1333,7 @@ public class MainActivity extends AppCompatActivity {
         view.setBackgroundColor(getResources().getColor(R.color.CORRECT));
         location.setEnabled(true);
         log.setEnabled(true);
+        messages.setEnabled(true);
     }
 
     private void showData(String eventType,String data){
@@ -1356,7 +1417,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED ||
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.FOREGROUND_SERVICE) != PackageManager.PERMISSION_GRANTED
-                ) {
+        ) {
             //Should we show an explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                     Manifest.permission.RECORD_AUDIO)) {
@@ -1372,7 +1433,7 @@ public class MainActivity extends AppCompatActivity {
                                 Manifest.permission.ACCESS_COARSE_LOCATION,
                                 Manifest.permission.CAMERA,
                                 Manifest.permission.READ_PHONE_STATE,
-                               // Manifest.permission.FOREGROUND_SERVICE
+                                // Manifest.permission.FOREGROUND_SERVICE
                         },
                         GET_PERMISSION);
             } else {

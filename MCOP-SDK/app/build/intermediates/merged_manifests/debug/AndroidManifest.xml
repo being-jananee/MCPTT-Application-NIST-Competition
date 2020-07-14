@@ -8,11 +8,6 @@
         android:minSdkVersion="22"
         android:targetSdkVersion="28" />
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -59,8 +54,24 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-
+        <activity
+            android:name="org.mcopenplatform.muoapi.mcopsdk.Messaging.MessageSelect"
+            android:label="@string/title_activity_message_select"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="org.mcopenplatform.muoapi.mcopsdk.Messaging.MessageActivity"
+            android:label="@string/title_activity_message"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="org.mcopenplatform.muoapi.mcopsdk.Main3Activity"
+            android:label="@string/title_activity_main3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="org.mcopenplatform.muoapi.mcopsdk.Maps2Activity"
+            android:label="@string/title_activity_maps2"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -74,8 +85,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="org.mcopenplatform.muoapi.Maps2Activity"
-            android:label="@string/title_activity_maps2" />
+            android:name="org.mcopenplatform.muoapi.mcopsdk.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
             android:name="org.mcopenplatform.muoapi.mcopsdk.LocationService"
@@ -174,6 +186,11 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="org.mcopenplatform.muoapi.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

@@ -41,6 +41,14 @@
     <string name="users">CONTACTS</string>
     <string name="request_token">REQUEST TOKEN</string>
     <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="register">Register</string>
+    <string name="logging">Logging</string>
+    <string name="location">Location</string>
+    <string name="message">Message</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_message_select">MessageSelect</string>
 
 </resources>
 

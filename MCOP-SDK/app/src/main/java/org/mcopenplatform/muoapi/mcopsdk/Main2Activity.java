@@ -1,6 +1,6 @@
 package org.mcopenplatform.muoapi.mcopsdk;
-import org.mcopenplatform.muoapi.Maps2Activity;
 import org.mcopenplatform.muoapi.R;
+import org.mcopenplatform.muoapi.mcopsdk.Domain.UserData;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -60,14 +60,15 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     ArrayList<ActionItem> allItems = new ArrayList<>();
     private RecyclerView recyclerView;
     private ActionItemAdapter actionItemAdapter;
-    private FloatingActionButton floatingButton;
+    FloatingActionButton floatingButton;
     private DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference().child("events");
     private ChildEventListener listener = getChildListener();
     private FusedLocationProviderClient fusedClient;
-    private String username;
-    private LinearLayoutManager manager;
-    private ActionItem selectedItem;
+    private UserData currentUser;
+    LinearLayoutManager manager;
+    ActionItem selectedItem;
     private DateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss.sss", Locale.US);
+    public final String TAG = MainActivity.class.getCanonicalName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +79,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 10);
         }
-        username = getIntent().getStringExtra("username");
+        currentUser = (UserData) getIntent().getParcelableExtra("currentUser");
+        Log.d(TAG, "onCreate: "+currentUser.toString());
         eventsRef.addChildEventListener(listener);
         floatingButton = findViewById(R.id.floatingActionButton);
         recyclerView = findViewById(R.id.recycle);
@@ -98,7 +100,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 for(ActionTag i : ActionTag.values()) {
                     tags.add(i.getName());
                 }
-                String[] a = tags.toArray(new String[tags.size()]);
+                String[] a = tags.toArray(new String[0]);
                 ArrayAdapter spinnerArrayAdapter = new ArrayAdapter
                         (Main2Activity.this, android.R.layout.simple_spinner_item,
                                 a); //selected item will look like a spinner set from XML
@@ -110,8 +112,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        newItem.setUser(username).setContent(et.getText().toString()).setTimestamp(formatter.format(new Date()))
+                        newItem.setUserId(currentUser.getMcpttID())
+                                .setContent(et.getText().toString()).setTimestamp(formatter.format(new Date()))
                                 .setTag(ActionTag.get((sp.getSelectedItem().toString())));
+                        Log.d(TAG, "onClick: GET USER ID " + currentUser.getMcpttID() + " " + newItem.getUserId());
                         if(s.isChecked() && hasPermission()) {
                             addLocationToActionItemAndSend(newItem);
                         } else {
@@ -150,7 +154,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         return new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot addedEvent, @Nullable String s) {
-                Log.d("Main2Activity", "onChildAdded: ");
+                Log.d("MainActivity", "onChildAdded: ");
                 ActionItem item = ActionItem.fromSnapshot(addedEvent);
                 allItems.add(item);
                 Collections.sort(allItems, ActionItem.Comparators.TIME);
@@ -159,14 +163,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                Log.d("MainActivity", "onChildChanged: ");
-                for(ActionItem item1 : allItems) {
-                    if(item1.getId().toString().equals(dataSnapshot.getKey())) {
-                        item1.setCompleted(dataSnapshot.child("completed").getValue(Boolean.class));
-                        actionItemAdapter.notifyDataSetChanged();
-                        break;
-                    }
-                }
+                //No Editing Of Events
             }
 
             @Override
@@ -219,10 +216,13 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ActionItem item = allItems.get(position);
-                if(item.getUser().equals(username)) {
+                Log.d(TAG, "onClick: GET USER ID" + currentUser.getMcpttID());
+                if(item.getUserId().equals(currentUser.getMcpttID())) {
                     eventsRef.child(item.getId().toString()).removeValue();
                 } else {
-                    Toast.makeText(Main2Activity.this, "Can't delete an event for a user that is not yourself.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Main2Activity.this,
+                            "Can't delete an event for a user that is not yourself.", Toast.LENGTH_SHORT)
+                            .show();
                 }
             }
         });
@@ -232,7 +232,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     }
 
     public boolean hasPermission() {
-        return (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED);
+        return (ContextCompat
+                .checkSelfPermission(this,
+                        Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+        );
     }
 
     public void addLocationToActionItemAndSend(final ActionItem newItem) throws SecurityException {
@@ -244,7 +247,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                     newItem.setLongitude(location.getLongitude());
                     updateEvent(newItem);
                 } else {
-                    //make dialog to show error;
+                    Toast.makeText(Main2Activity.this,
+                            "Unable to add location to Action Item", Toast.LENGTH_SHORT)
+                            .show();
                 }
             }
         });
@@ -258,14 +263,13 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             //MapView mapView = mView.findViewById(R.id.mapView);
             //mapView.getMapAsync(this);
             if(selectedItem.getLatitude() != null) {
-                Intent i = new Intent(Main2Activity.this, Maps2Activity.class);
+                Intent i = new Intent(Main2Activity.this, MapsActivity.class);
                 i.putExtra("item", ActionItem.ActionItemDTO.fromItem(selectedItem));
-                i.putExtra("username", username);
+                i.putExtra("currentUser", currentUser);
                 startActivity(i);
             }
         }
     }
-
 //    @Override
 //    public void onMapReady(GoogleMap googleMap) {
 //        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

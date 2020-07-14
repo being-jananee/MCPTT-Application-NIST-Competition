@@ -6,83 +6,43 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="BAL" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="MainActivity:" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
-  <component name="CMakeSettings">
-    <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
-    </configurations>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5787866-4433-4d5e-8314-7b9085849199" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/DatabaseUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Domain/Session.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Domain/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/ChatFragment/ChatFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/GroupFragment/GroupAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/GroupFragment/GroupFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/InstantMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/MessageActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/MessageSelect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/MessageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/UserFragment/UserAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Messaging/UserFragment/UserFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/drawable/ic_send_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/drawable/real_time_off.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/drawable/real_time_on.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/drawable/rounded_rectangle_received_message.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/drawable/rounded_rectangle_sent_message.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/activity_message.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/activity_message_select.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/fragment_chat.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/fragment_group.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/fragment_user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/group_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/receive_instant_message_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/send_instant_message_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/user_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android-ngn-stack/android-ngn-stack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/android-ngn-stack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+    <list default="true" id="6559c92a-c979-407a-a098-803c6bbccf1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/datatype/openId/CampsType.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/datatype/openId/CampsType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/authentication/IMyAuthenticacionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/authentication/IMyAuthenticacionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/cms/IMyCMSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/cms/IMyCMSService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/location/LocationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/location/LocationServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/mbms/MbmsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/mbms/MbmsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/AuthenticacionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/AuthenticacionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/MyAuthenticacionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/MyAuthenticacionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/MyCMSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/MyCMSService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/RestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/RestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/sip/NgnSipPrefrences.java" beforeDir="false" afterPath="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/sip/NgnSipPrefrences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/MCOPsdk.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/MCOPsdk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/ManagerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/ManagerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/managerIapi/UtilsIapi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/managerIapi/UtilsIapi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/DialogMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/DialogMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/.idea/features_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/.idea/features_app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/ActionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Domain/ActionItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/ActionItemAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/ActionItemAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/ActionTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Domain/ActionTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/LocationItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Maps/LocationItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Maps/LocationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/java/com/example/application/Maps/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/res/drawable/ic_person_pin_circle_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/drawable/ic_person_pin_circle_black_24dp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/activity_maps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/activity_maps.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/recycler_item_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/layout/recycler_item_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/res/menu/menu_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/menu/menu_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../features_app/application/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../features_app/application/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ScreenAutheticationWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ScreenAutheticationWebView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/session/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/utils/PermissionRequestUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/utils/PermissionRequestUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_volume_up_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_volume_up_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/screen_authetication_web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,75 +50,129 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_23" />
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/android-ngn-stack">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MCOP-SDK" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MCOP-SDK" type="f1a62948:ProjectNode" />
+                <item name="MCOP-SDK" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MCOP-SDK" type="f1a62948:ProjectNode" />
+                <item name="MCOP-SDK" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/datatype/UserData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="61" column="32" selection-end-line="99" />
-              <folding>
-                <element signature="e#0#2967#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/datatype/Session.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MapsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3870">
-              <caret line="327" column="62" selection-start-line="327" selection-start-column="62" selection-end-line="327" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/Maps2Activity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="98" column="78" selection-start-line="98" selection-start-column="78" selection-end-line="98" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="157" column="47" selection-start-line="157" selection-start-column="39" selection-end-line="157" selection-end-column="47" />
+            <state relative-caret-position="293">
+              <caret line="1308" column="38" selection-start-line="1308" selection-start-column="38" selection-end-line="1308" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#975#976#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
+                <element signature="e#1295#1296#0" expanded="true" />
+                <element signature="e#1326#1327#0" expanded="true" />
+                <element signature="e#1374#1375#0" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1450#1451#0" expanded="true" />
+                <element signature="e#1482#1483#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
+                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1601#1602#0" expanded="true" />
+                <element signature="e#1626#1627#0" expanded="true" />
+                <element signature="e#1660#1661#0" expanded="true" />
+                <element signature="e#1688#1689#0" expanded="true" />
+                <element signature="e#2068#2069#0" expanded="true" />
+                <element signature="e#2097#2098#0" expanded="true" />
+                <element signature="e#2130#2131#0" expanded="true" />
+                <element signature="e#2156#2157#0" expanded="true" />
+                <element signature="e#2395#2396#0" expanded="true" />
+                <element signature="e#2425#2426#0" expanded="true" />
+                <element signature="e#2572#2573#0" expanded="true" />
+                <element signature="e#2604#2605#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="124" column="65" selection-start-line="124" selection-start-column="65" selection-end-line="124" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2095#2096#0" expanded="true" />
+                <element signature="e#2122#2123#0" expanded="true" />
+                <element signature="e#2956#2957#0" expanded="true" />
+                <element signature="e#2988#2989#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="34" column="19" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="19" />
+              <folding>
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Main2Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,97 +185,115 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MCPTT_Request</find>
-      <find>granted</find>
-      <find>idle</find>
-      <find>request</find>
-      <find>button</find>
-      <find>HANGUP</find>
-      <find>drawable.make</find>
-      <find>adapter2</find>
-      <find>make_1</find>
-      <find>call_press</find>
-      <find>call_pre</find>
-      <find>login</find>
-      <find>showTy</find>
-      <find>Button_token</find>
-      <find>call</find>
-      <find>make_call</find>
-      <find>mainActivity_Button_make_call</find>
-      <find>token</find>
-      <find>onclick</find>
-      <find>RELEASE</find>
-      <find>hangupcall</find>
-      <find>hang</find>
-      <find>hang_up</find>
-      <find>token.setText</find>
-      <find>mainActivity_Button_token</find>
-      <find>hang_up_call</find>
-      <find>make_call.set</find>
-      <find>token.set</find>
-      <find>userData</find>
-      <find>.class</find>
+      <find>mDialogMenu</find>
+      <find>alli</find>
+      <find>mainActivity</find>
+      <find>unre</find>
+      <find>UNRE</find>
+      <find>mainActivity_simpleTextView</find>
+      <find>setTitle</find>
+      <find>mainActivity_simpleTextView.getText()</find>
+      <find>REGISTER</find>
+      <find>location</find>
+      <find>options</find>
+      <find>SHOWTYPERE</find>
+      <find>ISREG</find>
+      <find>ISREGISTED</find>
+      <find>SETENABLED(T</find>
+      <find>SETENABLED(FALS</find>
+      <find>UNREG</find>
+      <find>mainActivity_simpleTextView.SetText</find>
+      <find>items</find>
+      <find>dropdown</find>
+      <find>Offlin</find>
+      <find>showTypeRegister</find>
+      <find>getCurrentUser()</find>
+      <find>off</find>
+      <find>MainAc</find>
+      <find>getMcpttID()</find>
+      <find>tanw</find>
+      <find>onClick</find>
+      <find>onClick(View</find>
+      <find>OFFLINE MODE</find>
     </findStrings>
   </component>
-  <component name="GenerateSignedApkSettings">
-    <option name="EXPORT_PRIVATE_KEY" value="false" />
-    <option name="KEY_STORE_PATH" value="C:\Users\Jithin\OneDrive - hawk.iit.edu\Lenovo\School\2019 Fall\CS 547\Project\project_key.jks" />
-    <option name="KEY_ALIAS" value="key0" />
-    <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_layout.xml" />
-        <option value="$PROJECT_DIR$/android-ngn-stack/build.gradle" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_maps_acitivity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MapsAcitivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/recycler_item_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
+        <option value="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/authentication/IMyAuthenticacionService.java" />
+        <option value="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/MyCMSService.java" />
+        <option value="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/MyAuthenticacionService.java" />
+        <option value="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/location/LocationServer.java" />
+        <option value="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/ms/AuthenticacionUtils.java" />
+        <option value="$PROJECT_DIR$/android-ngn-stack/src/main/java/org/doubango/ngn/services/impl/mbms/MbmsUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/ManagerClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/session/Session.java" />
+        <option value="$PROJECT_DIR$/gradle.properties" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/managerIapi/UtilsIapi.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/DialogMenu.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ScreenAutheticationWebView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/MCOPsdk.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/utils/PermissionRequestUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItemAdapter2.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItem2.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main3.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/GroupFragment/GroupAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/UserFragment/UserAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/action_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Main3Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionTag.java" />
-        <option value="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/TabFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationService.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/Maps2Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageSelect.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/UserDataLite.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/UserData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/Session.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/ChatViewItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageItemAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/InstantMessage.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/UserFragment/UserFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/GroupFragment/GroupFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/ChatFragment/ChatFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/ChatFragment/ChatAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Maps2Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_message.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_message_select.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_chat.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItemAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Main2Activity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/hang_press.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/hang_press.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/make_call_press.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/token_b.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/token_req.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/token_rel.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/google_maps_api.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_group.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/DatabaseUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MapsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Main2Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -274,20 +306,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ExportApk.ApkPath" value="C:\Users\Jithin\Desktop\MCOP-SDK\app" />
-    <property name="ExportApk.BuildVariants" value="release" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="ExportApk.SignV2" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="d2dfe700" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CS547_Project/MCOP-SDK" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1583829449541" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
-      <recent name="org.mcopenplatform.muoapi" />
+      <recent name="org.mcopenplatform.muoapi.mcopsdk.Messaging" />
       <recent name="org.mcopenplatform.muoapi.mcopsdk" />
     </key>
     <key name="android.template.parentActivityClass">
@@ -307,10 +333,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -363,27 +385,12 @@
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -392,151 +399,353 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a5787866-4433-4d5e-8314-7b9085849199" name="Default" comment="" />
-      <created>1573330830640</created>
+      <changelist id="6559c92a-c979-407a-a098-803c6bbccf1b" name="Default Changelist" comment="" />
+      <created>1583829384880</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573330830640</updated>
+      <updated>1583829384880</updated>
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22213247" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="3" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.10469799" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.7805369" visible="true" weight="0.19209039" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.22051696" side_tool="true" weight="0.19209039" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.81543624" weight="0.5141643" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Preview" order="4" />
-      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Assistant" order="9" weight="0.3295302" />
-      <window_info anchor="right" id="Android WiFi ADB" order="10" />
-      <window_info anchor="right" id="Flutter Inspector" order="11" />
-      <window_info anchor="right" id="Flutter Outline" order="12" />
-      <window_info anchor="right" id="Flutter Performance" order="13" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.30736545" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.4716714" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.15302013" side_tool="true" weight="0.1898017" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.84697986" visible="true" weight="0.29036826" />
+      <window_info anchor="bottom" id="Find" order="8" sideWeight="0.49850747" weight="0.3286119" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.3295302" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.27651006" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.32885906" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19944598" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="3" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20738254" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.533241" visible="true" weight="0.41076487" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.466759" side_tool="true" visible="true" weight="0.41076487" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.8181208" weight="0.07648725" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Preview" order="4" />
-      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
-      <window_info anchor="right" id="Gradle" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.34844193" />
+      <window_info anchor="bottom" id="Logcat" order="1" visible="true" weight="0.31728044" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.15302013" side_tool="true" weight="0.1898017" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.84697986" weight="0.2917847" />
+      <window_info anchor="bottom" id="Find" order="8" sideWeight="0.49850747" weight="0.3286119" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.3295302" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.27651006" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Assistant" order="6" weight="0.32885906" />
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_maps_acitivity.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps_acitivity.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/screen_authetication_web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android-ngn-stack/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/GroupFragment/GroupAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="36" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="36" />
+        <state relative-caret-position="133">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MapsAcitivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recycler_item_view.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/UserFragment/UserAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="124" column="39" lean-forward="true" selection-start-line="124" selection-start-column="39" selection-end-line="124" selection-end-column="39" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/action_menu.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="136">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="e#468#486#0" expanded="true" />
+            <element signature="e#647#664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Main3Activity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_message.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_message_select.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageActivityl.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageSelectl.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageSelect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        <state relative-caret-position="415">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps2.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+          <folding>
+            <element signature="e#2266#2284#0" expanded="true" />
+            <element signature="e#2465#2504#0" expanded="true" />
+            <element signature="e#2679#2711#0" expanded="true" />
+            <element signature="e#2865#2895#0" expanded="true" />
+            <element signature="e#3049#3079#0" expanded="true" />
+            <element signature="e#3757#3782#0" expanded="true" />
+            <element signature="e#3880#3909#0" expanded="true" />
+            <element signature="e#4334#4363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/UserDataLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding>
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/ChatViewItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1057#1058#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageItemAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2150#2151#0" expanded="true" />
+            <element signature="e#2188#2189#0" expanded="true" />
+            <element signature="e#2716#2966#0" expanded="true" />
+            <element signature="e#2965#2966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/ChatFragment/ChatFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Maps2Activity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/ChatFragment/ChatAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2155#2156#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2555#3291#0" expanded="true" />
+            <element signature="e#3290#3291#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/InstantMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#652#1353#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/UserFragment/UserFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="33" column="73" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml">
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="53" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_message.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-307" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_message_select.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="60" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/chat_view_item.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_layout.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-392" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_user.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/group_item.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/receive_instant_message_item.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/send_instant_message_item.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/recycler_item_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/user_item.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionTag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="140">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#325#326#0" expanded="true" />
@@ -549,97 +758,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/data/res/layout/simple_spinner_dropdown_item.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/TabFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItem.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        <state relative-caret-position="-632" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_chat.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Domain/UserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="160" column="6" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_layout.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/DatabaseUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        <state relative-caret-position="238">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding>
-            <element signature="e#3812#3840#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationItem.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_group.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/google_maps_api.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+        <state relative-caret-position="374">
+          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/MessageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="68">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Messaging/GroupFragment/GroupFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/hang_press.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/make_call_press.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/aidl_source_output_dir/debug/compileDebugAidl/out/org/mcopenplatform/muoapi/IMCOPsdk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="58" column="22" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/hang_press.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/token_req.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Main2Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="253" column="33" selection-start-line="253" selection-start-column="33" selection-end-line="253" selection-end-column="33" />
+        <state relative-caret-position="51">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -648,94 +833,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItemAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="221">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/token_b.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/token_rel.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/datatype/UserData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="61" column="32" selection-end-line="99" />
-          <folding>
-            <element signature="e#0#2967#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/datatype/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MapsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3870">
-          <caret line="327" column="62" selection-start-line="327" selection-start-column="62" selection-end-line="327" selection-end-column="62" />
+        <state relative-caret-position="-34">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#7525#7949#0" expanded="true" />
+            <element signature="e#7948#7949#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/Maps2Activity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/ActionItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="98" column="78" selection-start-line="98" selection-start-column="78" selection-end-line="98" selection-end-column="78" />
+        <state relative-caret-position="136">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
+            <element signature="e#1482#1483#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1601#1602#0" expanded="true" />
+            <element signature="e#1626#1627#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1688#1689#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2130#2131#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+            <element signature="e#2395#2396#0" expanded="true" />
+            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2604#2605#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="124" column="65" selection-start-line="124" selection-start-column="65" selection-end-line="124" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2956#2957#0" expanded="true" />
+            <element signature="e#2988#2989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/LocationItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="19" />
+          <folding>
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/Main2Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -744,12 +926,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/mcopenplatform/muoapi/mcopsdk/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="157" column="47" selection-start-line="157" selection-start-column="39" selection-end-line="157" selection-end-column="47" />
+        <state relative-caret-position="293">
+          <caret line="1308" column="38" selection-start-line="1308" selection-start-column="38" selection-end-line="1308" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11877#50386#0" expanded="true" />
-            <element signature="e#50385#50386#0" expanded="true" />
           </folding>
         </state>
       </provider>

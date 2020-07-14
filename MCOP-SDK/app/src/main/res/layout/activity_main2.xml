@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mcopsdk.Main2Activity">
+    tools:context="org.mcopenplatform.muoapi.mcopsdk.Main2Activity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle"
@@ -36,5 +36,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="32dp"
         app:srcCompat="@drawable/ic_add_black_24dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

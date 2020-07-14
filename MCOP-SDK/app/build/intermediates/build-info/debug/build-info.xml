@@ -6,22 +6,22 @@
     density="420dpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1573872014956"
+    timestamp="1587615436028"
     token="-2214932135027868712"
     verifier="FIELD_TYPE_CHANGE" >
 
     <task
         name="javac"
-        duration="1818" />
+        duration="2375" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="17" />
+        duration="69" />
     <task
         name="verifier"
-        duration="11" />
+        duration="99" />
 
     <artifact
         location="C:\Users\Jithin\Desktop\MCOP-SDK\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -35,16 +35,16 @@
 
     <build
         build-mode="FULL"
-        timestamp="1573870836205"
+        timestamp="1587615279076"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\Jithin\Desktop\MCOP-SDK\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\Jithin\Desktop\MCOP-SDK\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Jithin\Desktop\MCOP-SDK\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\Jithin\Desktop\MCOP-SDK\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\Jithin\Desktop\MCOP-SDK\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -79,7 +79,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1573872014956"
+        timestamp="1587615436028"
         verifier="FIELD_TYPE_CHANGE" >
         <artifact
             location="C:\Users\Jithin\Desktop\MCOP-SDK\app\build\intermediates\split-apk\debug\slices\slice_9.apk"

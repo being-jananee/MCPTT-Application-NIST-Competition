@@ -14,8 +14,8 @@ android {
                 'appAuthRedirectScheme': 'com.googleusercontent.apps.YOUR_ID'
         ]
     }
-	
-	packagingOptions{
+
+    packagingOptions{
         doNotStrip "*/armeabi/*.so"
         doNotStrip "*/armeabi-v7a/*.so"
         doNotStrip "*/x86/*.so"
@@ -26,9 +26,9 @@ android {
     buildTypes {
         release {
             flavorDimensions "cpuArch"
-                ndk {
-                    abiFilters 'armeabi-v7a', 'x86'
-                }
+            ndk {
+                abiFilters 'armeabi-v7a', 'x86'
+            }
             minifyEnabled true
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -50,17 +50,17 @@ android {
 
         debug {
             flavorDimensions "cpuArch"
-                ndk {
-                    abiFilters 'armeabi-v7a', 'x86'
-                }
+            ndk {
+                abiFilters 'armeabi-v7a', 'x86'
+            }
             minifyEnabled false
             zipAlignEnabled false
-			buildConfigField "boolean", "LOG_SHOW", "true"
+            buildConfigField "boolean", "LOG_SHOW", "true"
             buildConfigField "boolean", "AUTHENTICATION_SIM", "true"
             buildConfigField "String", "APP_NAME_PROPIETARY", "\"MCOP CLIENT MCPTT1.0\""
         }
         publishNonDefault true
-		
+
 
 
 
@@ -86,8 +86,8 @@ android {
             jni.srcDirs = [] // This prevents the auto generation of Android.mk
         }
     }
-	
-	externalNativeBuild {
+
+    externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
 
@@ -100,7 +100,7 @@ android {
 
 
 dependencies {
-        //compile files('libs/simple-xml-2.3.4.jar')
+    //compile files('libs/simple-xml-2.3.4.jar')
     //compile fileTree(dir: 'libs', include: '*.jar')
     api('org.simpleframework:simple-xml:2.7.+') {
         exclude module: 'stax'

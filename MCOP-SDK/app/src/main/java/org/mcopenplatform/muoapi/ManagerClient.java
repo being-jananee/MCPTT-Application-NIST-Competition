@@ -66,12 +66,14 @@ import org.mcopenplatform.muoapi.session.ManagerSessions;
 import org.mcopenplatform.muoapi.utils.Utils;
 
 import java.io.Serializable;
+import java.net.InterfaceAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 
 import static org.mcopenplatform.muoapi.ManagerClientUtils.TypeParticipant.DISPLAY_NAME;
 import static org.mcopenplatform.muoapi.ManagerClientUtils.TypeParticipant.TYPE;

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta3] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\9809e125f0876ada7b795badbb1c1dbd\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\768243c13a159153b71d9b07e839f58c\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\2c0f5a5892ba92cc9494a31c7d48f007\AndroidManifest.xml:17:1-22:12
@@ -12,7 +12,7 @@ MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\Jithin\.grad
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:1-105:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\d22199cf6d0b447cc47b7cb79cfa95d3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\688352817f20552a9a700658a137bdbf\AndroidManifest.xml:17:1-22:12
-MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:15:1-46:12
+MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:15:1-46:12
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\d8954098960cde479d4f7367684c7658\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\c908eef5ce56dbbc8c18eae8e8a258e8\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\3fa0060d708e3bc01e12620797272e82\AndroidManifest.xml:17:1-22:12
@@ -25,7 +25,7 @@ MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Jithin\.
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\08d163ee1370c9f3c0e3b52eed782f16\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\612f43d637b3fd3b1a02cb93a908f1ca\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\fbde3f65b0582d8472fab04e2abec11b\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\f099e69cc87bbedc911a5bac10c9467d\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\6ece11a19068dc23971f5655efa8a634\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\23f45b84348fdea4fa3899c49228c7bd\AndroidManifest.xml:17:1-22:12
@@ -53,51 +53,49 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Jithin\.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\39a654a0aa369a7fb0a801962e15087f\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\5a9b9aff1379b84c53de2fcc91053a36\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\07e83ee027c4e4fe625c76e96b0818e9\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
 	package
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:4:5-40
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
 		INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml
-	xmlns:tools
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-102:12
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:1-110:12
 		INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:11:5-79
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:5:5-79
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:54:5-79
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:54:5-79
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:11:22-76
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:12:5-67
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\34438c95ac574786b9233386908e3abe\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\34438c95ac574786b9233386908e3abe\AndroidManifest.xml:26:5-67
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:5-67
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:5-67
-MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:24:5-67
-MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:24:5-67
+MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:24:5-67
+MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\99bcd29f47128b4e9bf7e13ff08d9391\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\99bcd29f47128b4e9bf7e13ff08d9391\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:12:22-64
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:13:5-76
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:7:5-76
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:5-76
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:5-76
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:13:22-73
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:7:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:14:5-79
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:8:5-79
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\34438c95ac574786b9233386908e3abe\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\34438c95ac574786b9233386908e3abe\AndroidManifest.xml:25:5-79
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:5-79
@@ -105,129 +103,129 @@ MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-st
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\99bcd29f47128b4e9bf7e13ff08d9391\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\99bcd29f47128b4e9bf7e13ff08d9391\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:14:22-76
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:8:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:15:5-76
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:9:5-76
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:5-76
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:5-76
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:15:22-73
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:9:22-73
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:16:5-79
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:10:5-79
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:5-79
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:5-79
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:16:22-76
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:10:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:11:5-81
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:5-81
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:5-81
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:12:5-65
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:5-65
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:5-65
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:12:22-62
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:13:5-68
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:5-68
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:5-68
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:13:22-65
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:14:5-71
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:5-71
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:5-71
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:14:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:15:5-80
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:5-80
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:5-80
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:15:22-77
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:16:5-66
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:5-66
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:5-66
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:16:22-63
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:17:5-81
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:5-81
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:5-81
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:5-81
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:5-81
 	android:name
 		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:17:22-78
-uses-permission#android.permission.CAMERA
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:18:5-65
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:5-65
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:5-65
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:18:5-73
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:5-73
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:5-73
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:18:22-62
-uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:19:5-68
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:5-68
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:5-68
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:18:22-70
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:19:5-75
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:5-75
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:5-75
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:19:22-65
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:20:5-71
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:5-71
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:5-71
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:19:22-72
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:20:5-72
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:5-72
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:5-72
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:20:22-68
-uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:21:5-80
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:5-80
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:41:5-80
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:20:22-69
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:21:5-73
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:5-73
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:5-73
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:21:22-77
-uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:22:5-66
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:5-66
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:5-66
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:21:22-70
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:22:5-75
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:48:5-75
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:48:5-75
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:22:22-63
-uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:22:22-72
+uses-permission#android.permission.PROCESS_OUTGOING_CALLS
 ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:23:5-81
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:5-81
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:5-81
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:5-81
+MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:5-81
 	android:name
 		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:23:22-78
-uses-permission#android.permission.WRITE_SETTINGS
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:24:5-73
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:5-73
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:44:5-73
-	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:24:22-70
-uses-permission#android.permission.DISABLE_KEYGUARD
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:25:5-75
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:5-75
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:5-75
-	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:25:22-72
-uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:26:5-72
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:5-72
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:5-72
-	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:26:22-69
-uses-permission#android.permission.WRITE_CONTACTS
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:27:5-73
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:5-73
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:5-73
-	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:27:22-70
-uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:28:5-75
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:48:5-75
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:48:5-75
-	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:28:22-72
-uses-permission#android.permission.PROCESS_OUTGOING_CALLS
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:29:5-81
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:5-81
-MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:49:5-81
-	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:29:22-78
 uses-permission#android.permission.CALL_PHONE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:30:5-69
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:24:5-69
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:5-69
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:5-69
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:30:22-66
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:24:22-66
 uses-permission#android.permission.RAISED_THREAD_PRIORITY
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:31:5-81
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:25:5-81
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:51:5-81
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:51:5-81
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:31:22-78
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:25:22-78
 uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:32:5-77
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:26:5-77
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:32:22-74
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:26:22-74
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:33:5-81
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:27:5-81
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:55:5-81
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:55:5-81
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:33:22-78
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:27:22-78
 uses-permission#android.permission.MODIFY_PHONE_STATE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:34:5-77
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:28:5-77
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:34:22-74
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:28:22-74
 uses-permission#android.permission.WRITE_APN_SETTINGS
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:35:5-77
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:29:5-77
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:35:22-74
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:29:22-74
 application
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:37:5-100:19
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:31:5-108:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta3] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\9809e125f0876ada7b795badbb1c1dbd\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-beta3] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\9809e125f0876ada7b795badbb1c1dbd\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\768243c13a159153b71d9b07e839f58c\AndroidManifest.xml:22:5-20
@@ -236,8 +234,8 @@ MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\Jithin\.grad
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\34438c95ac574786b9233386908e3abe\AndroidManifest.xml:28:5-36:19
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:69:5-103:19
 MERGED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:69:5-103:19
-MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:26:5-44:19
-MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:26:5-44:19
+MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:26:5-44:19
+MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:26:5-44:19
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\66a7f672eb68c3a595e0b0f1073f4284\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\66a7f672eb68c3a595e0b0f1073f4284\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\99bcd29f47128b4e9bf7e13ff08d9391\AndroidManifest.xml:30:5-36:19
@@ -252,8 +250,8 @@ MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\Jithin\.gradle
 MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\612f43d637b3fd3b1a02cb93a908f1ca\AndroidManifest.xml:12:5-24:19
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\fbde3f65b0582d8472fab04e2abec11b\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\fbde3f65b0582d8472fab04e2abec11b\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\b0e9b8bf9ca4dcafccc6fa0603a99d7a\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\b0e9b8bf9ca4dcafccc6fa0603a99d7a\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\78157082fefdab4b2ef9260567ee744e\AndroidManifest.xml:24:5-25:19
@@ -261,101 +259,133 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ji
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\b0e9b8bf9ca4dcafccc6fa0603a99d7a\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:42:9-35
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:36:9-35
 	android:label
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:41:9-41
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:35:9-41
 	android:hardwareAccelerated
 		ADDED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:71:9-43
-	tools:ignore
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:44:9-48
 	android:icon
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:40:9-43
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:34:9-43
 	android:allowBackup
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:39:9-35
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:33:9-35
 	android:theme
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:43:9-40
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:37:9-40
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:38:9-55
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:32:9-55
+activity#org.mcopenplatform.muoapi.mcopsdk.Messaging.MessageSelect
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:38:9-41:68
+	android:label
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:40:13-66
+	android:theme
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:41:13-56
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:39:13-60
+activity#org.mcopenplatform.muoapi.mcopsdk.Messaging.MessageActivity
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:42:9-45:59
+	android:label
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:44:13-59
+	android:theme
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:45:13-56
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:43:13-62
+activity#org.mcopenplatform.muoapi.mcopsdk.Main3Activity
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:46:9-49:59
+	android:label
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:48:13-57
+	android:theme
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:49:13-56
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:47:13-50
+activity#org.mcopenplatform.muoapi.mcopsdk.Maps2Activity
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:50:9-53:59
+	android:label
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:52:13-57
+	android:theme
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:53:13-56
+	android:name
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:51:13-50
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:54:9-56:55
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:62:9-64:55
 	android:value
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:56:13-52
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:64:13-52
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:55:13-58
-activity#org.mcopenplatform.muoapi.Maps2Activity
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:58:9-60:69
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:63:13-58
+activity#org.mcopenplatform.muoapi.mcopsdk.MapsActivity
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:66:9-69:59
 	android:label
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:60:13-57
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:68:13-56
+	android:theme
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:69:13-56
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:59:13-42
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:67:13-49
 service#org.mcopenplatform.muoapi.mcopsdk.LocationService
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:62:9-65:39
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:71:9-74:39
 	android:enabled
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:64:13-35
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:73:13-35
 	android:exported
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:65:13-36
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:74:13-36
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:63:13-52
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:72:13-52
 service#org.mcopenplatform.muoapi.MCOPsdk
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:67:9-70:39
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:75:9-78:39
 	android:enabled
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:69:13-35
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:77:13-35
 	android:exported
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:70:13-36
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:78:13-36
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:68:13-36
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:76:13-36
 activity#org.mcopenplatform.muoapi.mcopsdk.MainActivity
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:72:9-82:20
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:80:9-90:20
 	android:screenOrientation
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:75:13-49
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:83:13-49
 	android:label
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:74:13-56
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:82:13-56
 	android:theme
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:76:13-56
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:84:13-56
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:73:13-49
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:81:13-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:77:13-81:29
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:85:13-89:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:78:17-69
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:86:17-69
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:78:25-66
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:86:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:80:17-77
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:88:17-77
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:80:27-74
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:88:27-74
 activity#org.mcopenplatform.muoapi.mcopsdk.ScreenAutheticationWebView
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:83:9-92:20
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:91:9-100:20
 	android:screenOrientation
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:85:13-49
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:93:13-49
 	android:theme
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:86:13-56
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:94:13-56
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:84:13-63
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:92:13-63
 intent-filter#action:name:com.google.codelabs.appauth.HANDLE_AUTHORIZATION_RESPONSE+category:name:android.intent.category.DEFAULT
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:87:13-91:29
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:95:13-99:29
 action#com.google.codelabs.appauth.HANDLE_AUTHORIZATION_RESPONSE
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:88:17-100
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:96:17-100
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:88:25-97
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:96:25-97
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:90:17-76
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:98:17-76
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:90:27-73
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:98:27-73
 activity#org.mcopenplatform.muoapi.utils.PermissionRequestUtils$PermissionActivity
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:93:9-95:56
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:101:9-103:56
 	android:theme
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:95:13-53
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:103:13-53
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:94:13-76
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:102:13-76
 activity#org.mcopenplatform.muoapi.mcopsdk.Main2Activity
-ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:96:9-99:59
+ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:104:9-107:59
 	android:label
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:98:13-57
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:106:13-57
 	android:theme
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:99:13-56
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:107:13-56
 	android:name
-		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:97:13-50
+		ADDED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml:105:13-50
 uses-sdk
 INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Jithin\Desktop\MCOP-SDK\app\src\main\AndroidManifest.xml
@@ -376,8 +406,8 @@ MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Jithin\.gradle\caches\
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\d22199cf6d0b447cc47b7cb79cfa95d3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\688352817f20552a9a700658a137bdbf\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\688352817f20552a9a700658a137bdbf\AndroidManifest.xml:20:5-44
-MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:20:5-22:41
-MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:20:5-22:41
+MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:20:5-22:41
+MERGED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\d8954098960cde479d4f7367684c7658\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\d8954098960cde479d4f7367684c7658\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\c908eef5ce56dbbc8c18eae8e8a258e8\AndroidManifest.xml:20:5-44
@@ -402,8 +432,8 @@ MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\Jithin\.gradle
 MERGED from [com.google.firebase:firebase-common:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\612f43d637b3fd3b1a02cb93a908f1ca\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\fbde3f65b0582d8472fab04e2abec11b\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\fbde3f65b0582d8472fab04e2abec11b\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\f099e69cc87bbedc911a5bac10c9467d\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\f099e69cc87bbedc911a5bac10c9467d\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\6ece11a19068dc23971f5655efa8a634\AndroidManifest.xml:20:5-22:41
@@ -524,7 +554,7 @@ ADDED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-sta
 		ADDED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:75:13-82
 activity#net.openid.appauth.RedirectUriReceiverActivity
 ADDED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:79:9-102:20
-REJECTED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:32:9-43:20
+REJECTED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:32:9-43:20
 	tools:node
 		ADDED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:81:13-33
 	android:name
@@ -552,15 +582,15 @@ ADDED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-sta
 	android:scheme
 		ADDED from [:android-ngn-stack] C:\Users\Jithin\Desktop\MCOP-SDK\android-ngn-stack\build\intermediates\library_manifest\debug\AndroidManifest.xml:100:21-42
 activity#net.openid.appauth.AuthorizationManagementActivity
-ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:27:9-31:75
+ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:27:9-31:75
 	android:launchMode
-		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:30:13-44
+		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:30:13-44
 	android:exported
-		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:29:13-37
+		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:29:13-37
 	android:theme
-		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:31:13-72
+		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:31:13-72
 	android:name
-		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\465ac7fa3b5ff98e81e07c95e63d59ed\AndroidManifest.xml:28:13-78
+		ADDED from [net.openid:appauth:0.4.1] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\e8d03ccb13114a7333515ec914740b2d\AndroidManifest.xml:28:13-78
 uses-library#org.apache.http.legacy
 ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\99bcd29f47128b4e9bf7e13ff08d9391\AndroidManifest.xml:33:9-35:40
 	android:required
@@ -586,8 +616,8 @@ ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\Jithin\.gradle\
 	android:name
 		ADDED from [com.google.firebase:firebase-common:19.2.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\612f43d637b3fd3b1a02cb93a908f1ca\AndroidManifest.xml:20:13-77
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\51644682aa4bdae3845fa342636778a9\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Jithin\.gradle\caches\transforms-2\files-2.1\aa9380eb3f636a2d0f0cd8f503815526\AndroidManifest.xml:24:13-58

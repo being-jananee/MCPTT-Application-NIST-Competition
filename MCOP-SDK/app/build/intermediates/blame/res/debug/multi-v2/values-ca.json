@@ -38,6 +38,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Jithin\\.gradle\\caches\\transforms-2\\files-2.1\\aa9380eb3f636a2d0f0cd8f503815526\\res\\values-ca\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "193",
+                        "endOffsets": "440"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3984",
+                        "endColumns": "193",
+                        "endOffsets": "4173"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Jithin\\.gradle\\caches\\transforms-2\\files-2.1\\b0e9b8bf9ca4dcafccc6fa0603a99d7a\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2",
@@ -52,23 +69,6 @@
                         "startOffsets": "5643",
                         "endColumns": "100",
                         "endOffsets": "5739"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Jithin\\.gradle\\caches\\transforms-2\\files-2.1\\51644682aa4bdae3845fa342636778a9\\res\\values-ca\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "193",
-                        "endOffsets": "440"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3984",
-                        "endColumns": "193",
-                        "endOffsets": "4173"
                     }
                 }
             ]

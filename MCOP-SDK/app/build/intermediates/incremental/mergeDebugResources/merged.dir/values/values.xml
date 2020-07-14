@@ -1058,12 +1058,15 @@
     <string name="google_client_id" translatable="false">YOUR_ID.apps.googleusercontent.com</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDD7mANZDWmkO7UJuFbvojfvoUIYjufz74</string>
     <string name="google_discovery_uri" translatable="false">https://accounts.google.com/.well-known/openid-configuration</string>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDjAqVz3iWmNtZYQ1ah3jpbilFUQCsuPLM</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCfJwb1DI9AkHG8dZm_Nt8RQdo664p81gg</string>
     <string name="google_name">Google</string>
     <string name="google_scope_string" translatable="false">openid profile email</string>
     <string name="google_storage_bucket" translatable="false">maps-api-547.appspot.com</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="location">Location</string>
     <string name="logged_in_as">USER</string>
+    <string name="logging">Logging</string>
+    <string name="message">Message</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="none">NONE</string>
     <string name="password_toggle_content_description">Show password</string>
@@ -1072,14 +1075,19 @@
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="project_id" translatable="false">maps-api-547</string>
+    <string name="register">Register</string>
     <string name="release_token">RELEASE TOKEN</string>
     <string name="request_token">REQUEST TOKEN</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_main">MCPTT APP</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_maps2">Map</string>
     <string name="title_activity_maps_acitivity">MapsAcitivity</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_message_select">MessageSelect</string>
     <string name="users">CONTACTS</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
